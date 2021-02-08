@@ -119,7 +119,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   }
 
   .info-software {
-    margin-top: 30px;
+    margin-top: 50px;
 
     p {
       font-size: 14px;
@@ -151,6 +151,20 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     border: 1px solid #777777;
     width: 58px;
     height: 58px;
+  }
+
+  .know-more {
+    background-color: #f1f2f3;
+    border: solid 1px #777777;
+    padding: 15px;
+    p {
+      font-size: 18px;
+      width: 100%;
+      padding: 10px;
+      text-align: center;
+      line-height: 30px;
+      color: #777777;
+    }
   }
 }
 
@@ -238,6 +252,19 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     border: 1px solid #777777;
     width: 70px;
     height: 70px;
+  }
+
+  .know-more {
+    background-color: #f1f2f3;
+    border: solid 1px #777777;
+    padding: 40px;
+    p {
+      font-size: 25px;
+      width: 50%;
+      text-align: center;
+      line-height: 40px;
+      color: #777777;
+    }
   }
 
 }
