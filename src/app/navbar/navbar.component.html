@@ -1,0 +1,16 @@
+<mat-toolbar style="background-color: white;">
+  <button mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>Item 1</button>
+    <button mat-menu-item>Item 2</button>
+  </mat-menu>
+
+  <span class="spacer text-center ml-5" >PLATAFORMA PF - SCCON</span>
+
+  <div class="menu-right text-login">
+    <a  mat-flat-button >Acessar Agora</a>
+  </div>
+</mat-toolbar>
+

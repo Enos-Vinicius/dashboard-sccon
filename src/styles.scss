@@ -1,4 +1,261 @@
-/* You can add global styles to this file, and also import other style files */
+
+@import '~@angular/material/theming';
+
+@include mat-core();
+$md-mcgpalette-main: (
+    50 : #ede0e0,
+    100 : #d1b3b3,
+    200 : #b38080,
+    300 : #954d4d,
+    400 : #7e2626,
+    500 : #670000,
+    600 : #5f0000,
+    700 : #540000,
+    800 : #4a0000,
+    900 : #390000,
+    A100 : #ff6f6f,
+    A200 : #ff3c3c,
+    A400 : #ff0909,
+    A700 : #ef0000,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #ffffff,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+
+$busca-cep-primary: mat-palette($md-mcgpalette-main);
+$busca-cep-accent: mat-palette($md-mcgpalette-main);
+$busca-cep-theme: mat-light-theme($busca-cep-primary, $busca-cep-accent);
+
+@include angular-material-theme ($busca-cep-theme);
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.navbar {
+    width: 100%;
+    height: 64px;
+    border: 1px solid #979797;
+    padding: 15px;
+    display: block;
+}
+
+.line {
+  width: 100px;
+  height: 2px;
+  margin: 3.5px 0 0 547px;
+  border:  1px solid #979797;
+}
+
+.menu {
+  float: left;
+  position: absolute;
+  padding: 10px;
+}
+
+
+
+@media (max-width: 375px) {
+  
+  .text-login {
+    display: none;
+  }
+  
+  .navbar-title {
+    font-size: 18px;
+    color: #777777;
+  }
+
+  .ml-5 {
+    margin-left: 15px;
+  }
+  
+  .main {
+    width: 100%;
+    height: 600px;
+    border: solid 1px #777777;
+    background-color: #f1f2f3;
+  }
+
+  .info-principal {
+    height: 700px;
+  }
+
+  .text-primary {
+    font-size: 20px;
+    margin-bottom: 25px;
+  }
+ 
+  .text-secondary {
+    font-size: 12px;
+    color: #777777;
+    margin-bottom: 10px;
+  }
+
+  .legenda {
+    display: none;
+  }
+
+  .info{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 1px solid #777777;
+    margin: 10px;
+    background-color: white;
+  }
+
+  .info-software {
+    margin-top: 30px;
+
+    p {
+      font-size: 14px;
+      color: #777777;
+      width: 120px;
+      text-align: center;
+    }
+
+    button {
+      width: 200px;
+      height: 40px;
+      border-radius: 29.5px;
+      border: solid 1px #777777;
+      background-color: #f1f2f3;
+    }
+
+    .text-login {
+      width: 240px;
+      font-size: 16px;
+      padding: 10px;
+      text-align: center;
+      border-bottom: solid 1px #777777;
+    }
+  }
+    
+  .img-logo {
+    background-color: #f1f2f3;
+    border-radius: 50%;
+    border: 1px solid #777777;
+    width: 58px;
+    height: 58px;
+  }
+}
+
+@media (min-width: 376px) {
+  
+  .navbar-title {
+    font-size: 20px;
+    color: #777777;
+  }
+
+  .menu-right {
+    border-bottom: 1px solid  #777777;
+  }
+
+  .main {
+    width: 100%;
+    height: 800px;
+    border: solid 1px #777777;
+    background-color: #f1f2f3;
+  }
+
+  .spacer {
+    flex: 1 1 auto;
+  }
+
+  .ml-5 {
+    margin-left: 75px;
+  }
+    
+  .text-primary {
+    font-size: 40px;
+    margin-bottom: 25px;
+  }
+  
+  .text-secondary {
+    font-size: 20px;
+    color: #777777;
+    margin-bottom: 10px;
+  }
+
+  .legenda {
+    height: 150px;
+    padding: 20px;
+  }
+
+  .info-principal {
+    height: 700px;
+  }
+
+  .info-software {
+    height: 200px;
+
+    p {
+      font-size: 20px;
+      padding: 5px;    
+      color: #777777;
+      width: 154px;
+      text-align: center;
+    }
+
+    button {
+      width: 260px;
+      height: 40px;
+      border-radius: 29.5px;
+      border: solid 1px #777777;
+      background-color: #f1f2f3;
+    }
+
+    .text-login {
+      width: 240px;
+      font-size: 16px;
+      padding: 10px;
+      text-align: center;
+      border-bottom: solid 1px #777777;
+    }
+  }
+
+  .login-access {
+    margin-left: 50px;
+  }
+  
+  .img-logo {
+    background-color: #f1f2f3;
+    border-radius: 50%;
+    border: 1px solid #777777;
+    width: 70px;
+    height: 70px;
+  }
+
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+
+.card-logo {
+  height: 70px; 
+  width: 100px; 
+  background-color: white;
+  margin-right: 10px;
+  border: solid 1px #777777;
+}
+
