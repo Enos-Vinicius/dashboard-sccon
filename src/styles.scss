@@ -82,6 +82,76 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   .ml-5 {
     margin-left: 15px;
   }
+  
+  .main {
+    width: 100%;
+    height: 600px;
+    border: solid 1px #777777;
+    background-color: #f1f2f3;
+  }
+
+  .info-principal {
+    height: 700px;
+  }
+
+  .text-primary {
+    font-size: 20px;
+    margin-bottom: 25px;
+  }
+ 
+  .text-secondary {
+    font-size: 12px;
+    color: #777777;
+    margin-bottom: 10px;
+  }
+
+  .legenda {
+    display: none;
+  }
+
+  .info{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 1px solid #777777;
+    margin: 10px;
+    background-color: white;
+  }
+
+  .info-software {
+    margin-top: 30px;
+
+    p {
+      font-size: 14px;
+      color: #777777;
+      width: 120px;
+      text-align: center;
+    }
+
+    button {
+      width: 200px;
+      height: 40px;
+      border-radius: 29.5px;
+      border: solid 1px #777777;
+      background-color: #f1f2f3;
+    }
+
+    .text-login {
+      width: 240px;
+      font-size: 16px;
+      padding: 10px;
+      text-align: center;
+      border-bottom: solid 1px #777777;
+    }
+  }
+    
+  .img-logo {
+    background-color: #f1f2f3;
+    border-radius: 50%;
+    border: 1px solid #777777;
+    width: 58px;
+    height: 58px;
+  }
 }
 
 @media (min-width: 376px) {
@@ -98,13 +168,11 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   .main {
     width: 100%;
     height: 800px;
-    margin: 0 0 44px;
-    padding: 0 0 61px;
     border: solid 1px #777777;
     background-color: #f1f2f3;
   }
 
-  .example-spacer {
+  .spacer {
     flex: 1 1 auto;
   }
 
@@ -112,8 +180,82 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     margin-left: 75px;
   }
     
+  .text-primary {
+    font-size: 40px;
+    margin-bottom: 25px;
+  }
+  
+  .text-secondary {
+    font-size: 20px;
+    color: #777777;
+    margin-bottom: 10px;
+  }
+
+  .legenda {
+    height: 150px;
+    padding: 20px;
+  }
+
+  .info-principal {
+    height: 700px;
+  }
+
+  .info-software {
+    height: 200px;
+
+    p {
+      font-size: 20px;
+      padding: 5px;    
+      color: #777777;
+      width: 154px;
+      text-align: center;
+    }
+
+    button {
+      width: 260px;
+      height: 40px;
+      border-radius: 29.5px;
+      border: solid 1px #777777;
+      background-color: #f1f2f3;
+    }
+
+    .text-login {
+      width: 240px;
+      font-size: 16px;
+      padding: 10px;
+      text-align: center;
+      border-bottom: solid 1px #777777;
+    }
+  }
+
+  .login-access {
+    margin-left: 50px;
+  }
+  
+  .img-logo {
+    background-color: #f1f2f3;
+    border-radius: 50%;
+    border: 1px solid #777777;
+    width: 70px;
+    height: 70px;
+  }
+
 }
 
 .text-center {
   text-align: center;
 }
+
+.text-right {
+  text-align: right;
+}
+
+
+.card-logo {
+  height: 70px; 
+  width: 100px; 
+  background-color: white;
+  margin-right: 10px;
+  border: solid 1px #777777;
+}
+

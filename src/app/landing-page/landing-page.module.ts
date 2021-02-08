@@ -5,12 +5,14 @@ import { LandingPageRoutingModule } from './landing-page-routing.module';
 import { PageComponent } from './page/page.component';
 import { MaterialModule } from 'src/shared/material.module';
 import { MainComponent } from './main/main.component';
+import { InfoSoftwareComponent } from './info-software/info-software.component';
 
 
 @NgModule({
   declarations: [
     PageComponent,
-    MainComponent
+    MainComponent,
+    InfoSoftwareComponent
   ],
   imports: [
     CommonModule,
