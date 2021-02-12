@@ -1,0 +1,21 @@
+<div class="results" >
+    <h1>Lorem ipsum sit amet</h1>
+    <p-carousel [value]="products" styleClass="custom-carousel" [numVisible]="3" [numScroll]="1" [circular]="false" [autoplayInterval]="100000" [responsiveOptions]="responsiveOptions" >
+        <ng-template let-product pTemplate="item" >
+            <div class="carousel-item">
+                <div style="width: 100%;" class="carousel-item-content" fxLayout="column" fxLayoutAlign="start center">
+                    <div style="height: 100px; padding: 30px;" fxLayout="row" fxLayoutAlign="start end" fxLayoutAlign.xs="start start">
+                        <h4 style="font-size: 120px;">{{product.name}}</h4>
+                        <h6 style="font-size: 30px;">{{product.price}}</h6>
+                    </div>
+                    <div style="font-size: 30px; width: 100%; padding: 10px">
+                        Lorem ipsum dolor sit amet, adpscing elit
+                    </div>
+                    <div fx style="height: 100px; padding: 10px">
+                        <span style="font-size: 18px; width: 100%; letter-spacing: 0.75px;" >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+    </p-carousel>
+</div>
