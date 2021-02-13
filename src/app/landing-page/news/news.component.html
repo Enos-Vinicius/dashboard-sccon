@@ -1,0 +1,30 @@
+
+<div class="news" fxLayout="column" fxLayoutAlign="space-around  center">
+    <h1>Notícias em destaque</h1>
+    <p-carousel [value]="products" styleClass="custom-carousel" fxLayoutAlign="center center" [numVisible]="3" [numScroll]="1" [circular]="false" [autoplayInterval]="100000" [responsiveOptions]="responsiveOptions" >
+        <ng-template let-product pTemplate="item" >
+            <div class="carousel-item" >
+                <div style="width: 90%;" class="carousel-item-content" fxLayout="column" fxLayoutAlign="start center">
+                    <div class="news-image" fxLayout="row" fxLayoutAlign="start end" fxLayoutAlign.xs="start start">
+
+                    </div>
+                    <div class="conteudo" fxLayout="column" fxLayoutAlign="space-between start">
+                        <h2>
+                            Polícia Federal combate crimes ambientais em assentamentos do INCRA no Acre
+                        </h2> 
+                        <span style="font-size: 18px; width: 100%; letter-spacing: 0.75px;" >
+                            Batizada de Handroanthus GLO, ação reteve 131,1 mil metros cúbicos de toras extraídas no oeste do Pará
+                        </span>
+                        <div>
+                            GOV.BR
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+    </p-carousel>
+    <div class="login-access" fxLayout="column" fxLayoutAlign="center center">
+        <button mat-button routerLink="info-news">Ver mais notícias</button>
+        <div class="text-login" fxLayoutAlign="end center">Indique conteúdos</div>
+    </div>
+</div>

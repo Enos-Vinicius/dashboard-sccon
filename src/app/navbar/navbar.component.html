@@ -1,16 +1,18 @@
-<mat-toolbar style="background-color: white;">
-  <button mat-icon-button [matMenuTriggerFor]="menu">
-    <mat-icon>menu</mat-icon>
-  </button>
-  <mat-menu #menu="matMenu">
-    <button mat-menu-item>Item 1</button>
-    <button mat-menu-item>Item 2</button>
-  </mat-menu>
-
-  <span class="spacer text-center ml-5" >PLATAFORMA PF - SCCON</span>
-
-  <div class="menu-right text-login">
-    <a  mat-flat-button >Acessar Agora</a>
-  </div>
-</mat-toolbar>
+<div class="navbar-dash">
+  <mat-toolbar style="background-color: white;">
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu" class="menu-style">
+      <button mat-menu-item (click)="redirecTo('landing-page')">Home</button>
+      <button mat-menu-item (click)="redirecTo('landing-page/login')">Acessar Agora</button>
+    </mat-menu>
+  
+    <span class="spacer text-center ml-5" (click)="redirecTo('landing-page')">PLATAFORMA PF - SCCON</span>
+  
+    <div class="menu-right text-login">
+      <a mat-flat-button (click)="redirecTo('landing-page/login')">Acessar Agora</a>
+    </div>
+  </mat-toolbar>
+</div>
 
