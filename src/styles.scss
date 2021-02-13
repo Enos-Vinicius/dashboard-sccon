@@ -66,6 +66,17 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   padding: 10px;
 }
 
+.button-radius {
+  height: 40px;
+  border-radius: 29.5px;
+  border: solid 1px #777777;
+  background-color: #f1f2f3;
+  color: #777777;
+  font-size: 16px;
+  padding: 0 20px;
+  margin: 10px;
+  cursor: pointer;
+}
 
 /* MOBILE */
 @media (max-width: 375px) {
@@ -119,8 +130,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   }
 
   .info-software {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-left: 1px solid #777777;
+    border-right: 1px solid #777777;
 
     p {
       font-size: 14px;
@@ -143,6 +156,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
       padding: 10px;
       text-align: center;
       border-bottom: solid 1px #777777;
+      cursor: pointer;
     }
   }
     
@@ -170,7 +184,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
   .results {
     position: relative;
-    margin-top: 50px;
+    padding-top: 50px;
+    border-left: 1px solid #777777;
+    border-right: 1px solid #777777;
 
     h1 {
       font-size: 28px;
@@ -261,6 +277,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
       padding: 10px;
       text-align: center;
       border-bottom: solid 1px #777777;
+      cursor: pointer;
     }
   }
 
@@ -307,11 +324,43 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
       font-size: 16px;
     }
   }
+
+  .can-access {
+    height: 750px;
+    border: 1px solid #777777;
+    position: relative;
+    color:  #777777;
+
+    
+    .info-can-access {
+      height: 70px;
+      width: 300px;
+    }
+
+    h2 {
+      font-size: 16px;
+      padding: 10px;
+    }
+
+    h1 {
+      font-size: 20px;
+      margin-top: 40px;
+
+    }
+
+    p {
+      font-size: 12px;
+      padding: 20px;
+      width: 90%;
+    }
+  
+  }
+  /* END MOBILE*/
 }
 
 /* DESKTOP */
 @media (min-width: 376px) {
-  
+
   .navbar-title {
     font-size: 20px;
     color: #777777;
@@ -358,6 +407,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
   .info-software {
     height: 200px;
+    border-left: 1px solid #777777;
+    border-right: 1px solid #777777;
 
     p {
       font-size: 20px;
@@ -381,6 +432,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
       padding: 10px;
       text-align: center;
       border-bottom: solid 1px #777777;
+      cursor: pointer;
     }
   }
 
@@ -411,7 +463,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
   .results {
     position: relative;
-    margin-top: 50px;
+    padding-top: 50px;
+    border-left: 1px solid #777777;
+    border-right: 1px solid #777777;
     
     h1 {
       font-size: 28px;
@@ -494,6 +548,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
       text-align: center;
       margin-bottom: 20px;
       border-bottom: solid 1px #777777;
+      cursor: pointer;
     }
 
     .info-access {
@@ -545,6 +600,61 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     }
   }
 
+  .can-access {
+    border: 1px solid #777777;
+    position: relative;
+    color:  #777777;
+
+    
+    .info-can-access {
+      height: 100px;
+    }
+
+    h2 {
+      font-size: 20px;
+      padding: 20px;
+
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-top: 40px;
+
+    }
+
+    p {
+      font-size: 18px;
+      padding: 20px;
+      width: 60%;
+    }
+  
+  }
+
+  .info-dashboard {
+    height: 1202px;
+    padding: 0 236px 79px 0;
+    border: solid 1px #777777;
+    background-color: #f1f2f3;
+
+    .Path-4 {
+      width: 330px;
+      height: 714px;
+      margin-top: 50px;
+      margin-left: 50px;
+      transform: rotateY(180deg);
+      border-radius: 8px;
+      border: solid 1px #979797;
+      background-color: #ffffff;
+    }
+
+  }
+  /* END DESKTOP*/
+}
+
+.menu-style {
+  margin-left: -16px !important;
+  height: 850px !important;
+  width: 200px !important;
 }
 
 .text-center {

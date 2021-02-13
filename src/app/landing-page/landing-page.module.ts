@@ -12,6 +12,10 @@ import { PrimeNgModule } from 'src/shared/primeng.module';
 import { NewsComponent } from './news/news.component';
 import { ImagesMosaicsComponent } from './images-mosaics/images-mosaics.component';
 import { InfoNewsComponent } from './info-news/info-news.component';
+import { LoginComponent } from './login/login.component';
+import { WhoCanAccessComponent } from './who-can-access/who-can-access.component';
+import { RequestAccessComponent } from './request-access/request-access.component';
+import { InfoDashboardComponent } from './info-dashboard/info-dashboard.component';
 
 
 @NgModule({
@@ -23,7 +27,11 @@ import { InfoNewsComponent } from './info-news/info-news.component';
     ResultsComponent,
     NewsComponent,
     ImagesMosaicsComponent,
-    InfoNewsComponent
+    InfoNewsComponent,
+    LoginComponent,
+    WhoCanAccessComponent,
+    RequestAccessComponent,
+    InfoDashboardComponent
   ],
   imports: [
     CommonModule,
