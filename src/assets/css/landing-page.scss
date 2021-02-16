@@ -281,9 +281,10 @@
       color: #777777;
   
       h1 {
-        font-size: 30px;
-        margin-top: 30px;
+        font-size: 30px !important;
+        margin-top: 30px !important;
       }
+
       .div-left {
         height: 1100px;
         width: 50%;

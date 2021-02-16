@@ -16,6 +16,9 @@ import { LoginComponent } from './login/login.component';
 import { WhoCanAccessComponent } from './who-can-access/who-can-access.component';
 import { RequestAccessComponent } from './request-access/request-access.component';
 import { InfoDashboardComponent } from './info-dashboard/info-dashboard.component';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { createTranslateLoader } from '../app.module';
+import { HttpClient } from '@angular/common/http';
 
 
 @NgModule({
@@ -37,6 +40,13 @@ import { InfoDashboardComponent } from './info-dashboard/info-dashboard.componen
     CommonModule,
     MaterialModule,
     PrimeNgModule,
+    TranslateModule.forChild({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: (createTranslateLoader),
+        deps: [HttpClient],
+      }
+    }),
     LandingPageRoutingModule
   ]
 })
