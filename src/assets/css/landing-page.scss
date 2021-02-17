@@ -318,6 +318,75 @@
       }
   
     }
+
+    .platform {
+      border: 1px solid #777777;
+      width: 100%;
+      position: relative;
+
+      .info-platform {
+        width: 70%;
+      }
+
+      .info-platform-2 {
+        width: 70%;
+        height: 400px;
+      }
+
+      h1 {
+        font-size: 30px !important;
+        color: #777777;
+        margin-top: 40px !important;
+      }
+
+      h2 {
+        font-size: 20px !important;
+        color: #777777;
+        margin-left: 20px !important;
+        width: 600px;
+        margin-top: 30px !important;
+      }
+
+      .Rectangle-Copy-3 {
+        width: 263px;
+        height: 272px;
+        margin: 58px 6px 151px 84px;
+        padding: 62px 60px 66px;
+        border: solid 1px #777777;
+      }
+
+      .Rectangle-Copy-12 {
+        width: 96px;
+        height: 96px;
+        margin: 0 47px 48px 0;
+        border: solid 1px #777777;
+      }
+
+      .Oval-Copy-3 {
+        width: 96px;
+        height: 96px;
+        margin: -96px 0 0 47px;
+        border-radius: 50%;
+        border: solid 1px #777777;
+      }
+    }
+
+    .platform-access {
+      height: 100px;
+      background-color: #f1f2f3;
+    }
+
+    .common-questions {
+      position: relative;
+      height: 500px;
+      width: 100%;
+      border: 1px solid #777777;
+
+      .accordion {
+        width: 70%;
+        padding: 8px;
+      }
+    }
     /* END DESKTOP*/
   }
   

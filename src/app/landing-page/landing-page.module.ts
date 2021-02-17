@@ -19,6 +19,8 @@ import { InfoDashboardComponent } from './info-dashboard/info-dashboard.componen
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { createTranslateLoader } from '../app.module';
 import { HttpClient } from '@angular/common/http';
+import { PlatformComponent } from './platform/platform.component';
+import { CommonQuestionsComponent } from './common-questions/common-questions.component';
 
 
 @NgModule({
@@ -34,7 +36,9 @@ import { HttpClient } from '@angular/common/http';
     LoginComponent,
     WhoCanAccessComponent,
     RequestAccessComponent,
-    InfoDashboardComponent
+    InfoDashboardComponent,
+    PlatformComponent,
+    CommonQuestionsComponent
   ],
   imports: [
     CommonModule,

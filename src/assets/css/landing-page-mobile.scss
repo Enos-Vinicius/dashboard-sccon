@@ -325,5 +325,83 @@
         width: 200px;
       }
     }
+
+    .platform {
+      border: 1px solid #777777;
+      width: 100%;
+      position: relative;
+      height: 1700px;
+
+      .info-platform {
+        width: 70%;
+      }
+
+      .info-platform-2 {
+        width: 70%;
+        height: 400px;
+      }
+
+      h1 {
+        font-size: 20px !important;
+        color: #777777;
+      }
+
+      h2 {
+        font-size: 14px !important;
+        color: #777777;
+        width: 350px;
+        margin-top: 30px !important;
+      }
+
+      .Rectangle-Copy-3 {
+        width: 153px;
+        height: 158px;
+        padding: 36px 35px 38px;
+        border: solid 1px #777777;
+      }
+
+      .Rectangle-Copy-12 {
+        width: 56px;
+        height: 56px;
+        margin: 0 47px 48px 0;
+        border: solid 1px #777777;
+      }
+
+      .Oval-Copy-3 {
+        width: 56px;
+        height: 56px;
+        margin: -75px 0 0 30px;
+        border-radius: 50%;
+        border: solid 1px #777777;
+      }
+    }
+
+    .platform-access {
+      height: 100px;
+      background-color: #f1f2f3;
+      border: 1px solid #777777;
+    }
+
+    .common-questions {
+      position: relative;
+      height: 1000px;
+      width: 100%;
+      border: 1px solid #777777;
+
+      h1 {
+        font-size: 16px;
+        color: #777777;
+        margin-top: 20px !important;
+      }
+
+      .accordion {
+        width: 95%;
+        padding: 8px;
+      }
+
+      .mat-expansion-panel-header {
+        height: 190px;
+      }
+    }
     /* END MOBILE*/
   }
