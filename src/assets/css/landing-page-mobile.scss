@@ -216,8 +216,8 @@
   
       h1 {
         font-size: 16px;
-        margin-bottom: 20px;
-        margin: 20px 0;
+        margin: 20px 0 !important;
+        text-align: center;
       }
   
       .panel {
@@ -401,6 +401,41 @@
 
       .mat-expansion-panel-header {
         height: 190px;
+      }
+    }
+
+    .faq {
+      width: 100%;
+      border: 1px solid #777777;
+
+      h1 {
+        font-size: 27px !important;
+        color: #777777;
+        margin-top: 20px !important;
+        text-align: center;
+      }
+
+      .form {
+        width: 95%;
+      }
+
+      .input-50 {
+        width: 100%;
+      }
+
+      .input-100 {
+        width: 100%;
+      }
+    }
+
+    .footer {
+      height: 100px;
+      background-color: #f1f2f3;
+      border: 1px solid #777777;
+
+      h1 {
+        font-size: 36px;
+        margin: 0px !important;
       }
     }
     /* END MOBILE*/

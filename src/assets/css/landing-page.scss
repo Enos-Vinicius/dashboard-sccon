@@ -387,6 +387,42 @@
         padding: 8px;
       }
     }
+
+    .faq {
+      width: 100%;
+      border: 1px solid #777777;
+
+      h1 {
+        font-size: 30px !important;
+        color: #777777;
+        margin-top: 20px !important;
+      }
+
+      .form {
+        width: 60%;
+      }
+
+      .input-50 {
+        width: 50%;
+        padding: 10px;
+      }
+
+      .input-100 {
+        width: 100%;
+        padding: 10px;
+      }
+    }
+
+    .footer {
+      height: 100px;
+      background-color: #f1f2f3;
+      border: 1px solid #777777;
+
+      h1 {
+        font-size: 36px;
+        margin: 0px !important;
+      }
+    }
     /* END DESKTOP*/
   }
   

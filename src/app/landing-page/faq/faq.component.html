@@ -1,0 +1,82 @@
+<div class="faq" fxLayout="column" fxLayoutAlign="center center" fxLayoutAlign.xs="space-around center">
+    <h1>{{'landing-page.faq.title' | translate}}</h1>
+    
+    <!-- 1ª Linha  -->
+    <div class="form" fxLayout="row"  fxLayout.xs="column">
+        <mat-form-field class="input-50" appearance="outline">
+            <mat-label>Nome</mat-label>
+            <input id="name" name="input-name" formControlName="name" maxlength="9" matInput placeholder="Nome">
+            <mat-error >
+                *Preenchimento de campo obrigatório
+              </mat-error>
+              <mat-error >
+                Quantidade minima de caracteres não informada!
+              </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="input-50" appearance="outline">
+            <mat-label>Email</mat-label>
+            <input id="email" name="input-email" formControlName="email" maxlength="9" matInput placeholder="Email">
+            <mat-error >
+                *Preenchimento de campo obrigatório
+              </mat-error>
+              <mat-error >
+                Quantidade minima de caracteres não informada!
+              </mat-error>
+        </mat-form-field>
+    </div>
+
+    <!-- 2ª Linha  -->
+    <div class="form" fxLayout="row" fxLayout.xs="column">
+        <mat-form-field class="input-50" appearance="outline">
+            <mat-label>Nome da instituição</mat-label>
+            <input id="name" name="input-name" formControlName="name" maxlength="9" matInput placeholder="Nome da instituição">
+            <mat-error >
+                *Preenchimento de campo obrigatório
+              </mat-error>
+              <mat-error >
+                Quantidade minima de caracteres não informada!
+              </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="input-50" appearance="outline">
+            <mat-label>Telefone</mat-label>
+            <input id="email" name="input-email" formControlName="email" maxlength="9" matInput placeholder="Telefone">
+            <mat-error >
+                *Preenchimento de campo obrigatório
+              </mat-error>
+              <mat-error >
+                Quantidade minima de caracteres não informada!
+              </mat-error>
+        </mat-form-field>
+    </div>
+
+    <!-- 3ª Linha  -->
+    <div class="form" fxLayout="row">
+        <mat-form-field class="input-100" appearance="outline">
+            <mat-label>Título</mat-label>
+            <input id="email" name="input-email" formControlName="email" maxlength="9" matInput placeholder="Título">
+            <mat-error >
+                *Preenchimento de campo obrigatório
+              </mat-error>
+              <mat-error >
+                Quantidade minima de caracteres não informada!
+              </mat-error>
+        </mat-form-field>
+    </div>
+
+    <!-- 4ª Linha  -->
+    <div class="form" fxLayout="row">
+        <mat-form-field class="input-100" appearance="outline">
+            <mat-label>Título</mat-label>
+            <textarea rows="6" id="email" name="input-email" formControlName="email" maxlength="9" matInput placeholder="Título"></textarea>
+            <mat-error >
+                *Preenchimento de campo obrigatório
+              </mat-error>
+              <mat-error >
+                Quantidade minima de caracteres não informada!
+              </mat-error>
+        </mat-form-field>
+    </div>
+    <button class="button-radius" routerLink="request-access">Enviar</button>
+</div>

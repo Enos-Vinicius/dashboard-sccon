@@ -21,6 +21,8 @@ import { createTranslateLoader } from '../app.module';
 import { HttpClient } from '@angular/common/http';
 import { PlatformComponent } from './platform/platform.component';
 import { CommonQuestionsComponent } from './common-questions/common-questions.component';
+import { FaqComponent } from './faq/faq.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -38,7 +40,9 @@ import { CommonQuestionsComponent } from './common-questions/common-questions.co
     RequestAccessComponent,
     InfoDashboardComponent,
     PlatformComponent,
-    CommonQuestionsComponent
+    CommonQuestionsComponent,
+    FaqComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,
