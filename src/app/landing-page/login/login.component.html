@@ -1,1 +1,33 @@
-<p>login works!</p>
+<div class="login" fxLayout="row" fxLayoutAlign="center center">
+    <div class="card-login" fxLayout="column" fxLayoutAlign="center center">
+        <h1>Autenticação</h1>
+
+        <div class="form-login" fxLayout="column" fxLayout.xs="column" fxLayoutAlign="center center">
+            <mat-form-field class="input-100" appearance="outline">
+                <mat-label>Email</mat-label>
+                <input id="email" name="input-email" matInput placeholder="Email">
+                <mat-error >
+                    *Preenchimento de campo obrigatório
+                </mat-error>
+                <mat-error >
+                    Quantidade minima de caracteres não informada!
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="input-100" appearance="outline">
+                <mat-label>Password</mat-label>
+                <input type="password" id="password" name="input-password" maxlength="9" matInput placeholder="Password">
+                <mat-error >
+                    *Preenchimento de campo obrigatório
+                </mat-error>
+                <mat-error >
+                    Quantidade minima de caracteres não informada!
+                </mat-error>
+            </mat-form-field>
+            <button class="button-radius-long">Login</button>
+            <div class="recover-password">
+                <a mat-flat-button >Recuperar senha</a>
+            </div>
+        </div>
+    </div>
+</div>

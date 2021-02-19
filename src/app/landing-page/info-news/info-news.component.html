@@ -1,1 +1,34 @@
-<p>info-news works!</p>
+<div class="info-news" fxLayout="column" fxLayoutAlign="center center">
+    <div class="info-news-main" fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="end end" fxLayoutAlign="space-between end">
+        <div fxLayout="row" fxLayoutAlign="end start">
+            <div class="text-news" fxLayout="column" fxLayoutAlign="space-around start">
+                <div class="locale-news">FOLHA DE S. PAULO</div>
+                <div class="title-news">Operação da PF faz a maior apreensão de madeira da história</div>
+                <div class="description-news">Batizada de Handroanthus GLO, ação reteve 131,1 mil metros cúbicos de toras extraídas no oeste do Pará</div>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="end end">
+            <div class="description-news-origin">
+                Toras de madeira nativa apreendidas durante a Operação Handroanthus GLO, da Polícia Federal, no oeste do Pará - Polícia Federal/Divulgação
+            </div>
+        </div>
+    </div>
+    <div class="title-news-container">Notícias em destaque</div>
+    <div class="info-news-container" *ngFor="let item of arrNews">
+        <div fxLayout="row" fxLayoutAlign="space-around start">
+            <div fxLayout="column" class="info-news-description">
+                <div class="title-news-container-item">{{item.title}}</div>
+                <div class="description-news-container">
+                    {{item.description}}
+                </div>
+                <div class="locale-news">{{item.origin}}</div>
+            </div>
+            <div class="img-news"></div>
+        </div>
+    </div>
+    <div class="info-news-faq">
+        <app-faq></app-faq>
+    </div>
+</div>
+<app-footer></app-footer>
+

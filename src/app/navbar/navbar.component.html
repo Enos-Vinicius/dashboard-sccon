@@ -4,11 +4,18 @@
       <mat-icon>menu</mat-icon>
     </button>
     <mat-menu #menu="matMenu" class="menu-style">
-      <button mat-menu-item (click)="redirecTo('landing-page')">Home</button>
-      <button mat-menu-item (click)="redirecTo('landing-page/login')">Acessar Agora</button>
+      <button mat-menu-item (click)="redirecTo('landing-page')">Plataforma PF - SCCON</button>
+      <button mat-menu-item (click)="redirecTo('landing-page')">Imagens diárias e Mosaicos Planet</button>
+      <button mat-menu-item (click)="redirecTo('landing-page')">Dashboard de alertas de mudança</button>
+      <button mat-menu-item (click)="redirecTo('landing-page')">Plataforma EAD</button>
+      <button mat-menu-item (click)="redirecTo('landing-page/info-news')" >Notícias</button>
+      <button class="button-radius-long" (click)="redirecTo('landing-page/login')">Login</button>
+      <div class="text-access">
+        <a mat-flat-button (click)="redirecTo('landing-page/login')">Sem Acesso? Solicite Cadastro</a>
+      </div>
     </mat-menu>
   
-    <span class="spacer text-center ml-5" (click)="redirecTo('landing-page')">PLATAFORMA PF - SCCON</span>
+    <span class="spacer text-center ml-5 cursor-pointer" (click)="redirecTo('landing-page')">PLATAFORMA PF - SCCON</span>
   
     <div class="menu-right text-login">
       <a mat-flat-button (click)="redirecTo('landing-page/login')">Acessar Agora</a>
