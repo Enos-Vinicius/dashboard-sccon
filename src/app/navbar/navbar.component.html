@@ -4,14 +4,15 @@
       <mat-icon>menu</mat-icon>
     </button>
     <mat-menu #menu="matMenu" class="menu-style">
-      <button mat-menu-item (click)="redirecTo('landing-page')">Plataforma PF - SCCON</button>
+      <button mat-menu-item (click)="redirecTo('landing-page')" routerLinkActive="active">Plataforma PF - SCCON</button>
       <button mat-menu-item (click)="redirecTo('landing-page')">Imagens diárias e Mosaicos Planet</button>
       <button mat-menu-item (click)="redirecTo('landing-page')">Dashboard de alertas de mudança</button>
       <button mat-menu-item (click)="redirecTo('landing-page')">Plataforma EAD</button>
       <button mat-menu-item (click)="redirecTo('landing-page/info-news')" >Notícias</button>
       <button class="button-radius-long" (click)="redirecTo('landing-page/login')">Login</button>
+      <button class="button-radius-long" (click)="redirecTo('landing-page/login/logout')">Logout</button>
       <div class="text-access">
-        <a mat-flat-button (click)="redirecTo('landing-page/login')">Sem Acesso? Solicite Cadastro</a>
+        <a mat-flat-button (click)="redirecTo('landing-page/request-access')">Sem Acesso? Solicite Cadastro</a>
       </div>
     </mat-menu>
   

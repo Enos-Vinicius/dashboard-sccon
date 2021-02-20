@@ -438,6 +438,11 @@
         border: solid 1px #777777;
         background-color: white;
 
+        p {
+          width: 95%;
+          text-align: center;
+        }
+        
         h1 {
           font-size: 30px;
           color: #777777;
@@ -517,6 +522,22 @@
 
       .info-news-description {
         width: 70%;
+      }
+    }
+
+    .request-access {
+      width: 100%;
+      height: 93%;
+      border: 1px solid #777777;
+      p {
+        text-align: center;
+      }
+      .container {
+        width: 95%;
+      }
+      h1 {
+        text-align: center;
+        width: 90%;
       }
     }
 
