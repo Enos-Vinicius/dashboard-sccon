@@ -1,6 +1,6 @@
 <div class="common-questions" fxLayout="column" fxLayoutAlign="center center" fxLayoutAlign.xs="space-around center">
     <h1>{{'landing-page.common-questions.title' | translate}}</h1>
-    <mat-accordion class="accordion" *ngFor="let item of arrQuestions">
+    <mat-accordion class="accordion" *ngFor="let item of commonQuestions">
         <mat-expansion-panel (opened)="panelOpenState = true"
                              (closed)="panelOpenState = false">
           <mat-expansion-panel-header>
@@ -8,7 +8,7 @@
                {{item.question}}
             </mat-panel-title>
         </mat-expansion-panel-header>
-          <p>{{item.response}}</p>
+          <p style="white-space: pre-wrap;">{{item.answer}}</p>
         </mat-expansion-panel>
       </mat-accordion>
       <button class="button-radius" routerLink="request-access">Mais perguntas</button>

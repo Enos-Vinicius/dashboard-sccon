@@ -39,5 +39,20 @@
         "faq": {
             "title": "Envia suas dúvidas e sugestões"
         }
+    },
+    "set-erros": {
+        "validate-required": "*Preenchimento de campo obrigatório",
+        "minlength-name": "*Preenchimento de no mínimo 3 caracteres no campo",
+        "invalid-email": "*Email inválido"
+    },
+    "buttons": {
+        "send": "Enviar"
+    },
+    "forms-inputs": {
+        "name": "Nome",
+        "institution": "Nome da instituição",
+        "email": "Email",
+        "phone": "Telefone",
+        "message": "Mensagem"
     }
 }

@@ -45,6 +45,11 @@ $busca-cep-theme: mat-light-theme($busca-cep-primary, $busca-cep-accent);
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
+h1{
+  font-size: 30px !important;
+  margin-top: 20px !important;
+}
+
 .navbar {
     width: 100%;
     height: 64px;

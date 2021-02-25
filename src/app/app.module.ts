@@ -1,14 +1,14 @@
-import { BrowserModule } from '@angular/platform-browser';
+
 import { NgModule } from '@angular/core';
 import localePt from '@angular/common/locales/pt';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NavbarModule } from './navbar/navbar.module';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+
+import { HttpClient } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
 import { registerLocaleData } from '@angular/common';
+import { CoreModule } from './core/core.module';
 
 registerLocaleData(localePt);
 
@@ -20,8 +20,8 @@ export function createTranslateLoader(http: HttpClient) {
     AppComponent
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
+    CoreModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -29,9 +29,7 @@ export function createTranslateLoader(http: HttpClient) {
         deps: [HttpClient]
       }
     }),
-    NavbarModule,
-    HttpClientModule,
-    BrowserAnimationsModule
+
   ],
   providers: [
     TranslateService
@@ -41,4 +39,6 @@ export function createTranslateLoader(http: HttpClient) {
   ],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
+

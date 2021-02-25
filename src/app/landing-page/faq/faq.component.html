@@ -1,82 +1,80 @@
 <div class="faq" fxLayout="column" fxLayoutAlign="center center" fxLayoutAlign.xs="space-around center">
+  <div class="container" >
     <h1>{{'landing-page.faq.title' | translate}}</h1>
-    
-    <!-- 1ª Linha  -->
-    <div class="form" fxLayout="row"  fxLayout.xs="column">
-        <mat-form-field class="input-50" appearance="outline">
-            <mat-label>Nome</mat-label>
-            <input id="name" name="input-name" formControlName="name" maxlength="9" matInput placeholder="Nome">
-            <mat-error >
-                *Preenchimento de campo obrigatório
-              </mat-error>
+    <div [formGroup]="formFaq" >
+      <!-- 1ª Linha  -->
+      <div class="form" fxLayout="row"  fxLayout.xs="column">
+          <mat-form-field class="input-50" appearance="outline">
+            <mat-label>{{'forms-inputs.name' | translate}}</mat-label>
+            <input id="name" name="input-name" formControlName="nome" matInput placeholder="{{'forms-inputs.name' | translate}}">
+            <mat-error *ngIf="formFaq.get('nome').invalid && formFaq.get('nome').touched">
+              <span *ngIf="formFaq.get('nome').errors.required">
+                {{'set-erros.validate-required' | translate}}
+              </span> 
+              <span *ngIf="formFaq.get('nome').errors.minlength">
+                {{'set-erros.minlength-name' | translate}}
+              </span> 
+            </mat-error>
+          </mat-form-field>
+  
+          <mat-form-field class="input-50" appearance="outline">
+              <mat-label>{{'forms-inputs.email' | translate}}</mat-label>
+              <input id="email" name="input-email" formControlName="email" matInput placeholder="{{'forms-inputs.email' | translate}}">
+              <mat-error *ngIf="formFaq.get('email').invalid && formFaq.get('email').touched">
+                  <span *ngIf="formFaq.get('email').errors.required">{{'set-erros.validate-required' | translate}}</span>
+                  <span *ngIf="formFaq.get('email').errors.email">{{'set-erros.invalid-email' | translate}}</span>
+                </mat-error>
+          </mat-form-field>
+      </div>
+  
+      <!-- 2ª Linha  -->
+      <div class="form" fxLayout="row" fxLayout.xs="column">
+          <mat-form-field class="input-50" appearance="outline">
+              <mat-label>{{'forms-inputs.institution' | translate}}</mat-label>
+              <input id="instituicao" name="input-name" formControlName="instituicao" maxlength="9" matInput placeholder="{{'forms-inputs.institution' | translate}}">
+              <mat-error *ngIf="formFaq.get('instituicao').invalid && formFaq.get('instituicao').touched">
+                <span *ngIf="formFaq.get('instituicao').errors.required">{{'set-erros.validate-required' | translate}}</span>
+                </mat-error>
+          </mat-form-field>
+  
+          <mat-form-field class="input-50" appearance="outline">
+              <mat-label>{{'forms-inputs.phone' | translate}}</mat-label>
+              <input id="telefone" name="input-telefone" formControlName="telefone" maxlength="9" matInput placeholder="{{'forms-inputs.phone' | translate}}">
+              <mat-error *ngIf="formFaq.get('telefone').invalid && formFaq.get('telefone').touched">
+                <span *ngIf="formFaq.get('telefone').errors.required">{{'set-erros.validate-required' | translate}}</span>
+                </mat-error>
+          </mat-form-field>
+          <p-inputMask formControlName="telefone" mask="(999) 999-9999? x99999"></p-inputMask>
+      </div>
+  
+      <!-- 3ª Linha  -->
+      <!-- <div class="form" fxLayout="row">
+          <mat-form-field class="input-100" appearance="outline">
+              <mat-label>Título</mat-label>
+              <input id="email" name="input-email" formControlName="email" maxlength="9" matInput placeholder="Título">
               <mat-error >
-                Quantidade minima de caracteres não informada!
+                  *Preenchimento de campo obrigatório
+                </mat-error>
+                <mat-error >
+                  Quantidade minima de caracteres não informada!
+                </mat-error>
+          </mat-form-field>
+      </div> -->
+  
+      <!-- 4ª Linha  -->
+      <div class="form" fxLayout="row">
+          <mat-form-field class="input-100" appearance="outline">
+              <mat-label>{{'forms-inputs.message' | translate}}</mat-label>
+              <textarea rows="6" id="mensagem" name="input-mensagem" formControlName="mensagen" maxlength="9" matInput placeholder="{{'forms-inputs.message' | translate}}"></textarea>
+              <mat-error *ngIf="formFaq.get('mensagen').invalid && formFaq.get('mensagen').touched">
+                <span *ngIf="formFaq.get('mensagen').errors.required">{{'set-erros.validate-required' | translate}}</span>
               </mat-error>
-        </mat-form-field>
-
-        <mat-form-field class="input-50" appearance="outline">
-            <mat-label>Email</mat-label>
-            <input id="email" name="input-email" formControlName="email" maxlength="9" matInput placeholder="Email">
-            <mat-error >
-                *Preenchimento de campo obrigatório
-              </mat-error>
-              <mat-error >
-                Quantidade minima de caracteres não informada!
-              </mat-error>
-        </mat-form-field>
+          </mat-form-field>
+      </div>
+      <div fxLayoutAlign="center center">
+        <button class="button-radius" (click)="submitForm()">{{'buttons.send' | translate}}</button>
+      </div>
     </div>
+  </div>
 
-    <!-- 2ª Linha  -->
-    <div class="form" fxLayout="row" fxLayout.xs="column">
-        <mat-form-field class="input-50" appearance="outline">
-            <mat-label>Nome da instituição</mat-label>
-            <input id="name" name="input-name" formControlName="name" maxlength="9" matInput placeholder="Nome da instituição">
-            <mat-error >
-                *Preenchimento de campo obrigatório
-              </mat-error>
-              <mat-error >
-                Quantidade minima de caracteres não informada!
-              </mat-error>
-        </mat-form-field>
-
-        <mat-form-field class="input-50" appearance="outline">
-            <mat-label>Telefone</mat-label>
-            <input id="email" name="input-email" formControlName="email" maxlength="9" matInput placeholder="Telefone">
-            <mat-error >
-                *Preenchimento de campo obrigatório
-              </mat-error>
-              <mat-error >
-                Quantidade minima de caracteres não informada!
-              </mat-error>
-        </mat-form-field>
-    </div>
-
-    <!-- 3ª Linha  -->
-    <div class="form" fxLayout="row">
-        <mat-form-field class="input-100" appearance="outline">
-            <mat-label>Título</mat-label>
-            <input id="email" name="input-email" formControlName="email" maxlength="9" matInput placeholder="Título">
-            <mat-error >
-                *Preenchimento de campo obrigatório
-              </mat-error>
-              <mat-error >
-                Quantidade minima de caracteres não informada!
-              </mat-error>
-        </mat-form-field>
-    </div>
-
-    <!-- 4ª Linha  -->
-    <div class="form" fxLayout="row">
-        <mat-form-field class="input-100" appearance="outline">
-            <mat-label>Título</mat-label>
-            <textarea rows="6" id="email" name="input-email" formControlName="email" maxlength="9" matInput placeholder="Título"></textarea>
-            <mat-error >
-                *Preenchimento de campo obrigatório
-              </mat-error>
-              <mat-error >
-                Quantidade minima de caracteres não informada!
-              </mat-error>
-        </mat-form-field>
-    </div>
-    <button class="button-radius" routerLink="request-access">Enviar</button>
 </div>
