@@ -42,7 +42,9 @@ export abstract class BaseRecursoService<T extends BaseRecursoModel> {
     }
 
     create(recurso: T): Observable<T> {
-        return this.http.post(this.env.apis.pf + this.apiPath, recurso).pipe(
+        return this.http.post(this.env.apis.pf + this.apiPath, recurso, {headers: {
+            "Content-Type": "application/json;charset=utf-8",
+          }}).pipe(
             catchError(this.handleError),
             map(this.jsonDataToRecurso)
         )

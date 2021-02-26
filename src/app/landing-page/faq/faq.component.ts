@@ -24,11 +24,15 @@ export class FaqComponent implements OnInit {
   
   private buildForm(){
     this.formFaq = this.formBuilder.group({
-      nome: [null, [Validators.required, Validators.minLength(3)]],
+      name: [null, [Validators.required, Validators.minLength(3)]],
       email: [null, [Validators.required, Validators.email,Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]],
-      instituicao: [null, Validators.required],
-      telefone: [null, Validators.required],
-      mensagen: [null, Validators.required]
+      organizationName: [null, Validators.required],
+      appRefId: ['policiafederal'],
+      captchaValue: [null],
+      fone: [null, Validators.required],
+      doubt: [null, Validators.required],
+      receiveCall: [false],
+      receiveEmail: [false],
     })
   }
 
@@ -48,4 +52,5 @@ export class FaqComponent implements OnInit {
   private actionsForError(error){ 
     console.log("Erro ao enviar o e-mail!", error);
   }
+  
 }

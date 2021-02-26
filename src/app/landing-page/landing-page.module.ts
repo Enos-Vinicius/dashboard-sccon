@@ -24,7 +24,7 @@ import { CommonQuestionsComponent } from './common-questions/common-questions.co
 import { FaqComponent } from './faq/faq.component';
 import { FooterComponent } from './footer/footer.component';
 import { SharedModule } from 'src/shared/shared.module';
-
+import { RecaptchaModule, RECAPTCHA_SETTINGS, RecaptchaSettings, RecaptchaLoaderService, RecaptchaFormsModule } from 'ng-recaptcha';
 
 @NgModule({
   declarations: [
@@ -49,6 +49,8 @@ import { SharedModule } from 'src/shared/shared.module';
     CommonModule,
     MaterialModule,
     SharedModule,
+    RecaptchaModule,
+    RecaptchaFormsModule,
     TranslateModule.forChild({
       loader: {
         provide: TranslateLoader,
@@ -58,6 +60,18 @@ import { SharedModule } from 'src/shared/shared.module';
     }),
     LandingPageRoutingModule
   ],
-  exports: []
+  exports: [
+    RecaptchaModule,
+    RecaptchaFormsModule,
+  ],
+  providers: [
+    {
+      provide: RECAPTCHA_SETTINGS,
+      useValue: {
+        siteKey: '6Lc-XM8ZAAAAAMaf1-pwWNfwk7rDHKHCdKzoIhD8',
+      } as RecaptchaSettings,
+    },
+    RecaptchaLoaderService
+  ]
 })
 export class LandingPageModule { }

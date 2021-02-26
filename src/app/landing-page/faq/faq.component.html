@@ -6,12 +6,12 @@
       <div class="form" fxLayout="row"  fxLayout.xs="column">
           <mat-form-field class="input-50" appearance="outline">
             <mat-label>{{'forms-inputs.name' | translate}}</mat-label>
-            <input id="name" name="input-name" formControlName="nome" matInput placeholder="{{'forms-inputs.name' | translate}}">
-            <mat-error *ngIf="formFaq.get('nome').invalid && formFaq.get('nome').touched">
-              <span *ngIf="formFaq.get('nome').errors.required">
+            <input id="name" name="input-name" formControlName="name" matInput placeholder="{{'forms-inputs.name' | translate}}">
+            <mat-error *ngIf="formFaq.get('name').invalid && formFaq.get('name').touched">
+              <span *ngIf="formFaq.get('name').errors.required">
                 {{'set-erros.validate-required' | translate}}
               </span> 
-              <span *ngIf="formFaq.get('nome').errors.minlength">
+              <span *ngIf="formFaq.get('name').errors.minlength">
                 {{'set-erros.minlength-name' | translate}}
               </span> 
             </mat-error>
@@ -31,20 +31,19 @@
       <div class="form" fxLayout="row" fxLayout.xs="column">
           <mat-form-field class="input-50" appearance="outline">
               <mat-label>{{'forms-inputs.institution' | translate}}</mat-label>
-              <input id="instituicao" name="input-name" formControlName="instituicao" maxlength="9" matInput placeholder="{{'forms-inputs.institution' | translate}}">
-              <mat-error *ngIf="formFaq.get('instituicao').invalid && formFaq.get('instituicao').touched">
-                <span *ngIf="formFaq.get('instituicao').errors.required">{{'set-erros.validate-required' | translate}}</span>
+              <input id="instituicao" name="input-name" formControlName="organizationName" matInput placeholder="{{'forms-inputs.institution' | translate}}">
+              <mat-error *ngIf="formFaq.get('organizationName').invalid && formFaq.get('organizationName').touched">
+                <span *ngIf="formFaq.get('organizationName').errors.required">{{'set-erros.validate-required' | translate}}</span>
                 </mat-error>
           </mat-form-field>
   
           <mat-form-field class="input-50" appearance="outline">
               <mat-label>{{'forms-inputs.phone' | translate}}</mat-label>
-              <input id="telefone" name="input-telefone" formControlName="telefone" maxlength="9" matInput placeholder="{{'forms-inputs.phone' | translate}}">
-              <mat-error *ngIf="formFaq.get('telefone').invalid && formFaq.get('telefone').touched">
-                <span *ngIf="formFaq.get('telefone').errors.required">{{'set-erros.validate-required' | translate}}</span>
+              <input id="telefone" name="input-telefone" formControlName="fone" maxlength="15" phoneValidatorMask matInput placeholder="{{'forms-inputs.phone' | translate}}">
+              <mat-error *ngIf="formFaq.get('fone').invalid && formFaq.get('fone').touched">
+                <span *ngIf="formFaq.get('fone').errors.required">{{'set-erros.validate-required' | translate}}</span>
                 </mat-error>
           </mat-form-field>
-          <p-inputMask formControlName="telefone" mask="(999) 999-9999? x99999"></p-inputMask>
       </div>
   
       <!-- 3ª Linha  -->
@@ -65,12 +64,13 @@
       <div class="form" fxLayout="row">
           <mat-form-field class="input-100" appearance="outline">
               <mat-label>{{'forms-inputs.message' | translate}}</mat-label>
-              <textarea rows="6" id="mensagem" name="input-mensagem" formControlName="mensagen" maxlength="9" matInput placeholder="{{'forms-inputs.message' | translate}}"></textarea>
-              <mat-error *ngIf="formFaq.get('mensagen').invalid && formFaq.get('mensagen').touched">
-                <span *ngIf="formFaq.get('mensagen').errors.required">{{'set-erros.validate-required' | translate}}</span>
+              <textarea rows="6" id="mensagem" name="input-mensagem" formControlName="doubt" matInput placeholder="{{'forms-inputs.message' | translate}}"></textarea>
+              <mat-error *ngIf="formFaq.get('doubt').invalid && formFaq.get('doubt').touched">
+                <span *ngIf="formFaq.get('doubt').errors.required">{{'set-erros.validate-required' | translate}}</span>
               </mat-error>
           </mat-form-field>
       </div>
+      <re-captcha formControlName="captchaValue"></re-captcha>
       <div fxLayoutAlign="center center">
         <button class="button-radius" (click)="submitForm()">{{'buttons.send' | translate}}</button>
       </div>

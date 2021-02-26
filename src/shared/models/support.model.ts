@@ -3,11 +3,12 @@ import { BaseRecursoModel } from "./base-resource.model";
 export class Support extends BaseRecursoModel {
     constructor(
         public id?: number, 
+        public appRefId?: string, 
         public nome?: string,
         public email?: string,
-        public instituicao?: string,
-        public telefone?: string,
-        public mensagen?: string
+        public organizationName?: string,
+        public fone?: string,
+        public doubt?: string
     ){
         super();
     }
