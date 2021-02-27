@@ -1,25 +1,35 @@
 <!-- BANNER PRINCIPAL COM IMAGEM, LOGOS E PROGRAMA SAIBA MAIS -->
-<div class="main" fxLayout="column" fxLayoutAlign="space-between">
-    <div class="info-principal" fxLayout="column" fxLayoutAlign="space-between center">
-
-        <div style="margin-top: 50px" fxLayout="row" fxLayoutAlign="space-evenly center">
-            <div class="card-logo"></div>
-            <div class="card-logo"></div>
-            <div class="card-logo"></div>
-        </div>
+<div class="main" fxLayout="column" fxLayoutAlign="center center">
+    <div class="info-principal" fxLayout="column" fxLayoutAlign="space-evenly">
         <div fxLayout="column">
-            <div fxLayout="column">
-                <div class="text-primary text-center">{{'landing-page.main.program' | translate}}</div>
-                <div class="text-secondary text-center">{{'landing-page.main.program-sub-title' | translate}}</div>
-                <div class="text-secondary text-center">{{'landing-page.main.program-sub-title2' | translate}}</div>
-                <div class="text-secondary text-center">{{'landing-page.main.program-sub-title3' | translate}}</div>
+            <div class="banner" fxLayout="column" fxLayoutAlign="space-between">
+                <div class="accent-color title" >{{'landing-page.main.program' | translate}}</div>
+                <div class="title-primary mat-h1">{{'landing-page.main.program-brazil' | translate | uppercase  }}</div>
+                <div class="title accent-color">{{'landing-page.main.program-sub-title' | translate }}</div>
+                <div class="sub-title">{{'landing-page.main.program-sub-title3' | translate}}</div>
             </div>
         </div>
+        <div class="legenda" fxLayout="row" fxLayoutAlign="end end">
+            <span class="white-color text-legenda" fxFlex="40%" fxFlex.xs="80%">
+                Toras de madeira nativa apreendidas durante a Operação Handroanthus GLO, da Polícia Federal, no oeste do Pará. Polícia Federal Divulgação
+            </span>
+            <div class="info"></div>
+        </div>
     </div>
-    <div class="legenda" fxLayout="row" fxLayoutAlign="end end">
-        <span class="text-login" fxFlex="20%" fxFlex.xs="80%">
-            Toras de madeira nativa apreendidas durante a Operação Handroanthus GLO, da Polícia Federal, no oeste do Pará. Polícia Federal Divulgação
-        </span>
-        <div class="info"></div>
+    <div class="info-software" fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="center center" fxLayoutAlign="space-evenly center">
+       <div class="white-color">{{'landing-page.info-software.access' | translate | uppercase}}</div> 
+       <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutAlign.xs="center center">
+            <div class="img-logo"></div>
+            <p>{{'landing-page.info-software.images' | translate}} <br> {{'landing-page.info-software.mosaics' | translate}}</p>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutAlign.xs="center center">
+            <div class="img-logo"></div>
+            <p>{{'landing-page.info-software.dashboard' | translate}}  <br> {{'landing-page.info-software.alerts' | translate}} </p>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutAlign.xs="center center">
+            <div class="img-logo"></div>
+            <p>{{'landing-page.info-software.platform' | translate}}  <br>{{'landing-page.info-software.ead' | translate}} </p>
+        </div>
+        <button (click)="redirecTo('landing-page/login')" mat-raised-button color="accent">{{'buttons.register' | translate | uppercase}}</button>
     </div>
 </div>

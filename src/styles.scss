@@ -35,6 +35,39 @@ $md-mcgpalette-main: (
   )
 );
 
+$md-mcgpalette-light: (
+    50 : #fff9ef,
+    100 : #fff1d7,
+    200 : #ffe8bc,
+    300 : #ffdea1,
+    400 : #ffd78d,
+    500 : #ffd079,
+    600 : #ffcb71,
+    700 : #ffc466,
+    800 : #ffbe5c,
+    900 : #ffb349,
+    A100 : #ffffff,
+    A200 : #ffffff,
+    A400 : #fff8f0,
+    A700 : #ffedd6,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #000000,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
 $custom-typography: mat-typography-config(
   $font-family: 'Montserrat, sans-serif',
   $headline: mat-typography-level(32px, 48px, 700),
@@ -43,13 +76,22 @@ $custom-typography: mat-typography-config(
 @include mat-core($custom-typography);
 
 $dashboard-primary: mat-palette($md-mcgpalette-main);
-$dashboard-accent: mat-palette($md-mcgpalette-main);
+$dashboard-accent: mat-palette($md-mcgpalette-light);
 $dashboard-theme: mat-light-theme($dashboard-primary, $dashboard-accent);
+$white: white;
 
 @include angular-material-theme ($dashboard-theme);
 
 html, body { height: 100%; }
 body { margin: 0; font-family: 'Montserrat', sans-serif; }
+
+.accent-color {
+  color: mat-color($dashboard-accent) !important;
+}
+
+.white-color {
+  color: $white !important;
+}
 
 h1{
   font-size: 30px !important;

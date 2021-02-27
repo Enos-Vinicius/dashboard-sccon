@@ -1,8 +1,9 @@
 {
     "landing-page": {
         "main": {
-            "program": "Programa Brasil Mais",
-            "program-sub-title": "MEIO AMBIENTE INTEGRADO E SEGURAO",
+            "program": "Programa ",
+            "program-brazil": "Brasil Mais",
+            "program-sub-title": "MEIO AMBIENTE INTEGRADO E SEGURO",
             "program-sub-title2": "(PORTARIA MJSP N 535, DE 22 DE SETEMBRO DE 2020)",
             "program-sub-title3": "Subprograma de Consciência Situacional por Sensoriamento Remoto"
         },
@@ -15,7 +16,8 @@
             "ead": "EAD",
             "access-now": "Acessar agora",
             "know-more": "Saiba mais",
-            "request-access": "Sem acesso? Solicite cadastro"
+            "request-access": "Sem acesso? Solicite cadastro",
+            "access": "Acesse: "
         },
         "know-more": {
             "text": "A Plataforma Web permite o acesso e compartilhamento das imagens de satélites diárias adquiridas pela constelação PlanetScope, composta por mais de 130 satélites, fornecidas no âmbito do contrato n° 018/2020 celebrado entre Polícia Federal e a Santiago & Cintra Consultoria – SCCON.",
@@ -46,7 +48,8 @@
         "invalid-email": "*Email inválido"
     },
     "buttons": {
-        "send": "Enviar"
+        "send": "Enviar",
+        "register": "Cadastre-se"
     },
     "forms-inputs": {
         "name": "Nome",

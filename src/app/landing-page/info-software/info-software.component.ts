@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
-
 @Component({
   selector: 'app-info-software',
   templateUrl: './info-software.component.html',
@@ -9,7 +7,7 @@ import { TranslateService } from '@ngx-translate/core';
 export class InfoSoftwareComponent implements OnInit {
 
   constructor(
-
+    
   ) { }
 
   ngOnInit(): void {
