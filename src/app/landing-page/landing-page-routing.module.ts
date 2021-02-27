@@ -9,6 +9,7 @@ const routes: Routes = [
   { path: '', component: PageComponent, pathMatch: 'full' },
   { path: 'info-news', component: InfoNewsComponent},
   { path: 'login', component: LoginComponent},
+  { path: 'login/:type', component: LoginComponent},
   { path: 'request-access', component: RequestAccessComponent}
 ];
 

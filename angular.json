@@ -32,6 +32,8 @@
               "node_modules/primeicons/primeicons.css",
               "node_modules/primeng/resources/themes/saga-blue/theme.css",
               "node_modules/primeng/resources/primeng.min.css",
+              "src/assets/css/landing-page.scss",
+              "src/assets/css/landing-page-mobile.scss",
               "src/styles.scss"
             ],
             "scripts": []

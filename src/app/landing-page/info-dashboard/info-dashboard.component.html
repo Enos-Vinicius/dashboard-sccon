@@ -1,3 +1,42 @@
-<div class="info-dashboard">
-    <div class="Path-4"></div>
+<div class="info-dashboard" fxLayout="column" >
+    <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign="start start">
+        <div class="div-left" fxLayout="column" fxLayoutAlign.xs="start center" fxLayoutAlign="end center">
+            <p>CLASSE DE ALERTAS</p> 
+            <p>- Todas</p>
+            <p>- Cicatriz de Queimadas;</p>
+            <p>- Desmatamento - Acesso;</p>
+            <p>- Desmatamento - Corte Raso;</p>
+            <p>- Desmatamento - Degradação;</p>
+            <p>- Desmatamento - Degradação - Corte Seletivo;</p>
+            <p>- Desmatamento - Extração de Mineral/Garimpo;</p>
+            <p>- Embarcações;</p>
+            <p>- Foco de Queimada;</p>
+            <p>- Pista de Pouso;</p>
+            <br><br>
+            <p> DADOS EM GRÁFICOS</p>
+            <p>- Queimadas</p>
+            <p>- Desmatamentos</p>
+            <p>- Cultivos Ilícitos</p>
+            <p>- Embarcações Ilegais</p>
+            <p>- Pista de Pousos Clandestina</p>
+        </div>
+        <div class="div-right" fxLayout="column" fxLayoutAlign="start start">
+            <h1>Dashboard de alertas de mudança</h1><br>
+            <p>
+                O Dashboard tem o objetivo de apresentar os alertas de detecção de mudanças gerados no âmbito do contrato, a partir de visualização interativa em um mapa e de gráficos produzidos automaticamente a partir dos filtros definidos pelo usuário.
+            </p><br>
+            <p>
+                No Dashboard, após realizar o login, o usuário terá acesso aos alertas de detecção de mudança gerados para as áreas definidas pela Polícia Federal. Vale observar que o Dashboard será disponibilizado somente para usuários com permissão de acesso. 
+            </p><br>
+            <p>   
+                É  possível no dashboard verificar a quantificação de alertas, filtrar por área e período de interesse, além de observar os polígonos no mapa e sua intersecção com outras camadas como, por exemplo, o CAR (Cadastro Ambiental Rural).
+            </p><br><br><br>
+            <p class="text-min">Disponível e acessível também para celulares</p>
+        </div>
+    </div>
+    <p class="text-min-mobile">Disponível e acessível também para celulares</p>
+    <div class="can-access-open" fxLayout="row" fxLayoutAlign="center center">
+        <button class="button-radius-white" routerLink="request-access">Saiba Mais</button>
+        <button class="button-radius-white" routerLink="login">Acessar Agora</button>
+    </div>
 </div>

@@ -13,7 +13,7 @@ import {SplitterModule} from 'primeng/splitter';
     ToastModule,
     CardModule,
     SplitterModule,
-    AccordionModule    
+    AccordionModule 
   ],
   exports: [ 
     CarouselModule,

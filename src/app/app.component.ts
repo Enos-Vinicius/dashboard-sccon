@@ -8,6 +8,7 @@ import Icon from 'ol/style/Icon';
 import OSM from 'ol/source/OSM';
 import * as olProj from 'ol/proj';
 import TileLayer from 'ol/layer/Tile';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -18,7 +19,12 @@ export class AppComponent {
   title = 'dashboard';
   map;
   
+  constructor(
+    private translate: TranslateService
+  ){}
+
   ngOnInit(){
+    this.getCulture();
     this.map = new Map({
       target: 'hotel_map',
       layers: [
@@ -31,5 +37,10 @@ export class AppComponent {
         zoom: 5
       })
     });
+  }
+  
+  getCulture() {
+    this.translate.setDefaultLang('pt');
+    this.translate.use('pt');
   }
 }

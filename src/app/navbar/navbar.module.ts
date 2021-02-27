@@ -1,9 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
 import { NavbarComponent } from './navbar.component';
-import { MaterialModule } from 'src/shared/material.module';
-
-
+import { SharedModule } from 'src/shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -11,10 +10,11 @@ import { MaterialModule } from 'src/shared/material.module';
   ],
   imports: [
     CommonModule,
-    MaterialModule,
+    SharedModule,
   ],
   exports: [
-    NavbarComponent
+    NavbarComponent,
+    SharedModule
   ]
 })
 export class NavbarModule { }
