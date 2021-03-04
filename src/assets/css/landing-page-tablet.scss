@@ -53,4 +53,28 @@ $secondary: #ffd079;
     .display-none-md {
         display: none !important;
     }
+
+    .icon-satelite {
+        width: 84px;
+        height: 72px;
+        background-image: url("../imgs/icons/icon-nav-satelite.png");
+        background-size: 84px 72px;
+        background-repeat: no-repeat;
+    }
+
+    .icon-dashboard {
+        width: 49px;
+        height: 72px;
+        background-image: url("../imgs/icons/icon-nav-dashboard.png");
+        background-size: 49px 72px;
+        background-repeat: no-repeat;
+    }
+
+    .icon-ead {
+        width: 50px;
+        height: 72px;
+        background-image: url("../imgs/icons/icon-nav-ead.png");
+        background-size: 50px 72px;
+        background-repeat: no-repeat;
+    }
 }
