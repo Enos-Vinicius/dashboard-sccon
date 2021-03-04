@@ -1,35 +1,43 @@
+
 <!-- BANNER PRINCIPAL COM IMAGEM, LOGOS E PROGRAMA SAIBA MAIS -->
-<div class="main" fxLayout="column" fxLayoutAlign="center center">
-    <div class="info-principal" fxLayout="column" fxLayoutAlign="space-evenly">
+<div class="main" fxLayout="column" fxLayoutAlign="space-between center" fxLayoutAlign.xs="center center">
+    <div class="info-principal p-lg-10 p-md-11 p-xs-12 p-p-0" fxLayout="column" fxLayoutAlign="space-evenly" fxLayoutAlign.xs="center center">
         <div fxLayout="column">
             <div class="banner" fxLayout="column" fxLayoutAlign="space-between">
-                <div class="accent-color title" >{{'landing-page.main.program' | translate}}</div>
-                <div class="title-primary mat-h1">{{'landing-page.main.program-brazil' | translate | uppercase  }}</div>
-                <div class="title accent-color">{{'landing-page.main.program-sub-title' | translate }}</div>
-                <div class="sub-title">{{'landing-page.main.program-sub-title3' | translate}}</div>
+                <div class="accent-color kicker-featured" >{{'landing-page.main.program' | translate}}</div>
+                <div class="h1-featured white-color">{{'landing-page.main.program-brazil' | translate }}</div>
+                <div class="accent-color kicker-featured ">{{'landing-page.main.program-sub-title' | translate }}</div>
+                <div class="h3-featured white-color p-lg-5 p-p-0">{{'landing-page.main.program-sub-title3' | translate}}</div>
             </div>
         </div>
-        <div class="legenda" fxLayout="row" fxLayoutAlign="end end">
-            <span class="white-color text-legenda" fxFlex="40%" fxFlex.xs="80%">
-                Toras de madeira nativa apreendidas durante a Operação Handroanthus GLO, da Polícia Federal, no oeste do Pará. Polícia Federal Divulgação
-            </span>
-            <div class="info"></div>
+        <div class="legenda p-lg-12 p-md-12 p-p-0" fxLayout="row" fxLayoutAlign="end end">
+            <div class="text-legenda p-lg-4 p-md-6" fxLayout="row" fxLayoutAlign="center center">
+                <span class="white-color">
+                    Toras de madeira nativa apreendidas durante a Operação Handroanthus GLO, da Polícia Federal, no oeste do Pará. Polícia Federal Divulgação
+                </span>
+               <span class="more-info accent-color kicker-featured">+</span>
+            </div>
         </div>
     </div>
-    <div class="info-software" fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="center center" fxLayoutAlign="space-evenly center">
-       <div class="white-color">{{'landing-page.info-software.access' | translate | uppercase}}</div> 
-       <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutAlign.xs="center center">
-            <div class="img-logo"></div>
-            <p>{{'landing-page.info-software.images' | translate}} <br> {{'landing-page.info-software.mosaics' | translate}}</p>
+    <div class="p-lg-1 white-color">{{'landing-page.info-software.access' | translate | uppercase}}</div> 
+    <div class="info-software p-lg-10 p-xl-10 p-md-12 p-xs-12 p-flex-lg-row p-flex-md-column p-jc-md-center" fxLayout="row" fxLayout.xs="column">
+        <div class="p-lg-10 p-md-12 p-flex-row" fxLayoutAlign="space-evenly center">
+            <div class="p-lg-1 display-none-md white-color">{{'landing-page.info-software.access' | translate | uppercase}}</div> 
+            <div class="p-lg-3 p-md-4" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center center" fxLayoutAlign.xs="center center">
+                 <img src="../../../assets/imgs/icons/icon-nav-satelite.png" width="110" height="94" alt="Ícone de Satélite">
+                 <p class="p-ml-3 white-color h4-featured">{{'landing-page.info-software.images' | translate}} <br> {{'landing-page.info-software.mosaics' | translate}}</p>
+             </div>
+             <div class="p-lg-3 p-md-4" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center center" fxLayoutAlign.xs="center center">
+                 <img src="../../../assets/imgs/icons/icon-nav-dashboard.png" width="64" height="94" alt="Ícone de Satélite">
+                 <p class="p-ml-3 white-color h4-featured">{{'landing-page.info-software.dashboard' | translate}}  <br> {{'landing-page.info-software.alerts' | translate}} </p>
+             </div>
+             <div class="p-lg-3 p-md-4" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center center" fxLayoutAlign.xs="center center">
+                 <img src="../../../assets/imgs/icons/icon-nav-ead.png" width="65" height="94" alt="Ícone de Satélite">
+                 <p class="p-ml-3 white-color h4-featured">{{'landing-page.info-software.platform' | translate}}  <br>{{'landing-page.info-software.ead' | translate}} </p>
+             </div>
         </div>
-        <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutAlign.xs="center center">
-            <div class="img-logo"></div>
-            <p>{{'landing-page.info-software.dashboard' | translate}}  <br> {{'landing-page.info-software.alerts' | translate}} </p>
+        <div class="p-lg-2 p-md-12" fxLayoutAlign="center center">
+            <button (click)="redirecTo('landing-page/login')" mat-raised-button color="accent">{{'buttons.register' | translate | uppercase}}</button>
         </div>
-        <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutAlign.xs="center center">
-            <div class="img-logo"></div>
-            <p>{{'landing-page.info-software.platform' | translate}}  <br>{{'landing-page.info-software.ead' | translate}} </p>
-        </div>
-        <button (click)="redirecTo('landing-page/login')" mat-raised-button color="accent">{{'buttons.register' | translate | uppercase}}</button>
     </div>
 </div>

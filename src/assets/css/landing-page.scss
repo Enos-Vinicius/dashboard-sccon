@@ -1,22 +1,21 @@
 $white: white;
+$primary: #000000;
+$secondary: #ffd079;
 /* DESKTOP */
-@media (min-width: 376px) {
+@media (min-width: 769px) {
 
-    .navbar-title {
-      font-size: 20px;
-      color: #777777;
+  .main { 
+      width: 100%;
+      height: 900px;
+      background-image: url("../imgs/Bitmap-1.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 100% 900px;
     }
     
-    .main { 
-      width: 100%;
-      height: 800px;
-      border: solid 1px #777777;
-      background-color: #f1f2f3;
-
-    }
-
     .title {
       font-size: 28px;
+      font-weight: 600; color: $primary;
     }
 
     .login {
@@ -67,58 +66,22 @@ $white: white;
     
     .text-legenda {
       background-color: rgba(0,0,0,0.4);
-      padding: 20px;
+      padding: 10px;
       font-size: 14px;
     }
   
     .info-principal {
-      height: 700px;
-      width: 80%;
-
-      .title-primary {
-        color: $white;
-        font-size: 80px !important;
-      }
+      margin-top: 150px;
 
       .banner {
         height: 250px;
       }
 
-      .sub-title {
-        width: 60%;
-        color: $white;
-      }
     }
   
     .info-software {
       height: 200px;
-      width: 80%;
       background-color: rgba(0,0,0,0.6);
-  
-      // p {
-      //   font-size: 20px;
-      //   padding: 5px;    
-      //   color: #777777;
-      //   width: 154px;
-      //   text-align: center;
-      // }
-  
-      // button {
-      //   width: 260px;
-      //   height: 40px;
-      //   border-radius: 29.5px;
-      //   border: solid 1px #777777;
-      //   background-color: #f1f2f3;
-      // }
-  
-      // .text-login {
-      //   width: 240px;
-      //   font-size: 16px;
-      //   padding: 10px;
-      //   text-align: center;
-      //   border-bottom: solid 1px #777777;
-      //   cursor: pointer;
-      // }
     }
   
     .login-access {
@@ -550,6 +513,54 @@ $white: white;
       .container {
         width: 100%;
       }
+    }
+
+    .more-info {
+      cursor: pointer;
+    }
+
+    /* TYPOGRAPHY */
+    .kicker-featured{font-size: 32px;font-weight: 600; color: $primary;}
+    .h1-featured{font-size: 80px;font-weight: bold; color: $primary; line-height: 80px;}
+    .h2-featured{font-size: 28px;font-weight: 600; color: $primary;}
+    .h3-featured{font-size: 22px;font-weight: 500; color: $primary;}
+    .h4-featured{font-size: 16px;font-weight: 500; color: $primary;}
+    .caption-featured{font-size: 14px;font-weight: 500; color: $primary;}
+    .h1-section{font-size: 28px;font-weight: bold; color: $primary;}
+    .h2-section{font-size: 22px;font-weight: 600; color: $primary;}
+    .body-section{font-size: 18px;font-weight: 400; color: $primary;}
+    .list-section{font-size: 16px;font-weight: 500; color: $primary;}
+    .caption-section{font-size: 22px;font-weight: 600; color: $primary;}
+    .numbers{font-size: 140px;font-weight: 600; color: $primary; line-height: 140px;}
+    .h1-news{font-size: 36px;font-weight: 600; color: $primary;}
+    .a-link{font-size: 18px;font-weight: 500; border-bottom: 1px solid rgba(0,0,0,0.3);color: $primary; cursor: pointer;}
+    .a-link:hover{font-size: 18px;font-weight: 500; border-bottom: 1px solid rgba(0,0,0,0.7);color: $primary; cursor: pointer;}
+    /* END TYPOGRAPHY*/
+
+    .kicker-featured-mb{font-size: 24px;font-weight: 600;color: $primary;}
+    .h1-featured-mb{font-size: 48px;font-weight: bold;line-height: 48px;color: $primary;}
+    .h2-featured-mb{font-size: 18px;font-weight: 600;color: $primary;}
+    .h3-featured-mb{font-size: 16px;font-weight: 600;color: $primary;}
+    .h4-featured-mb{font-size: 12px;font-weight: 500;color: $primary;}
+    .caption-featured-mb{font-size: 12px;font-weight: 500;color: $primary;}
+    .h1-section-mb{font-size: 20px;font-weight: bold;color: $primary;}
+    .h2-section-mb{font-size: 18px;font-weight: 600;color: $primary;}
+    .body-section-mb{font-size: 16px;font-weight: 500;color: $primary;}
+    .list-section-mb{font-size: 14px;font-weight: 500;color: $primary;}
+    .caption-section-mb{font-size: 18px;font-weight: 600;color: $primary;}
+    .numbers-mb{font-size: 120px;font-weight: 600; line-height: 120px;color: $primary;}
+    .h1-news-mb{font-size: 22px;font-weight: 600;color: $primary;}
+    .a-link-mb{font-size: 16px;font-weight: 500; border-bottom: 1px solid rgba(0,0,0,0.3);color: $primary; cursor: pointer;}
+    .a-link-mb:hover{font-size: 16px;font-weight: 500; border-bottom: 1px solid rgba(0,0,0,0.7);color: $primary; cursor: pointer;}
+
+    .paginator-example {
+      .p-carousel .p-carousel-content .p-carousel-prev, .p-carousel .p-carousel-content .p-carousel-next {
+          display: none;
+      }
+    }
+
+    .black-container {
+      background: #333333;
     }
     /* END DESKTOP*/
   }

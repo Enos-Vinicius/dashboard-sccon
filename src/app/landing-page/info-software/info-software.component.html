@@ -1,21 +1,487 @@
-<!-- SECTION DE DIVULGAÇÃO DO ECOSSISTEMA SSCON -->
-<div class="info-software" fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="center center" fxLayoutAlign="center center">
-    <!-- <div fxLayout="row">
-        <div fxLayout="column" fxLayoutAlign="space-between center" fxLayoutAlign.xs="center center">
-            <div class="img-logo"></div>
-            <p>{{'landing-page.info-software.images' | translate}} <br> {{'landing-page.info-software.mosaics' | translate}}</p>
-        </div>
-        <div fxLayout="column" fxLayoutAlign="space-between center" fxLayoutAlign.xs="center center">
-            <div class="img-logo"></div>
-            <p>{{'landing-page.info-software.dashboard' | translate}}  <br> {{'landing-page.info-software.alerts' | translate}} </p>
-        </div>
-        <div fxLayout="column" fxLayoutAlign="space-between center" fxLayoutAlign.xs="center center">
-            <div class="img-logo"></div>
-            <p>{{'landing-page.info-software.platform' | translate}}  <br>{{'landing-page.info-software.ead' | translate}} </p>
-        </div>
-    </div>
-    <div class="info-access" fxLayout="column" fxLayoutAlign="center center">
-        <button mat-button routerLink="login">{{'landing-page.info-software.access-now' | translate}}</button>
-        <div class="text-login" fxLayoutAlign="end center" routerLink="landing-page/request-access">{{'landing-page.info-software.request-access' | translate}}</div>
-    </div> -->
+<div class="p-grid" style="margin-top: 100px;">
+    <p-tabView class="p-col-12" fxLayoutAlign="center center">
+
+        <p-tabPanel header="Comparisson slider" >
+            <div style="width: 1600px;" fxLayoutAlign="center center">
+                    <div class="p-col-12" style="margin-bottom: 20px; border: 1px solid black; padding: 0px; height: 500px;" fxLayout="column" fxLayoutAlign="start center">
+                        <div class="p-col-12 bk-color-secondary" style="height: 80px; ;" fxLayout="row" fxLayoutAlign="center center">
+                            <div fxLayout="column" fxLayoutAlign="start start">
+                                <div class="list-section">SCCON - PF - DS</div>
+                                <span class="kicker-featured">Comparisson slider</span>
+                            </div>
+                        </div>
+                        <div class="p-col-8">
+                            <p-splitter [style]="{'height': '300px', 'background-color': '#333333'}">
+                                <ng-template>
+
+                                </ng-template>
+                                <ng-template>
+
+                                </ng-template>
+                            </p-splitter>
+                        </div>
+                    </div>
+            </div>
+        </p-tabPanel>
+        
+        <p-tabPanel header="Grid System">
+            <!-- GRID DESKTOP -->
+            <div style="border: 1px solid black; margin-bottom: 20px;">
+                <div class="bk-color-secondary" style="width: 1600px;" fxLayout="row" fxLayoutAlign="center center">
+                    <div fxLayout="row" fxLayoutAlign="space-between center" class="p-col-10 bk-color-secondary">
+                        <div fxLayout="column" fxLayoutAlign="start start" style="height: 80px;">
+                            <div class="list-section">SCCON - PF - DS</div>
+                            <div class="kicker-featured">Grid Large (LG)</div>
+                        </div>
+                        <span class="p-col-2" fxLayoutAlign="end end">Width: 1600px</span>
+                    </div>
+                </div>
+                <div fxLayout="column" fxLayoutAlign="center center" >
+                    <div class="p-col-10 p-0" fxLayout="row" fxLayoutAlign="space-between center" style="padding: 0px">
+                        <div class="spacing-21" style="background-color: #6999ff; opacity: 0.1; height: 400px; width: 20px;"></div>
+                        <div class="spacing-21" style="background-color: #6999ff; opacity: 0.2; height: 400px; width: 20px;"></div>
+                        <div class="spacing-21" style="background-color: #6999ff; opacity: 0.2; height: 400px; width: 20px;"></div>
+                        <div class="spacing-21" style="background-color: #6999ff; opacity: 0.2; height: 400px; width: 20px;"></div>
+                        <div class="spacing-21" style="background-color: #6999ff; opacity: 0.2; height: 400px; width: 20px;"></div>
+                        <div class="spacing-21" style="background-color: #6999ff; opacity: 0.2; height: 400px; width: 20px;"></div>
+                        <div class="spacing-21" style="background-color: #6999ff; opacity: 0.2; height: 400px; width: 20px;"></div>
+                        <div class="spacing-21" style="background-color: #6999ff; opacity: 0.2; height: 400px; width: 20px;"></div>
+                        <div class="spacing-21" style="background-color: #6999ff; opacity: 0.2; height: 400px; width: 20px;"></div>
+                        <div class="spacing-21" style="background-color: #6999ff; opacity: 0.2; height: 400px; width: 20px;"></div>
+                        <div class="spacing-21" style="background-color: #6999ff; opacity: 0.2; height: 400px; width: 20px;"></div>
+                        <div class="spacing-21" style="background-color: #6999ff; opacity: 0.2; height: 400px; width: 20px;"></div>
+                        <div class="spacing-21" style="background-color: #6999ff; opacity: 0.1; height: 400px; width: 20px;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GRID SMALLs -->
+            <div fxLayout="row" fxLayoutAlign="space-around center">
+                <!-- GRID TABLET -->
+                <div fxLayout="column" style="border: 1px solid black;">
+                    <div class="bk-color-secondary" style="width: 768px;" fxLayout="row" fxLayoutAlign="space-between center">
+                        <div class="p-col-10 bk-color-secondary" fxLayout="column" fxLayoutAlign="start start" style="height: 80px;">
+                            <div class="list-section">SCCON - PF - DS</div>
+                            <div class="kicker-featured">Grid Small (SM)</div>
+                        </div>
+                        <span class="p-col-2">Width: 768px</span>
+                    </div>
+                    <div fxLayout="column" fxLayoutAlign="center center">
+                        <div class="p-col-12 p-0" fxLayout="row" fxLayoutAlign="space-between center" style="padding: 0px">
+                            <div  class="spacing-21" style="background-color: #6999ff; opacity: 0.1; height: 400px; width: 20px;"></div>
+                            <div  class="spacing-21" style="background-color: #6999ff; opacity: 0.1; height: 400px; width: 20px;"></div>
+                            <div  class="spacing-21" style="background-color: #6999ff; opacity: 0.1; height: 400px; width: 20px;"></div>
+                            <div  class="spacing-21" style="background-color: #6999ff; opacity: 0.1; height: 400px; width: 20px;"></div>
+                            <div  class="spacing-21" style="background-color: #6999ff; opacity: 0.1; height: 400px; width: 20px;"></div>
+                            <div  class="spacing-21" style="background-color: #6999ff; opacity: 0.1; height: 400px; width: 20px;"></div>
+                            <div  class="spacing-21" style="background-color: #6999ff; opacity: 0.1; height: 400px; width: 20px;"></div>
+                            <div  class="spacing-21" style="background-color: #6999ff; opacity: 0.1; height: 400px; width: 20px;"></div>
+                            <div  class="spacing-21" style="background-color: #6999ff; opacity: 0.1; height: 400px; width: 20px;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GRID CELULAR -->
+                <div fxLayout="column" style="border: 1px solid black;">
+                    <div class="bk-color-secondary" style="width: 375px;" fxLayout="row" fxLayoutAlign="space-between center">
+                        <div class="p-col-10 bk-color-secondary" fxLayout="column" fxLayoutAlign="start start" style="height: 80px;">
+                            <div class="list-section">SCCON - PF - DS</div>
+                            <div class="kicker-featured">Grid XSmall (XS)</div>
+                        </div>
+                        <span class="p-col-2">Width: 375px</span>
+                    </div>
+                    <div fxLayout="column" fxLayoutAlign="center center">
+                        <div class="p-col-12 p-0" fxLayout="row" fxLayoutAlign="space-between center" style="padding: 0px">
+                            <div  class="spacing-21" style="background-color: #6999ff; opacity: 0.1; height: 400px; width: 20px;"></div>
+                            <div  class="spacing-21" style="background-color: #6999ff; opacity: 0.1; height: 400px; width: 20px;"></div>
+                            <div  class="spacing-21" style="background-color: #6999ff; opacity: 0.1; height: 400px; width: 20px;"></div>
+                            <div  class="spacing-21" style="background-color: #6999ff; opacity: 0.1; height: 400px; width: 20px;"></div>
+                            <div  class="spacing-21" style="background-color: #6999ff; opacity: 0.1; height: 400px; width: 20px;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </p-tabPanel>
+
+        <p-tabPanel header="Tipography">
+            <div class="p-col" style="min-width: 1600px" fxLayout="row" fxLayoutAlign="space-between center">
+                <!--DESKTOP-->
+                <div class="p-col-5" fxLayout="column" fxLayoutAlign="space-between start" style="height: 600px;">
+                    <div class="h4-featured">Large - LG</div>
+                    <div class="kicker-featured">kicker-featured</div>
+                    <div class="h1-featured">h1-featured</div>
+                    <div class="h2-featured">h2-featured</div>
+                    <div class="h3-featured">h3-featured</div>
+                    <div class="h4-featured">h4-featured</div>
+                    <div class="caption-featured">caption-featured</div>
+                    <div class="h1-section">h1-section</div>
+                    <div class="h2-section">h2-section</div>
+                    <div class="body-section">body-section</div>
+                    <div class="list-section">list-section</div>
+                    <div class="caption-section">caption-section</div>
+                    <div class="numbers">numbers</div>
+                    <div class="h1-news">h1-news</div>
+                    <div class="a-link">a: link</div>
+                    <div class="a-link">a: link-hover</div>
+                </div>
+                <!--TABLET-->
+                <div class="p-col-4" fxLayout="column" fxLayoutAlign="space-around start" style="height: 600px;">
+                    <div class="h4-featured">Small - SM</div>
+                    <div class="h4-featured">Large - LG</div>
+                    <div class="kicker-featured">kicker-featured</div>
+                    <div class="h1-featured">h1-featured</div>
+                    <div class="h2-featured">h2-featured</div>
+                    <div class="h3-featured">h3-featured</div>
+                    <div class="h4-featured">h4-featured</div>
+                    <div class="caption-featured">caption-featured</div>
+                    <div class="h1-section">h1-section</div>
+                    <div class="h2-section">h2-section</div>
+                    <div class="body-section">body-section</div>
+                    <div class="list-section">list-section</div>
+                    <div class="caption-section">caption-section</div>
+                    <div class="numbers">numbers</div>
+                    <div class="h1-news">h1-news</div>
+                    <div class="a-link">a: link</div>
+                    <div class="a-link">a: link-hover</div>
+                </div>
+                <!--MOBILE-->
+                <div class="p-col-3" fxLayout="column" fxLayoutAlign="space-around start" style="height: 600px;">
+                    <div class="h4-featured">XSmall XS</div>
+                    <div class="h4-featured-mb">Large - LG</div>
+                    <div class="kicker-featured-mb">kicker-featured</div>
+                    <div class="h1-featured-mb">h1-featured</div>
+                    <div class="h2-featured-mb">h2-featured</div>
+                    <div class="h3-featured-mb">h3-featured</div>
+                    <div class="h4-featured-mb">h4-featured</div>
+                    <div class="caption-featured-mb">caption-featured</div>
+                    <div class="h1-section-mb">h1-section</div>
+                    <div class="h2-section-mb">h2-section</div>
+                    <div class="body-section-mb">body-section</div>
+                    <div class="list-section-mb">list-section</div>
+                    <div class="caption-section-mb">caption-section</div>
+                    <div class="numbers-mb">numbers</div>
+                    <div class="h1-news-mb">h1-news</div>
+                    <div class="a-link-mb">a: link</div>
+                    <div class="a-link-mb">a: link-hover</div>
+                </div>
+            </div>
+        </p-tabPanel>
+
+        <p-tabPanel header="Buttons" >
+            <div style="width: 1600px;" fxLayoutAlign="center center">
+                <div style="margin-bottom: 20px; border: 1px solid black; height: 800px;" fxLayout="column" fxLayoutAlign="space-between center">
+                    <div class="bk-color-secondary" style=" width: 800px; height: 80px;" fxLayout="row" fxLayoutAlign="center center">
+                        <div fxLayout="column" fxLayoutAlign="start start">
+                            <div class="list-section">SCCON - PF - DS</div>
+                            <span class="kicker-featured">Buttons</span>
+                        </div>
+                    </div>
+                    <div class="p-col-10">
+                        <div class="list-section">40px height</div>
+                    </div>
+                    <div class="p-col-10" fxLayout="row" fxLayoutAlign="space-between center">
+                        <button class="button-md" mat-flat-button color="accent">ENABLE</button>
+                        <button class="button-md" mat-flat-button color="accent">HOVERED</button>
+                        <button class="button-md" mat-flat-button color="accent">PRESSED</button>
+                        <button class="button-md" mat-flat-button color="accent" disabled>DISABLED</button>
+                    </div>
+                    <div class="p-col-10" fxLayout="row" fxLayoutAlign="space-between center">
+                        <button class="button-md" mat-stroked-button color="accent">ENABLE</button>
+                        <button class="button-md" mat-stroked-button color="accent">HOVERED</button>
+                        <button class="button-md" mat-stroked-button color="accent">PRESSED</button>
+                        <button class="button-md" mat-stroked-button color="accent" disabled>DISABLED</button>
+                    </div>
+                    <div class="p-col-10" style="background-color: #333333;" fxLayout="row" fxLayoutAlign="space-between center">
+                        <button class="button-md" mat-button color="accent">ENABLE</button>
+                        <button class="button-md" mat-button color="accent">HOVERED</button>
+                        <button class="button-md" mat-button color="accent">PRESSED</button>
+                        <button class="button-md" mat-button color="accent" disabled>DISABLED</button>
+                    </div>
+                    <div class="p-col-10">
+                        <div class="list-section">48px height</div>
+                    </div>
+                    <div class="p-col-10" fxLayout="row" fxLayoutAlign="space-between center">
+                        <button class="button-lg" mat-flat-button color="accent">ENABLE</button>
+                        <button class="button-lg" mat-flat-button color="accent">HOVERED</button>
+                        <button class="button-lg" mat-flat-button color="accent">PRESSED</button>
+                        <button class="button-lg" mat-flat-button color="accent" disabled>DISABLED</button>
+                    </div>
+                    <div class="p-col-10" fxLayout="row" fxLayoutAlign="space-between center">
+                        <button class="button-lg" mat-stroked-button color="accent">ENABLE</button>
+                        <button class="button-lg" mat-stroked-button color="accent">HOVERED</button>
+                        <button class="button-lg" mat-stroked-button color="accent">PRESSED</button>
+                        <button class="button-lg" mat-stroked-button color="accent" disabled>DISABLED</button>
+                    </div>
+                    <div class="p-col-10" style="background-color: #333333;" fxLayout="row" fxLayoutAlign="space-between center">
+                        <button class="button-lg" mat-button color="accent">ENABLE</button>
+                        <button class="button-lg" mat-button color="accent">HOVERED</button>
+                        <button class="button-lg" mat-button color="accent">PRESSED</button>
+                        <button class="button-lg" mat-button color="accent" disabled>DISABLED</button>
+                    </div>
+                    <div class="p-col-10">
+                        <div class="list-section">Icons Buttons</div>
+                    </div>
+                    <div class="p-col-10" fxLayout="row" fxLayoutAlign="space-between center">
+                        <button type="button" class="p-carousel-next p-link p-ripple"><span class="p-carousel-prev-icon pi pi-chevron-right"></span></button>
+                        <button type="button" class="p-carousel-next p-link p-ripple" style="background-color: rgba(0, 0, 0, 0.05) !important; border-radius: 50%;"><span class="p-carousel-prev-icon pi pi-chevron-right"></span></button>
+                        <button type="button" class="p-carousel-next p-link p-ripple" style="background-color: rgba(0, 0, 0, 0.07) !important; border-radius: 50%;"><span class="p-carousel-prev-icon pi pi-chevron-right"></span></button>
+                        <button type="button" disabled class="p-carousel-next p-link p-ripple" ><span class="p-carousel-prev-icon pi pi-chevron-right"></span></button>
+                    </div>
+                    <div class="p-col-10" style="background-color: #333333;" fxLayout="row" fxLayoutAlign="space-between center">
+                        <div class="pi-secondary">
+                            <button type="button" class="p-carousel-next p-link p-ripple"><span class="p-carousel-prev-icon pi pi-chevron-right"></span></button>
+                        </div>
+                        <div class="pi-secondary">
+                            <button type="button" class="p-carousel-next p-link p-ripple" style="background-color: rgba(255, 207, 105, 0.05) !important; border-radius: 50%;"><span class="p-carousel-prev-icon pi pi-chevron-right"></span></button>
+                        </div>
+                        <div class="pi-secondary">
+                            <button type="button" class="p-carousel-next p-link p-ripple" style="background-color: rgba(255, 207, 105, 0.07) !important; border-radius: 50%;"><span class="p-carousel-prev-icon pi pi-chevron-right"></span></button>
+                        </div>
+                        <div class="pi-secondary">
+                            <button type="button" disabled class="p-carousel-next p-link p-ripple" ><span class="p-carousel-prev-icon pi pi-chevron-right"></span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </p-tabPanel>
+
+        <p-tabPanel header="Text field" >
+            <div style=" width: 1600px;" fxLayoutAlign="center center">
+                    <div style="margin-bottom: 20px; border: 1px solid black; height: 800px;" fxLayout="column" fxLayoutAlign="space-between center">
+                        <div class="bk-color-secondary" style=" width: 800px; height: 80px;" fxLayout="row" fxLayoutAlign="center center">
+                            <div fxLayout="column" fxLayoutAlign="start start">
+                                <div class="list-section">SCCON - PF - DS</div>
+                                <span class="kicker-featured">Text field</span>
+                            </div>
+                        </div>
+                        <div class="p-col-12">
+                            <form class="example-form p-col-12">
+                                <div class="h1-section">Outlined</div>
+                                <div fxLayout="row" fxLayoutAlign="center center">
+                                    <mat-form-field class="p-col-5 example-full-width" appearance="outline">
+                                        <mat-label>Input Text</mat-label>
+                                        <input type="input" matInput [formControl]="inputText" [errorStateMatcher]="matcher"
+                                                placeholder="Input Text">
+                                        <mat-hint>Assistive text</mat-hint>
+                                        <mat-error *ngIf="inputText.hasError('required')">
+                                            *Campo Obrigatório
+                                        </mat-error>
+                                    </mat-form-field>
+                                    <mat-form-field class="p-col-5 example-full-width" appearance="outline">
+                                        <mat-label>Input Text</mat-label>
+                                        <input type="input" matInput [formControl]="inputText" [errorStateMatcher]="matcher"
+                                                placeholder="Input Text">
+                                        <mat-hint>Assistive text</mat-hint>
+                                        <mat-error *ngIf="inputText.hasError('required')">
+                                            *Campo Obrigatório
+                                        </mat-error>
+                                    </mat-form-field>
+                                    <span class="list-section">Activated</span>
+                                </div>
+                                <div fxLayout="row" fxLayoutAlign="center center">
+                                    <mat-form-field class="p-col-5 example-full-width" appearance="outline">
+                                        <mat-label>Input Text</mat-label>
+                                        <input type="input" matInput [formControl]="inputTextDisabled" placeholder="Input Text">
+                                        <mat-hint>Assistive text</mat-hint>
+                                        <mat-error *ngIf="inputTextDisabled.hasError('required')">
+                                            *Campo Obrigatório
+                                        </mat-error>
+                                    </mat-form-field>
+                                    <mat-form-field class="p-col-5 example-full-width" appearance="outline">
+                                        <mat-label>Input Text</mat-label>
+                                        <input type="input" matInput [formControl]="inputTextDisabled" placeholder="Input Text">
+                                        <mat-hint>Assistive text</mat-hint>
+                                        <mat-error *ngIf="inputTextDisabled.hasError('required')">
+                                            *Campo Obrigatório
+                                        </mat-error>
+                                    </mat-form-field>
+                                    <span class="list-section">Disabled</span>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="p-col-12" >
+                            <div class="h1-section" style="margin-bottom: 20px;">Filled</div>
+                            <form class="example-form p-col-12" style="background-color: #333333;">
+                                <div class="black-input" fxLayout="row" fxLayoutAlign="center center">
+                                    <mat-form-field class="p-col-5 example-full-width" appearance="outline">
+                                        <mat-label>Input Text</mat-label>
+                                        <input type="input" matInput [formControl]="inputTextDisabled" [errorStateMatcher]="matcher"
+                                                placeholder="Input Text">
+                                        <mat-hint>Assistive text</mat-hint>
+                                        <mat-error *ngIf="inputText.hasError('required')">
+                                            *Campo Obrigatório
+                                        </mat-error>
+                                    </mat-form-field>
+                                    <mat-form-field class="p-col-5 example-full-width" appearance="outline">
+                                        <mat-label>Input Text</mat-label>
+                                        <input type="input" matInput [formControl]="inputTextDisabled" [errorStateMatcher]="matcher"
+                                                placeholder="Input Text">
+                                        <mat-hint>Assistive text</mat-hint>
+                                        <mat-error *ngIf="inputText.hasError('required')">
+                                            *Campo Obrigatório
+                                        </mat-error>
+                                    </mat-form-field>
+                                    <span class="list-section white-color">Activated</span>
+                                </div>
+                                <div class="black-input"  fxLayout="row" fxLayoutAlign="center center">
+                                    <mat-form-field class="p-col-5 example-full-width" appearance="outline">
+                                        <mat-label>Input Text</mat-label>
+                                        <input type="input" matInput [formControl]="inputTextDisabled" placeholder="Input Text">
+                                        <mat-hint>Assistive text</mat-hint>
+                                        <mat-error *ngIf="inputTextDisabled.hasError('required')">
+                                            *Campo Obrigatório
+                                        </mat-error>
+                                    </mat-form-field>
+                                    <mat-form-field class="p-col-5 example-full-width" appearance="outline">
+                                        <mat-label>Input Text</mat-label>
+                                        <input type="input" matInput [formControl]="inputTextDisabled" placeholder="Input Text">
+                                        <mat-hint>Assistive text</mat-hint>
+                                        <mat-error *ngIf="inputTextDisabled.hasError('required')">
+                                            *Campo Obrigatório
+                                        </mat-error>
+                                    </mat-form-field>
+                                    <span class="list-section white-color">Disabled</span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+            </div>
+        </p-tabPanel>
+
+        <p-tabPanel header="bottom nav" >
+            <div style="width: 1600px;" fxLayoutAlign="center center">
+                    <div class="p-col-12" style="margin-bottom: 20px; border: 1px solid black; padding: 0px; height: 300px;" fxLayout="column" fxLayoutAlign="space-between center">
+                        <div class="p-col-12 bk-color-secondary" style="height: 80px; ;" fxLayout="row" fxLayoutAlign="center center">
+                            <div fxLayout="column" fxLayoutAlign="start start">
+                                <div class="list-section">SCCON - PF - DS</div>
+                                <span class="kicker-featured">bottom nav</span>
+                            </div>
+                        </div>
+                        
+                        <div class="info-software" fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="center center" fxLayoutAlign="space-evenly center">
+                            <div class="white-color">{{'landing-page.info-software.access' | translate | uppercase}}</div> 
+                            <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutAlign.xs="center center">
+                                 <img src="../../../assets/imgs/icons/icon-nav-satelite.png" width="110" height="94" alt="Ícone de Satélite">
+                                 <p class="margin-description white-color">{{'landing-page.info-software.images' | translate}} <br> {{'landing-page.info-software.mosaics' | translate}}</p>
+                             </div>
+                             <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutAlign.xs="center center">
+                                 <img src="../../../assets/imgs/icons/icon-nav-dashboard.png" width="64" height="94" alt="Ícone de Satélite">
+                                 <p class="margin-description white-color">{{'landing-page.info-software.dashboard' | translate}}  <br> {{'landing-page.info-software.alerts' | translate}} </p>
+                             </div>
+                             <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutAlign.xs="center center">
+                                 <img src="../../../assets/imgs/icons/icon-nav-ead.png" width="65" height="94" alt="Ícone de Satélite">
+                                 <p class="margin-description white-color">{{'landing-page.info-software.platform' | translate}}  <br>{{'landing-page.info-software.ead' | translate}} </p>
+                             </div>
+                             <button mat-raised-button color="accent">{{'buttons.register' | translate | uppercase}}</button>
+                         </div>
+
+                    </div>
+            </div>
+        </p-tabPanel>
+
+        <p-tabPanel header="Featured caption" >
+            <div style="width: 1600px;" fxLayoutAlign="center center">
+                <div class="p-col-12" style="margin-bottom: 20px; border: 1px solid black; padding: 0px; height: 300px;" fxLayout="column" fxLayoutAlign="space-between center">
+                    <div class="p-col-12 bk-color-secondary" style="height: 80px; ;" fxLayout="row" fxLayoutAlign="center center">
+                        <div fxLayout="column" fxLayoutAlign="start start">
+                            <div class="list-section">SCCON - PF - DS</div>
+                            <span class="kicker-featured">Featured caption</span>
+                        </div>
+                    </div>
+                    <div class="legenda p-col-10" fxLayout="row" fxLayoutAlign="center start">
+                        <div class="p-col-4" fxLayout="column" fxLayoutAlign="start start">
+                            <div class="list-section">LG / SM</div>
+                            <div class="text-legenda p-col-12" fxLayout="row" fxLayoutAlign="center center">
+                                <span class="white-color " >
+                                    Toras de madeira nativa apreendidas durante a Operação Handroanthus GLO, da Polícia Federal, no oeste do Pará. Polícia Federal Divulgação
+                                </span>
+                                <span class="kicker-featured accent-color">+</span>
+                            </div>
+                        </div>
+                        <div class="p-col-3" fxLayout="column" fxLayoutAlign="start start">
+                            <div class="list-section">XS</div>
+                            <div class="text-legenda" fxLayout="row" fxLayoutAlign="center center">
+                                <span *ngIf="viewText" class="white-color caption-featured-mb" >
+                                    Toras de madeira nativa apreendidas durante a Operação Handroanthus GLO, da Polícia Federal, no oeste do Pará. Polícia Federal Divulgação
+                                </span>
+                                <span *ngIf="viewText" (click)="viewTextLegend()" class="p-col-1 more-info accent-color kicker-featured">-</span>
+                                <span *ngIf="!viewText" (click)="viewTextLegend()" class="more-info accent-color kicker-featured">+</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </p-tabPanel>
+
+        <p-tabPanel header="Pagination" >
+            <div style="width: 1600px;" fxLayoutAlign="center center">
+                    <div class="p-col-12" style="margin-bottom: 20px; border: 1px solid black; padding: 0px; height: 500px;" fxLayout="column" fxLayoutAlign="space-between center">
+                        <div class="p-col-12 bk-color-secondary" style="height: 80px; ;" fxLayout="row" fxLayoutAlign="center center">
+                            <div fxLayout="column" fxLayoutAlign="start start">
+                                <div class="list-section">SCCON - PF - DS</div>
+                                <span class="kicker-featured">Pagination</span>
+                            </div>
+                        </div>
+                        <div class="p-col-6" fxLayout="row" fxLayoutAlign="center start">
+                            <div fxLayout="column" >
+                                <span class="kicker-featured" style="margin-bottom: 40px">LG / SM</span>
+                                <p-carousel [value]="products" styleClass="custom-carousel" fxLayoutAlign="center center" [numVisible]="3" [numScroll]="1" [circular]="true" [autoplayInterval]="100000" [responsiveOptions]="responsiveOptions" >
+                                    <ng-template let-product pTemplate="item" >
+                                        <div class="p-col-2"></div>
+                                    </ng-template>
+                                </p-carousel>
+                            </div>
+                            <div class="paginator-example" fxLayout="column" >
+                                <span class="kicker-featured" style="margin-bottom: 40px">XS</span>
+                                <p-carousel [value]="products" styleClass="custom-carousel" fxLayoutAlign="center center" [numVisible]="3" [numScroll]="1" [circular]="true" [autoplayInterval]="100000" [responsiveOptions]="responsiveOptions" >
+                                    <ng-template let-product pTemplate="item" >
+                                        <div class="p-col-2"></div>
+                                    </ng-template>
+                                </p-carousel>
+                            </div>
+                        </div>
+                        <div class="black-container p-col-6" fxLayout="row" fxLayoutAlign="center start">
+                            <div class="pi-secondary" fxLayout="column" >
+                                <p-carousel [value]="products" styleClass="custom-carousel" fxLayoutAlign="center center" [numVisible]="3" [numScroll]="1" [circular]="true" [autoplayInterval]="100000" [responsiveOptions]="responsiveOptions" >
+                                    <ng-template let-product pTemplate="item" >
+                                        <div class="p-col-2"></div>
+                                    </ng-template>
+                                </p-carousel>
+                            </div>
+                            <div class="paginator-example" fxLayout="column" >
+                                <p-carousel class="pi-secondary" [value]="products" styleClass="custom-carousel" fxLayoutAlign="center center" [numVisible]="3" [numScroll]="1" [circular]="true" [autoplayInterval]="100000" [responsiveOptions]="responsiveOptions" >
+                                    <ng-template let-product pTemplate="item" >
+                                        <div class="p-col-2"></div>
+                                    </ng-template>
+                                </p-carousel>
+                            </div>
+                        </div>
+
+                    </div>
+            </div>
+        </p-tabPanel>
+
+        <p-tabPanel header="Timeline" >
+            <div style="width: 1600px;" fxLayoutAlign="center center">
+                    <div class="p-col-12" style="margin-bottom: 20px; border: 1px solid black; padding: 0px; height: 300px;" fxLayout="column" fxLayoutAlign="space-between center">
+                        <div class="p-col-12 bk-color-secondary" style="height: 80px; ;" fxLayout="row" fxLayoutAlign="center center">
+                            <div fxLayout="column" fxLayoutAlign="start start">
+                                <div class="list-section">SCCON - PF - DS</div>
+                                <span class="kicker-featured">Timeline</span>
+                            </div>
+                        </div>
+                        <div class="p-col-8" style="background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));">
+                            <p-timeline [value]="events" layout="horizontal">
+                                <ng-template pTemplate="content" let-event>
+                                    <span class="h3-featured white-color">{{event.status}}</span> 
+                                </ng-template>
+                            </p-timeline>
+                        </div>
+                    </div>
+            </div>
+        </p-tabPanel>
+
+    </p-tabView>
+    
+
 </div>

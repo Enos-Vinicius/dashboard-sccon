@@ -1,26 +1,39 @@
-<div class="navbar-dash">
-  <mat-toolbar style="background-color: white;">
-    <button mat-icon-button [matMenuTriggerFor]="menu">
-      <mat-icon>menu</mat-icon>
-    </button>
+<div class="navbar-dash fixed-top p-lg-12" fxLayout="row" fxLayoutAlign="start center">
+  <mat-toolbar class="p-pl-0">
+    <!-- ICON MENU -->
+    <div class="p-lg-1">
+      <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+
+    <!--MENU ITENS-->
     <mat-menu #menu="matMenu" class="menu-style">
       <button mat-menu-item (click)="redirecTo('landing-page')" routerLinkActive="active">Plataforma PF - SCCON</button>
       <button mat-menu-item (click)="redirecTo('landing-page')">Imagens diárias e Mosaicos Planet</button>
       <button mat-menu-item (click)="redirecTo('landing-page')">Dashboard de alertas de mudança</button>
       <button mat-menu-item (click)="redirecTo('landing-page')">Plataforma EAD</button>
       <button mat-menu-item (click)="redirecTo('landing-page/info-news')" >Notícias</button>
+      <button mat-menu-item (click)="redirecTo('landing-page/design')" >Design/Systens</button>
       <button class="button-radius-long" (click)="redirecTo('landing-page/login')">Login</button>
       <button class="button-radius-long" (click)="redirecTo('landing-page/login/logout')">Logout</button>
       <div class="text-access">
         <a mat-flat-button (click)="redirecTo('landing-page/request-access')">Sem Acesso? Solicite Cadastro</a>
       </div>
     </mat-menu>
-  
-    <span class="spacer text-center ml-5 cursor-pointer" (click)="redirecTo('landing-page')">PLATAFORMA PF - SCCON</span>
-  
-    <div class="menu-right">
-      <button (click)="redirecTo('landing-page/login')" mat-raised-button color="accent">Login</button>
+
+    <!--LOGO COMPANYS-->
+    <div class="p-lg-5 p-md-11 p-md-jc-center p-p-0" fxLayout="row" fxLayoutAlign="space-between center" fxLayoutAlign.xs="space-evenly center">
+      <img class="" src="../../assets/imgs/logos/logo-justica.png" alt="Logomarca do Ministério da Justiça e Segurança Pública">
+      <img class="" src="../../assets/imgs/logos/pf.png" width="74" alt="Logomarca da Polícia Federal">
+      <img class="" src="../../assets/imgs/logos/logo-senasp.png" alt="Logomarca da Secretaria Nacional de Segurança Pública">
+    </div>
+    
+    <!--BUTTON LOGIN-->
+    <div class="p-lg-6 display-none-md " fxLayoutAlign="end">
+      <button (click)="redirecTo('landing-page/login')" mat-raised-button color="accent">LOGIN</button>
     </div>
   </mat-toolbar>
+
 </div>
 

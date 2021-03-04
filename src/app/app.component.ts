@@ -2,13 +2,11 @@ import { Component } from '@angular/core';
 
 import Map from 'ol/Map';
 import View from 'ol/View';
-import VectorLayer from 'ol/layer/Vector';
-import Style from 'ol/style/Style';
-import Icon from 'ol/style/Icon';
 import OSM from 'ol/source/OSM';
 import * as olProj from 'ol/proj';
 import TileLayer from 'ol/layer/Tile';
 import { TranslateService } from '@ngx-translate/core';
+import { ActivatedRoute, } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -16,15 +14,19 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'dashboard';
+  currentyRouter;
   map;
   
   constructor(
-    private translate: TranslateService
+    private translate: TranslateService,
+    public router: ActivatedRoute
   ){}
 
   ngOnInit(){
     this.getCulture();
+    console.log("Router: ",);
+    this.currentyRouter =  window.location.pathname;  
+    
     this.map = new Map({
       target: 'hotel_map',
       layers: [
