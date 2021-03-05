@@ -25,7 +25,8 @@
             
         },
         "info-news": {
-            "news": "Notícias em Destaque"
+            "news": "+ Notícias",
+            "indicate-content": "Indique + conteúdos"
         },
         "platform": {
             "platform": "Plataforma EAD",

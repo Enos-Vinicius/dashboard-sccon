@@ -25,6 +25,43 @@ $secondary: #ffd079;
         background-color: rgba(0,0,0,0.6);
     }
 
+    .news {
+        height: 950px;
+        width: 768px;
+        font-size: 20px;
+        color: #777777;
+        border: 1px solid #777777;
+        padding: 10px;
+        
+        .pi {
+            display: none;
+        }
+        
+        .product-item {
+            width: 768px;
+            .product-item-content {
+                width: 768px;
+            }
+        
+        }
+  
+        .p-carousel, .p-carousel-content {
+          width: 768px;
+        }
+
+        .p-carousel .p-carousel-content .p-carousel-prev, .p-carousel .p-carousel-content .p-carousel-next {
+            display: none;
+        }
+
+        .img-carousel {
+          height: 333px;
+          width: 550px;
+          background-image: url("../imgs/Bitmap-2.png");
+          background-size: 550px 333px;
+        }
+    
+      }
+
     /* TYPOGRAPHY */
     .kicker-featured{font-size: 32px;font-weight: 600; color: $primary;}
     .h1-featured{font-size: 80px;font-weight: bold; color: $primary; line-height: 80px;}
@@ -77,4 +114,59 @@ $secondary: #ffd079;
         background-size: 50px 72px;
         background-repeat: no-repeat;
     }
+
+    .logo-justica {
+        width: 179px;
+        height: 56px;
+        margin-top: 20px;
+        background-image: url("../imgs/logos/logo-justica.png");
+        background-size: 179px 56px;
+        background-repeat: no-repeat;
+    }
+
+    .logo-pf {
+        width: 74px;
+        height: 90px;
+        background-image: url("../imgs/logos/pf.png");
+        background-size: 74px 90px;
+        background-repeat: no-repeat;
+    }
+
+    .logo-senasp {
+        width: 220px;
+        height: 38px;
+        margin-top: 25px;
+        background-image: url("../imgs/logos/logo-senasp.png");
+        background-size: 220px 38px;
+        background-repeat: no-repeat;
+    }
+
+    .navbar-dash {
+        height: 100px;
+    }
+}
+
+@media (min-width: 900px) and (max-width: 1024px){
+    .news {
+        height: 700px;
+        font-size: 20px;
+        color: #777777;
+        border: 1px solid #777777;
+        padding: 10px;
+        
+        .product-item {
+            width: 900px;
+            .product-item-content {
+                width: 768px;
+            }
+        
+        }
+  
+        .p-carousel, .p-carousel-content {
+          width: 900px;
+        }
+
+        
+    
+      }  
 }

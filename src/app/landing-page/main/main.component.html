@@ -1,8 +1,8 @@
 
 <!-- BANNER PRINCIPAL COM IMAGEM, LOGOS E PROGRAMA SAIBA MAIS -->
 <div class="main" fxLayout="column" fxLayoutAlign="space-between center" fxLayoutAlign.xs="space-between center">
-    <div class="info-principal p-lg-10 p-md-11 p-sm-11 p-p-0" fxLayout="column" fxLayoutAlign="space-evenly" fxLayoutAlign.xs="center center">
-        <div fxLayout="column">
+    <div class="info-principal p-lg-10 p-md-11 p-sm-9 p-p-0" fxLayout="column" fxLayoutAlign="space-evenly" fxLayoutAlign.xs="end end">
+        <div class="container" fxLayout="column">
             <div class="banner" fxLayout="column" fxLayoutAlign="space-between">
                 <div class="accent-color kicker-featured p-mb-4" >{{'landing-page.main.program' | translate}}</div>
                 <div class="h1-featured white-color p-mb-4">{{'landing-page.main.program-brazil' | translate }}</div>
@@ -10,20 +10,29 @@
                 <div class="h3-featured white-color p-lg-5 p-p-0">{{'landing-page.main.program-sub-title3' | translate}}</div>
             </div>
         </div>
-        <div class="legenda p-lg-12 p-md-12 p-p-0" fxLayout="row" fxLayoutAlign="end end">
-            <div class="text-legenda p-lg-4 p-md-6 display-none-xs" fxLayout="row" fxLayoutAlign="center center">
+        <div class="legenda p-lg-12 p-md-12 p-p-0" fxLayout="row" fxLayoutAlign="end end" fxLayoutAlign.xs="end end">
+            <div class="text-legenda p-lg-4 p-md-6 display-none-sm" fxLayout="row" fxLayoutAlign="center center">
                 <span class="white-color ">
                     Toras de madeira nativa apreendidas durante a Operação Handroanthus GLO, da Polícia Federal, no oeste do Pará. Polícia Federal Divulgação
                 </span>
                <span class="more-info accent-color kicker-featured">+</span>
             </div>
+            <div class="p-sm-4 display-none-md display-none-lg" fxLayout="row" fxLayoutAlign="end end">
+                <div class="text-legenda" fxLayout="row" fxLayoutAlign="center center">
+                    <span *ngIf="viewText" class="white-color caption-featured-mb" >
+                        Toras de madeira nativa apreendidas durante a Operação Handroanthus GLO, da Polícia Federal, no oeste do Pará. Polícia Federal Divulgação
+                    </span>
+                    <span *ngIf="viewText" (click)="viewTextLegend()" class="p-col-1 more-info accent-color kicker-featured">-</span>
+                    <span *ngIf="!viewText" (click)="viewTextLegend()" class="more-info accent-color kicker-featured">+</span>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="p-lg-10 p-xl-10 p-md-12 p-flex-lg-row p-flex-md-column p-jc-md-center p-p-0">
-        <div class="p-lg-12 p-md-12 white-color display-none-lg display-none-xs" fxLayout="row" fxLayoutAlign="start center">{{'landing-page.info-software.access' | translate | uppercase}}</div> 
+    <div class="p-lg-10 p-xl-10 p-md-12 p-sm-12 p-flex-lg-row p-flex-md-column p-jc-md-center p-p-0">
+        <div class="p-lg-12 p-md-12 white-color display-none-lg display-none-sm" fxLayout="row" fxLayoutAlign="start center">{{'landing-page.info-software.access' | translate | uppercase}}</div> 
         <div class="info-software p-lg-12 p-xl-12 p-md-12 p-flex-lg-row p-flex-md-column p-jc-md-center p-p-0" fxLayout="row" fxLayout.xs="column">
             <div class="p-col-12 p-lg-10 p-md-12 p-flex-row" fxLayoutAlign="space-evenly center">
-                <div class="p-lg-1 display-none-md white-color display-none-xs">{{'landing-page.info-software.access' | translate | uppercase}}</div> 
+                <div class="p-lg-1 display-none-md white-color display-none-sm">{{'landing-page.info-software.access' | translate | uppercase}}</div> 
                 <div class="p-lg-3 p-md-4" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center center" fxLayoutAlign.xs="center center">
                      <div class="icon-satelite"></div>
                      <div class="p-ml-md-3 p-ml-xs-0 white-color h4-featured">{{'landing-page.info-software.images' | translate}} <br> {{'landing-page.info-software.mosaics' | translate}}</div>

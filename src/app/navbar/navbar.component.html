@@ -22,15 +22,28 @@
       </div>
     </mat-menu>
 
-    <!--LOGO COMPANYS-->
-    <div class="p-lg-5 p-md-11 p-md-jc-center p-p-0" fxLayout="row" fxLayoutAlign="space-between center" fxLayoutAlign.xs="space-evenly center">
-      <img class="" src="../../assets/imgs/logos/logo-justica.png" alt="Logomarca do Ministério da Justiça e Segurança Pública">
-      <img class="" src="../../assets/imgs/logos/pf.png" width="74" alt="Logomarca da Polícia Federal">
-      <img class="" src="../../assets/imgs/logos/logo-senasp.png" alt="Logomarca da Secretaria Nacional de Segurança Pública">
+    <!--LOGO COMPANYS TABLET / DESKTOP -->
+    <div class="p-col-12 display-none-sm">
+      <div class="p-lg-5 p-md-11 p-md-jc-center p-p-0 p-d-flex p-flex-row p-jc-between p-js-md-between p-jc-lg-start p-d-none">
+        <div class="logo-justica"></div>
+        <div class="logo-pf p-ml-4"></div>
+        <div class="logo-senasp p-ml-4"></div>
+      </div>
+    </div>
+
+    <!--LOGO COMPANYS MOBILE -->
+    <div class="p-col-10 p-p-0 display-none-md display-none-lg">
+      <div fxLayout="row" fxLayoutAlign="space-between">
+        <div class="logo-pf"></div>
+        <div fxLayout="column" fxLayoutAlign="end end">
+          <div class="logo-senasp"></div>
+          <div class="logo-justica p-mt-2"></div>
+        </div>
+      </div>
     </div>
     
     <!--BUTTON LOGIN-->
-    <div class="p-lg-6 display-none-md " fxLayoutAlign="end">
+    <div class="p-lg-6 display-none-md display-none-sm" fxLayoutAlign="end">
       <button (click)="redirecTo('landing-page/login')" mat-raised-button color="accent">LOGIN</button>
     </div>
   </mat-toolbar>

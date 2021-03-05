@@ -132,77 +132,41 @@ $secondary: #ffd079;
     }
   
     .news {
-      height: 800px;
-      border: 1px solid #777777;
+      height: 650px;
+      font-size: 20px;
       color: #777777;
-  
-      h1 {
-        text-align: center;
-        margin: 30px 0 30px 0;
-        font-size: 26px;
+      border: 1px solid #777777;
+      padding: 10px;
+
+      .product-item {
+          .product-item-content {
+              width: 100%;
+              border-radius: 3px;
+              margin: .3rem;
+              text-align: center;
+              padding: 2rem 0;
+          }
+      
+          .product-image {
+              width: 592px;
+              height: auto;
+          }
+      }
+
+      .p-carousel, .p-carousel-content {
+        width: 1400px;
+      }
+
+      .img-carousel {
+        height: 333px;
+        width: 550px;
+        background-image: url("../imgs/Bitmap-2.png");
+        background-size: 550px 333px;
       }
   
-      h2 {
-        font-size: 22px;
-        color: #777777;
-      }
-  
-      .custom-carousel{
-        width: 80%;
-      }
-  
-      .news-image {
-        height: 250px; 
-        width: 100%; 
-        padding: 30px; 
-        background-color: #f1f2f3;
-        border: 1px solid #777777;
-      }
-  
-      .conteudo {
-        font-size: 20px;
-        color: #777777;
-        border: 1px solid #777777;
-        height: 300px; 
-        padding: 10px
-      }
-  
-      .p-carousel .p-carousel-indicators {
-        display: none;
-      }
-  
-      .pi {
-        font-size: 3rem;
-      }
-  
-      .p-carousel .p-carousel-content .p-carousel-prev, .p-carousel .p-carousel-content .p-carousel-next {
-        width: 4rem;
-        height: 4rem;
-        border: 1px solid #777777;
-      }
-  
-      button {
-        width: 160px;
-        height: 40px;
-        border-radius: 29.5px;
-        border: solid 1px #777777;
-        background-color: #f1f2f3;
-      }
-  
-      .text-login {
-        width: 160px;
-        font-size: 16px;
-        padding: 10px;
-        text-align: center;
-        margin-bottom: 20px;
-        border-bottom: solid 1px #777777;
-        cursor: pointer;
-      }
-  
-      .info-access {
-        margin: 20px 0 20px 0;
-      }
     }
+
+
   
     .images-mosaics {
       position: relative;
@@ -533,7 +497,12 @@ $secondary: #ffd079;
     .caption-section{font-size: 22px;font-weight: 600; color: $primary;}
     .numbers{font-size: 140px;font-weight: 600; color: $primary; line-height: 140px;}
     .h1-news{font-size: 36px;font-weight: 600; color: $primary;}
-    .a-link{font-size: 18px;font-weight: 500; border-bottom: 1px solid rgba(0,0,0,0.3);color: $primary; cursor: pointer;}
+    .a-link{
+      font-size: 18px;
+      font-weight: 500; 
+      border-bottom: 1px solid rgba(0,0,0,0.3);
+      color: $primary; cursor: pointer;
+    }
     .a-link:hover{font-size: 18px;font-weight: 500; border-bottom: 1px solid rgba(0,0,0,0.7);color: $primary; cursor: pointer;}
     /* END TYPOGRAPHY*/
 
@@ -592,6 +561,33 @@ $secondary: #ffd079;
         background-size: 65px 94px;
         background-repeat: no-repeat;
     }
+
+    .logo-justica {
+        width: 179px;
+        height: 56px;
+        margin-top: 20px;
+        background-image: url("../imgs/logos/logo-justica.png");
+        background-size: 179px 56px;
+        background-repeat: no-repeat;
+    }
+
+    .logo-pf {
+        width: 74px;
+        height: 90px;
+        background-image: url("../imgs/logos/pf.png");
+        background-size: 74px 90px;
+        background-repeat: no-repeat;
+    }
+
+    .logo-senasp {
+        width: 220px;
+        height: 38px;
+        margin-top: 25px;
+        background-image: url("../imgs/logos/logo-senasp.png");
+        background-size: 220px 38px;
+        background-repeat: no-repeat;
+    }
+
     /* END DESKTOP*/
   }
   

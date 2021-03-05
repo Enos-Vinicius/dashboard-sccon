@@ -8,7 +8,8 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent implements OnInit {
-
+  viewText: boolean = false;
+  
   constructor(
     private translate: TranslateService,
     private router: Router
@@ -19,5 +20,9 @@ export class MainComponent implements OnInit {
     
   redirecTo(page){
     this.router.navigate([page])
+  }
+  
+  viewTextLegend(){
+    this.viewText = !this.viewText;
   }
 }
