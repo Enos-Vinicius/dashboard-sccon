@@ -1,5 +1,5 @@
 <div class="navbar-dash fixed-top p-lg-12" fxLayout="row" fxLayoutAlign="start center">
-  <mat-toolbar class="p-pl-0">
+  <mat-toolbar class="p-lg-12 p-pl-0">
     <!-- ICON MENU -->
     <div class="p-lg-1">
       <button mat-icon-button [matMenuTriggerFor]="menu">
@@ -23,8 +23,8 @@
     </mat-menu>
 
     <!--LOGO COMPANYS TABLET / DESKTOP -->
-    <div class="p-col-12 display-none-sm">
-      <div class="p-lg-5 p-md-11 p-md-jc-center p-p-0 p-d-flex p-flex-row p-jc-between p-js-md-between p-jc-lg-start p-d-none">
+    <div class="p-lg-6 p-md-12 display-none-sm">
+      <div class="p-lg-12 p-md-11 p-md-jc-center p-p-0 p-d-flex p-flex-row p-jc-between p-js-md-between p-jc-lg-start p-d-none">
         <div class="logo-justica"></div>
         <div class="logo-pf p-ml-4"></div>
         <div class="logo-senasp p-ml-4"></div>
@@ -32,7 +32,7 @@
     </div>
 
     <!--LOGO COMPANYS MOBILE -->
-    <div class="p-col-10 p-p-0 display-none-md display-none-lg">
+    <div class="p-p-0 display-none-md display-none-lg">
       <div fxLayout="row" fxLayoutAlign="space-between">
         <div class="logo-pf"></div>
         <div fxLayout="column" fxLayoutAlign="end end">
@@ -43,7 +43,7 @@
     </div>
     
     <!--BUTTON LOGIN-->
-    <div class="p-lg-6 display-none-md display-none-sm" fxLayoutAlign="end">
+    <div class="p-lg-5 display-none-md display-none-sm" fxLayoutAlign="end">
       <button (click)="redirecTo('landing-page/login')" mat-raised-button color="accent">LOGIN</button>
     </div>
   </mat-toolbar>

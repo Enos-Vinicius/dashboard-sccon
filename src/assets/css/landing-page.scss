@@ -12,11 +12,6 @@ $secondary: #ffd079;
       background-position: center;
       background-size: 100% 900px;
     }
-    
-    .title {
-      font-size: 28px;
-      font-weight: 600; color: $primary;
-    }
 
     .login {
       width: 100%;
@@ -39,25 +34,7 @@ $secondary: #ffd079;
         }
       }
     }
-  
-    .spacer {
-      flex: 1 1 auto;
-    }
-  
-    .ml-5 {
-      margin-left: 75px;
-    }
-      
-    .text-primary {
-      font-size: 40px;
-      margin-bottom: 25px;
-    }
-    
-    .text-secondary {
-      font-size: 20px;
-      color: #777777;
-      margin-bottom: 10px;
-    }
+
   
     .legenda {
       height: 150px;
@@ -83,10 +60,6 @@ $secondary: #ffd079;
       height: 200px;
       background-color: rgba(0,0,0,0.6);
     }
-  
-    .login-access {
-      margin-left: 50px;
-    }
     
     .img-logo {
       background-color: #f1f2f3;
@@ -97,16 +70,37 @@ $secondary: #ffd079;
     }
   
     .know-more {
-      background-color: #f1f2f3;
-      border: solid 1px #777777;
-      padding: 40px;
-      p {
-        font-size: 25px;
-        width: 50%;
-        text-align: center;
-        line-height: 40px;
-        color: #777777;
+      width: 100%;
+      height: 1173px;
+      background-image: url("../imgs/Bitmap-3.png");
+      background-repeat: no-repeat;
+      background-size: 100% 1173px;
+
+      .container {
+        background-color: rgba(0,0,0,0.6);
+        width: 100%;
+        height: 1173px;
+        padding: 40px;
       }
+
+      .product-item {
+        .product-item-content {
+            width: 100%;
+            border-radius: 3px;
+            margin: .3rem;
+            text-align: center;
+            padding: 2rem 0;
+        }
+    
+        .product-image {
+            width: 100%;
+            height: auto;
+          }
+        }
+
+        .p-carousel, .p-carousel-content {
+          max-width: 1400px;
+        }
     }
   
     .results {
@@ -134,8 +128,6 @@ $secondary: #ffd079;
     .news {
       height: 650px;
       font-size: 20px;
-      color: #777777;
-      border: 1px solid #777777;
       padding: 10px;
 
       .product-item {
@@ -165,8 +157,6 @@ $secondary: #ffd079;
       }
   
     }
-
-
   
     .images-mosaics {
       position: relative;
@@ -492,7 +482,7 @@ $secondary: #ffd079;
     .caption-featured{font-size: 14px;font-weight: 500; color: $primary;}
     .h1-section{font-size: 28px;font-weight: bold; color: $primary;}
     .h2-section{font-size: 22px;font-weight: 600; color: $primary;}
-    .body-section{font-size: 18px;font-weight: 400; color: $primary;}
+    .body-section{font-size: 18px;font-weight: 400; color: $primary;line-height: 1.56; letter-spacing: normal;font-stretch: normal;}
     .list-section{font-size: 16px;font-weight: 500; color: $primary;}
     .caption-section{font-size: 22px;font-weight: 600; color: $primary;}
     .numbers{font-size: 140px;font-weight: 600; color: $primary; line-height: 140px;}

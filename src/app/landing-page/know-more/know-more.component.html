@@ -1,5 +1,42 @@
 <!-- SAIBA MAIS -->
 <div class="know-more" fxLayout="column" fxLayoutAlign.xs="center center" fxLayoutAlign="center center">
-    <p>{{'landing-page.know-more.text' | translate}}</p>
-    <p>{{'landing-page.know-more.text2' | translate}}</p>
+    <div class="container" fxLayout="column" fxLayoutAlign="center center">
+        <div class="p-col-10" fxLayout="column" fxLayoutAlign="start start">
+            <div class="h1-section white-color p-mt-lg-6 p-mt-md-6 p-mt-6">{{'landing-page.know-more.platform' | translate }}</div>
+            <div class="body-section white-color p-lg-8 p-mt-lg-6 p-mt-md-6 p-mt-3">
+                {{'landing-page.know-more.text' | translate }}
+            </div>
+            <div class="body-section white-color p-lg-8 p-mt-lg-4">
+                {{'landing-page.know-more.text2' | translate }}
+            </div>
+            <div class="h1-section white-color p-mt-lg-6 p-mt-md-6 p-mt-4">{{'landing-page.know-more.numbers-of-platform' | translate }}</div>
+        </div>
+        <div class="pi-secondary">
+            <p-carousel styleClass="p-mb-6" [value]="items" [numVisible]="3" [numScroll]="3" [circular]="false" [responsiveOptions]="responsiveOptions">
+                <ng-template let-item pTemplate="item" >
+                    <div class="product-item p-p-0" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center center" fxLayoutAlign.xs="space-between center">
+                        <div class="product-item-content" fxLayout="column" fxLayout.sm="column" fxLayout.xs="column" fxLayoutAlign="space-between start" fxLayoutAlign.sm="cenbter center" fxLayoutAlign.xs="cenbter center">
+                            <div class="product-image">
+                                <!--DESKTOP-->
+                                <img class="display-none-md display-none-sm" src={{item.path}} width="346" height="200" alt="">
+                                <div class="numbers white-color display-none-md display-none-sm" style="margin-top: -170px; margin-bottom: 50px;">{{item.results}}</div>
+                                
+                                <!--TABLET-->
+                                <img class="display-none-lg display-none-sm" src={{item.path}} width="344" height="200" alt="">
+                                <div class="numbers white-color display-none-lg display-none-sm" style="margin-top: -170px; margin-bottom: 50px;">{{item.results}}</div>
+                                
+                                <!--MOBILE-->
+                                <img class="display-none-md display-none-lg" src={{item.path}} width="309" height="180" alt="">
+                                <div class="numbers white-color display-none-md display-none-lg" style="margin-top: -100px; margin-bottom: 50px;">{{item.results}}</div>
+                            </div>
+                            <div class="p-lg-12" fxLayout="column" fxLayoutAlign="center center" fxLayoutAlign.xs="center center">
+                                <div class="h2-section white-color" fxLayoutAlign="start start">{{item.title | uppercase}} </div>
+                                <div class="body-section white-color p-mt-lg-2 p-mt-md-2" >{{item.text}}</div>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+            </p-carousel>
+        </div>
+    </div>
 </div>

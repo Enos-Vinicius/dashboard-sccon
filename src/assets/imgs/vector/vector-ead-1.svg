@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="383px" height="462px" viewBox="0 0 383 462" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>vector/vector-ead-1</title>
+    <g id="vector/vector-ead-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <polygon id="Path-4" fill="#FFFFFF" opacity="0" points="0 421 69 462 383 281 382 40 312 0 0 181"></polygon>
+        <g id="Group-14" stroke="#000000" stroke-width="3">
+            <polyline id="Stroke-4" points="278.251 340.4091 382.242 280.3701 382.242 40.2141 278.251 100.2531"></polyline>
+            <path d="M278.2512,100.2529 L278.2512,340.4089 L69.3272,461.0319 L69.3272,220.8759 L278.2512,100.2529 Z M154.3965,250.6181 L154.3965,330.6701 L207.9815,260.9011 L154.3965,250.6181 Z" id="Combined-Shape" fill="#FFD079"></path>
+            <line x1="296.3516" y1="173.4755" x2="365.6786" y2="133.4495" id="Stroke-6"></line>
+            <line x1="296.3516" y1="194.9765" x2="365.6786" y2="154.9505" id="Stroke-7"></line>
+            <line x1="296.3516" y1="216.4775" x2="365.6786" y2="176.4515" id="Stroke-8"></line>
+            <line x1="296.3516" y1="237.9785" x2="365.6786" y2="197.9525" id="Stroke-9"></line>
+            <line x1="296.3516" y1="259.4794" x2="341.7556" y2="232.5784" id="Stroke-10"></line>
+            <polyline id="Stroke-11" points="34.6641 441.0185 34.6631 200.8625 346.6361 20.7455"></polyline>
+            <polyline id="Stroke-12" points="0 421.0058 0 180.8498 311.973 0.7328"></polyline>
+        </g>
+    </g>
+</svg>

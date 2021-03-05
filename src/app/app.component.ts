@@ -24,8 +24,6 @@ export class AppComponent {
 
   ngOnInit(){
     this.getCulture();
-    console.log("Router: ",);
-    this.currentyRouter =  window.location.pathname;  
     
     this.map = new Map({
       target: 'hotel_map',

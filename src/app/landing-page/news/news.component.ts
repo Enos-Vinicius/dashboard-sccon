@@ -90,7 +90,7 @@ export class NewsComponent implements OnInit {
           numVisible: 1,
           numScroll: 3
       }
-  ];
+    ];
    }
 
   ngOnInit(): void {
