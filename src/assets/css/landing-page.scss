@@ -160,46 +160,48 @@ $secondary: #ffd079;
   
     .images-mosaics {
       position: relative;
-      color: #777777;
-      border-left: 1px solid #777777;
-      border-right: 1px solid #777777;
-      border-bottom: 1px solid #777777;
-      padding: 50px;
-  
-      p {
-        font-size: 20px;
-        letter-spacing: 1px;
-        line-height: 30px;
+      width: 100%;
+      height: 1314px;
+
+
+      .container {
+        margin-top: 120px;
+        z-index: 2;
       }
-  
-      h1 {
-        font-size: 28px;
-        margin-bottom: 20px;
-      }
-  
-      .panel {
-        height: 368px;
-        width: 100%;
-        border: 1px solid #777777;
-        background-color: #f1f2f3;
-      }
-  
+    
       .p-button.p-button-secondary.p-button-outlined, .p-buttonset.p-button-secondary > .p-button.p-button-outlined, .p-splitbutton.p-button-secondary > .p-button.p-button-outlined {
         width: 160px;
       }
   
       .spliter {
         position: relative;
-        width: 550px;
+        width: 100%;
         height: 400px;
-        margin-top: 35px;
         background-color: #f1f2f3;
         border-color: #777777;
       }
-  
-      .title {
-        font-size: 28px;
+
+      .img-after {
+        background-image: url("../imgs/BitMap12.png");
+        background-size: 100% 400px;
+        height: 400px;
       }
+  
+    }
+
+    .images-mosaics::before {
+      background-image: url("../imgs/Bitmap-4.png");
+      background-size: 100% 1314px;
+      background-repeat: no-repeat;
+      opacity: 0.15;
+      z-index: 1;
+      content: ' ';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
     }
   
     .can-access {
@@ -480,9 +482,17 @@ $secondary: #ffd079;
     .h3-featured{font-size: 22px;font-weight: 500; color: $primary;}
     .h4-featured{font-size: 16px;font-weight: 500; color: $primary;}
     .caption-featured{font-size: 14px;font-weight: 500; color: $primary;}
-    .h1-section{font-size: 28px;font-weight: bold; color: $primary;}
+    .h1-section{font-size: 28px;font-weight: bold; color: $primary; line-height: 1.29; letter-spacing: 0.6px; font-stretch: normal;}
     .h2-section{font-size: 22px;font-weight: 600; color: $primary;}
-    .body-section{font-size: 18px;font-weight: 400; color: $primary;line-height: 1.56; letter-spacing: normal;font-stretch: normal;}
+    .body-section{
+      font-size: 18px;
+      color: $primary;
+      line-height: 1.56; 
+      font-weight: 500;
+      font-stretch: normal;
+      font-style: normal;
+      letter-spacing: normal;
+    }
     .list-section{font-size: 16px;font-weight: 500; color: $primary;}
     .caption-section{font-size: 22px;font-weight: 600; color: $primary;}
     .numbers{font-size: 140px;font-weight: 600; color: $primary; line-height: 140px;}

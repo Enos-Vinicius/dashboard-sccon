@@ -29,6 +29,11 @@
             "news": "+ Notícias",
             "indicate-content": "Indique + conteúdos"
         },
+        "images-mosaics": {
+            "title": "Imagens diárias e Mosaicos Planet",
+            "text": "Com centenas de satélites em órbita a Planet é capaz de obter imagens com resolução de 3 metros de qualquer local da Terra diariamente.",
+            "text2": "As imagens Planet são obtidas pela constelação de satélites Dove que possuem o mesmo tipo de sensor, são adquiridas por mais de 130 satélites, com 04 bandas espectrais e resolução radiométrica de 12 bits, são ortorretificadas e possuem 3 metros de resolução espacial, o que permite obter imagens atuais de grandes áreas com alto padrão de qualidade e precisão planimétrica."
+        },
         "platform": {
             "platform": "Plataforma EAD",
             "text": "Plataforma para aprendizado à distância e compartilhamento de conhecimento e informações fornecidas no âmbito do contrato n° 018/2020 celebrado entre Polícia Federal e SCCON, com o objetivo de apresentar as especificações técnicas da tecnologia Planet e demais produtos contemplados no projeto, além de aplicações práticas e conteúdos conceituais relacionados a tecnologias de Sensoriamento Remoto e Geoprocessamento. A Plataforma EAD tem o objetivo também de contribuir para que o acesso e a utilização dos produtos fornecidos sejam potencializados e compartilhados entre as instituições e usuários públicos de todo Brasil.",

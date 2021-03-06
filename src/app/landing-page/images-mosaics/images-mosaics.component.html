@@ -1,53 +1,17 @@
-<div class="images-mosaics" fxLayout="column" fxLayoutAlign="space-around center">
-    <h1>Imagens diárias e Mosaicos Planet</h1>
-    <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="center center" fxLayoutAlign="space-around center">
-        <div fxFlex="40" fxLayout="column" fxLayoutAlign="start center">
-            <p-splitter styleClass="spliter p-mb-5">
-                <ng-template>
-                    <div class="p-col p-d-flex p-ai-center p-jc-center">
-
-                    </div>
-                </ng-template>
-                <ng-template>
-                    <div class="p-col p-d-flex p-ai-center p-jc-center">
-
-                    </div>
-                </ng-template>
-            </p-splitter>
-            <br>
-            <p class="title">Comparação de imagens - (desmatamento)</p>
-            <br><br>
-            <p>
-                Nenhuma outra constelação de satélites atualmente em operação tem a capacidade de monitoramento e cobertura para aquisição de imagens de alta resolução e precisão planimétrica como a Planet.<br><br>
-    
-                As imagens Planet são adquiridas nas bandas do visível: azul, verde e vermelho e, também, no infravermelho próximo (NIR), favorecendo o monitoramento ambiental e o mapeamento de uso e 
-                cobertura do solo em similaridade com as bandas RapidEye.<br><br>
-    
-                Revisita diária e análise de séries temporais Tenha o contexto histórico e entenda o que está acontecendo na sua área de interesse com imagens diárias.<br><br>
-    
-                Coleta de mais de 300 milhões de km² diariamente Acervo desde 2016<br><br>
-    
-                Monitore alterações em grandes áreas com recursos de alta resolução
-            </p>
+<div class="images-mosaics" fxLayout="column" fxLayoutAlign="start center">
+    <div class="container p-lg-12 p-p-0">
+        <div fxLayout="row" fxLayoutAlign="start start">
+            <div class="p-col-1"></div>
+            <div class="p-col-5 p-p-0" fxLayout="column" fxLayoutAlign="start start">
+                <div class="h1-section p-col-8 p-p-0">{{'landing-page.images-mosaics.title' | translate | uppercase}}</div>    
+                <div class="body-section p-col-12 p-p-0 p-mt-3">{{'landing-page.images-mosaics.text' | translate | uppercase}}</div>
+                <div class="body-section p-col-12 p-p-0 p-mt-3">{{'landing-page.images-mosaics.text2' | translate | uppercase}}</div>
+            </div>
+            <div class="p-col-1"></div>
+            <div class="p-col-5 p-p-0" fxLayout="column" fxLayoutAlign="center">
+                <div class="p-col-12 p-d-flex p-p-0 p-ai-center p-jc-center img-after" ></div>
+            </div>
         </div>
-        <div fxFlex="40" fxLayout="column" fxLayoutAlign="center center">
-            <p>
-                Com centenas de satélites em órbita a Planet é capaz de obter imagens com resolução de 3 metros de qualquer local da Terra diariamente. <br><br>
-                As imagens Planet são obtidas pela constelação de satélites Dove que possuem o mesmo tipo de sensor, são adquiridas por mais de 130 satélites, com 04 bandas espectrais e resolução radiométrica de 12 bits, são ortorretificadas e possuem 3 metros de resolução espacial, o que permite obter imagens atuais de grandes áreas com alto padrão de qualidade e precisão planimétrica.<br><br>
-                A capacidade de recobrimento de todo o Brasil várias vezes ao longo de 30 dias com o mesmo tipo de sensor poderá permitir o monitoramento detalhado da dinâmica de ocupação no País ao longo de cada mês. Esta capacidade garante também coberturas completas com baixos índices de cobertura de nuvem, bem inferiores aqueles normalmente estabelecidos pelos padrões normais de aquisição.
-            </p><br><br>
-            <p class="title">Foco de queimada</p>
-             <div  fxLayout="column" fxLayoutAlign="space-evenly end">
-                 <div class="panel"></div>
-                 <div fxLayout="row" fxLayoutAlign="end end" fxFlex="100">
-                     <button pButton pRipple type="button" label="1 Out 2020" class="p-button-outlined p-button-secondary"></button>
-                     <button pButton pRipple type="button" label="10 Out 2020" class="p-button-outlined p-button-secondary"></button>
-                     <button pButton pRipple type="button" label="20 Out 2020" class="p-button-outlined p-button-secondary"></button>
-                     <button pButton pRipple type="button" label="1 Nov 2020" class="p-button-outlined p-button-secondary"></button>
-                 </div>
-             </div>
-    
-        </div>
+
     </div>
-    <br><br>
 </div>
