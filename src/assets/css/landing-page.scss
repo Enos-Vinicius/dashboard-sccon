@@ -161,28 +161,20 @@ $secondary: #ffd079;
     .images-mosaics {
       position: relative;
       width: 100%;
-      height: 1314px;
-
 
       .container {
         margin-top: 120px;
         z-index: 2;
       }
     
-      .p-button.p-button-secondary.p-button-outlined, .p-buttonset.p-button-secondary > .p-button.p-button-outlined, .p-splitbutton.p-button-secondary > .p-button.p-button-outlined {
-        width: 160px;
-      }
-  
-      .spliter {
-        position: relative;
-        width: 100%;
-        height: 400px;
-        background-color: #f1f2f3;
-        border-color: #777777;
-      }
-
       .img-after {
         background-image: url("../imgs/BitMap12.png");
+        background-size: 100% 400px;
+        height: 400px;
+      }
+
+      .img-timeline {
+        background-image: url("../imgs/Bitmap-6.png");
         background-size: 100% 400px;
         height: 400px;
       }

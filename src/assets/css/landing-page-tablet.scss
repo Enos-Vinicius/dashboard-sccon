@@ -92,7 +92,45 @@ $secondary: #ffd079;
           .p-carousel, .p-carousel-content {
             width: 500px;
           }
-      }
+    }
+
+    .images-mosaics {
+        position: relative;
+        width: 100%;
+  
+        .container {
+          z-index: 2;
+        }
+      
+        .img-after {
+          background-image: url("../imgs/BitMap12.png");
+          background-size: 100% 400px;
+          height: 400px;
+        }
+  
+        .img-timeline {
+          background-image: url("../imgs/Bitmap-6.png");
+          background-size: 100% 400px;
+          height: 400px;
+        }
+    
+    }
+
+    
+    .images-mosaics::before {
+        background-image: url("../imgs/Bitmap-4.png");
+        background-size: 100% 866px;
+        background-repeat: no-repeat;
+        opacity: 0.15;
+        z-index: 1;
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
 
     /* TYPOGRAPHY */
     .kicker-featured{font-size: 32px;font-weight: 600; color: $primary;}

@@ -121,9 +121,8 @@ export class InfoSoftwareComponent implements OnInit {
       {status: 'NOV', date: '15/10/2020 16:15'},
       {status: 'NOV', date: '15/10/2020 16:15'},
       {status: 'NOV', date: '15/10/2020 16:15'},
-      {status: 'NOV', date: '15/10/2020 16:15'},
-      {status: 'NOV', date: '16/10/2020 10:00'}
-  ];
+      {status: 'NOV', date: '15/10/2020 16:15'}
+    ];
   }
 
   viewTextLegend(){

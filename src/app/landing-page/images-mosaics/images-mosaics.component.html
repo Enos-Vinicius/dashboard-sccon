@@ -1,17 +1,65 @@
-<div class="images-mosaics" fxLayout="column" fxLayoutAlign="start center">
-    <div class="container p-lg-12 p-p-0">
-        <div fxLayout="row" fxLayoutAlign="start start">
-            <div class="p-col-1"></div>
-            <div class="p-col-5 p-p-0" fxLayout="column" fxLayoutAlign="start start">
-                <div class="h1-section p-col-8 p-p-0">{{'landing-page.images-mosaics.title' | translate | uppercase}}</div>    
-                <div class="body-section p-col-12 p-p-0 p-mt-3">{{'landing-page.images-mosaics.text' | translate | uppercase}}</div>
-                <div class="body-section p-col-12 p-p-0 p-mt-3">{{'landing-page.images-mosaics.text2' | translate | uppercase}}</div>
+<div class="images-mosaics" fxLayout="column" fxLayoutAlign="start center" fxLayoutAlign.sm="center center" fxLayoutAlign.xs="center center">
+    <div class="container p-lg-12 p-md-12 p-sm-12 p-p-0" >
+        <!-- 1ª Linha de Dados -->
+        <div fxLayout="row" fxLayout.sm="column" fxLayout.xs="column" fxLayoutAlign="start start" fxLayoutAlign.sm="center center"  fxLayoutAlign.xs="center center">
+            <div class="p-lg-1"></div>
+            <div class="p-lg-5 p-md-11 p-p-0 p-mt-md-6 p-m-3 p-m-lg-0" fxLayout="column" fxLayoutAlign="start start">
+                <div class="h1-section p-lg-8 p-md-8 p-p-0">{{'landing-page.images-mosaics.title' | translate | uppercase}}</div>    
+                <div class="body-section p-lg-12 p-p-0 p-mt-3 p-mt-md-5">{{'landing-page.images-mosaics.text' | translate | uppercase}}</div>
+                <div class="body-section p-lg-12 p-p-0 p-mt-3 p-mt-md-5">{{'landing-page.images-mosaics.text2' | translate | uppercase}}</div>
             </div>
-            <div class="p-col-1"></div>
-            <div class="p-col-5 p-p-0" fxLayout="column" fxLayoutAlign="center">
-                <div class="p-col-12 p-d-flex p-p-0 p-ai-center p-jc-center img-after" ></div>
+            <div class="p-lg-1"></div>
+            <div class="p-lg-5 p-md-12 p-sm-12 p-p-0 p-mt-md-5 p-m-lg-0" fxLayout="column" fxLayout.sm="column" fxLayoutAlign="center" fxLayoutAlign.sm="end end">
+                <div class="p-lg-12 p-md-11 p-sm-12 p-d-flex p-p-0 img-after"></div>
+                <div class="p-lg-12 p-md-11 caption-section p-mt-2" fxLayoutAlign="start start" fxLayoutAlign.sm="start start">Lorem ipsum dolor sit amet</div>
             </div>
         </div>
 
+        <div class="spacingY-21 display-none-md display-none-sm" fxLayout="row"></div>
+        
+        <!-- 2ª Linha de Dados -->
+        <div fxLayout="row" fxLayout.sm="column" fxLayout.xs="column" fxLayoutAlign="start start" fxLayoutAlign.sm="center center">
+            <div class="p-order-lg-1 p-order-md-2 p-order-2 p-lg-5 p-md-12 p-p-0 p-mt-md-6 p-m-lg-0" fxLayout="column" fxLayoutAlign="center">
+                <div class="p-lg-12 p-md-11 p-d-flex p-p-0 p-ai-center p-jc-center img-timeline" fxLayoutAlign="end end" fxLayoutAlign.sm="end end">
+                    <div class="p-lg-12 p-md-12 p-col-12" style="background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));" fxLayoutAlign="center">
+                        
+                        <!--TIME LINE DESKTOP/TABLET-->
+                        <div class="p-lg-10 p-md-12 display-none-sm">
+                            <p-timeline [value]="events" layout="horizontal">
+                                <ng-template pTemplate="content" let-event>
+                                    <span class="h3-featured white-color">{{event.status}}</span> 
+                                </ng-template>
+                            </p-timeline>
+                        </div>
+                        
+                        <!--TIME LINE DESKTOP/TABLET-->
+                        <div class="p-lg-10 p-md-12 p-col-8 display-none-md display-none-lg">
+                            <p-timeline [value]="eventsMobile" layout="horizontal">
+                                <ng-template pTemplate="content" let-event>
+                                    <span class="h3-featured white-color">{{event.status}}</span> 
+                                </ng-template>
+                            </p-timeline>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="p-lg-12 p-md-11 caption-section p-mt-2 p-ml-2" fxLayoutAlign="end end" fxLayoutAlign.xs="start">Lorem ipsum dolor sit amet</div>
+            </div>
+            <div class="p-lg-1 p-order-lg-2"></div>
+            <div class="p-order-1 p-order-lg-3 p-order-md-1 p-lg-5 p-md-11 p-p-0 p-m-3 p-m-lg-0" fxLayout="column" fxLayoutAlign="start start">
+                <div class="body-section p-lg-12 p-md-11 p-p-0">{{'landing-page.images-mosaics.text3' | translate | uppercase}}</div>
+                <div class="body-section p-lg-12 p-md-11 p-p-0 p-mt-3">{{'landing-page.images-mosaics.text4' | translate | uppercase}}</div>
+                <div class="body-section p-lg-12 p-md-11 p-p-0 p-mt-3">{{'landing-page.images-mosaics.text5' | translate | uppercase}}</div>
+            </div>
+            <div class="p-lg-1 p-order-lg-4"></div>
+        </div>
+
+        <!-- 3ª Linha de Dados -->
+        <div class="p-mt-6" fxLayout="row" fxLayoutAlign="center center">
+            <button class="button-md" mat-stroked-button color="accent">SAIBA MAIS</button>
+            <button class="button-md p-ml-6" mat-flat-button color="accent">ACESSAR AGORA</button>
+        </div>
+
+        <div class="spacingY-16" fxLayout="row"></div>
     </div>
 </div>
