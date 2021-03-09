@@ -62,11 +62,12 @@
         },  
         "platform": {
             "platform": "Plataforma EAD",
-            "text": "Plataforma para aprendizado à distância e compartilhamento de conhecimento e informações fornecidas no âmbito do contrato n° 018/2020 celebrado entre Polícia Federal e SCCON, com o objetivo de apresentar as especificações técnicas da tecnologia Planet e demais produtos contemplados no projeto, além de aplicações práticas e conteúdos conceituais relacionados a tecnologias de Sensoriamento Remoto e Geoprocessamento. A Plataforma EAD tem o objetivo também de contribuir para que o acesso e a utilização dos produtos fornecidos sejam potencializados e compartilhados entre as instituições e usuários públicos de todo Brasil.",
+            "text": "Plataforma para aprendizado à distância e compartilhamento de conhecimento e informações fornecidas no âmbito do contrato n° 018/2020 celebrado entre Polícia Federal e SCCON, com o objetivo de apresentar as especificações técnicas da tecnologia Planet e demais produtos contemplados no projeto, além de aplicações práticas e conteúdos conceituais relacionados a tecnologias de Sensoriamento Remoto e Geoprocessamento. ",
+            "text2": "A Plataforma EAD tem o objetivo também de contribuir para que o acesso e a utilização dos produtos fornecidos sejam potencializados e compartilhados entre as instituições e usuários públicos de todo Brasil.",
             "about-courses": "Sobre os Cursos",
-            "text2": "Os cursos disponíveis na Plataforma EAD estão organizados por temas que são apresentados utilizando recursos didáticos. Dentre os recursos utilizados na plataforma, têm-se: vídeos, apresentações, aulas gravadas, documentos técnicos e cases de diferentes aplicações. Também serão ministradas aulas ao vivo previamente agendas em cronograma compartilhado na Plataforma. Todas as aulas ao vivo serão gravadas e disponibilizadas.",
+            "text3": "Os cursos disponíveis na Plataforma EAD estão organizados por temas que são apresentados utilizando recursos didáticos. Dentre os recursos utilizados na plataforma, têm-se: vídeos, apresentações, aulas gravadas, documentos técnicos e cases de diferentes aplicações. Também serão ministradas aulas ao vivo previamente agendas em cronograma compartilhado na Plataforma. Todas as aulas ao vivo serão gravadas e disponibilizadas.",
             "target-audience": "Público-Alvo",
-            "text3": "Esta Plataforma EAD representa um recurso disponível aos usuários vinculados às instituições públicas dos níveis federal, estadual e municipal que aderirem ao projeto, permitindo assim o acesso às imagens de satélite Planet."
+            "text4": "Esta Plataforma EAD representa um recurso disponível aos usuários vinculados às instituições públicas dos níveis federal, estadual e municipal que aderirem ao projeto, permitindo assim o acesso às imagens de satélite Planet."
         },
         "common-questions": {
             "title": "Perguntas frequentes"

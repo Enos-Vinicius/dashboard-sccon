@@ -206,25 +206,25 @@ $secondary: #ffd079;
     }
   
     .info-dashboard {
-      height: 1858px;
+      height: 2055px;
       background-image: url("../imgs/Bitmap-7.png");
-      background-size: 100% 1858px;
+      background-size: 100% 2055px;
       background-repeat: no-repeat;
       background-position: center;
 
       .container {
         width: 100%;
-        height: 1858px;
+        height: 2055px;
         background-color: rgba(0,0,0,0.6);
       }
 
       .img-macbook {
         width: 375px;
         height: 397px;
-        background-image: url("../imgs/Bitmap-7.png");
+        background-image: url("../imgs/notebook.png");
         background-repeat: no-repeat;
-        background-size: 375px 397px;
-        margin-bottom: -210px;
+        background-size: 608px auto;
+        margin-bottom: 10px;
       }
       
       .img-iphone {
@@ -239,77 +239,55 @@ $secondary: #ffd079;
         margin-right: 50px;
       }
   }    
+    
+  .platform {
+    position: relative;
+    width: 100%;
+    background-image: url("../imgs/Bitmap-9.png");
+    background-size: 250% auto;
 
-    .platform {
-      border: 1px solid #777777;
-      width: 100%;
-      position: relative;
-      height: 1700px;
-
-      .info-platform {
-        width: 70%;
-      }
-
-      .info-platform-2 {
-        width: 70%;
-        height: 400px;
-      }
-
-      h1 {
-        font-size: 20px !important;
-        color: #777777;
-      }
-
-      h2 {
-        font-size: 14px !important;
-        color: #777777;
-        width: 350px;
-        margin-top: 30px !important;
-      }
-
-      .Rectangle-Copy-3 {
-        width: 153px;
-        height: 158px;
-        padding: 36px 35px 38px;
-        border: solid 1px #777777;
-      }
-
-      .Rectangle-Copy-12 {
-        width: 56px;
-        height: 56px;
-        margin: 0 47px 48px 0;
-        border: solid 1px #777777;
-      }
-
-      .Oval-Copy-3 {
-        width: 56px;
-        height: 56px;
-        margin: -75px 0 0 30px;
-        border-radius: 50%;
-        border: solid 1px #777777;
-      }
+    .img-platform-ead {
+      width: 245px;
+      height: 220px;
+      background-image: url("../imgs/vector/vector-laptop.svg");
+      background-repeat: no-repeat;
+      background-size: 90% auto;
+      margin-top: 56px;
     }
 
-    .platform-access {
-      height: 100px;
-      background-color: #f1f2f3;
-      border: 1px solid #777777;
+    .img-platform-courses {
+      width: 183px;
+      height: 220px;
+      background-image: url("../imgs/vector/vector-ead-1.svg");
+      background-repeat: no-repeat;
+      background-size: 90% auto;
+      margin-top: 20px;
     }
 
-    .common-questions {
-      position: relative;
-      width: 100%;
-      border: 1px solid #777777;
-
-      .accordion {
-        width: 95%;
-        padding: 8px;
-      }
-
-      .mat-expansion-panel-header {
-        min-height: 190px;
-      }
+    .img-platform-public {
+      width: 233px;
+      height: 220px;
+      background-image: url("../imgs/vector/vector-publico.svg");
+      background-repeat: no-repeat;
+      background-size: 90% auto;
+      margin-top: 20px;
     }
+  }
+
+  .common-questions {
+    position: relative;
+    width: 100%;
+    border: 1px solid #777777;
+
+    .accordion {
+      width: 95%;
+      padding: 8px;
+    }
+
+    .mat-expansion-panel-header {
+      min-height: 190px;
+    }
+  }
 
     .faq {
       width: 100%;

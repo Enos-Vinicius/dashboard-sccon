@@ -1,42 +1,45 @@
 <div class="platform" fxLayout="column" fxLayoutAlign="center center" fxLayoutAlign.xs="space-around center">
-    <div class="info-platform" fxLayout="column" fxLayoutAlign="center center">
-        <h1 mat-h1>{{'landing-page.platform.platform' | translate}}</h1>
-        <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="center center" fxLayoutAlign="start start">
-            <div class="Rectangle-Copy-3">
-                <div class="Rectangle-Copy-12"></div>
-                <div class="Oval-Copy-3"></div>
-            </div>
-            <h2>
-                {{'landing-page.platform.text' | translate}}
-            </h2>
+    <div class="spacingY-21 display-none-sm"></div>
+
+    <!--PLATAFORMA EAD-->
+    <div class="p-lg-10 p-md-11 p-col-11 p-p-0" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center" >
+        <div class="p-lg-4 p-md-4 p-p-0" fxLayoutAlign="center" fxLayoutAlign.sm="start">
+            <div class="img-platform-ead"></div>
+        </div>
+        <div class="p-lg-6 p-md-8 p-p-0">
+            <div class="h1-section">{{'landing-page.platform.platform' | translate | uppercase}}</div>
+            <div class="p-lg-11 body-section p-mt-5 p-p-0">{{'landing-page.platform.text' | translate}}</div>
+            <div class="p-lg-11 body-section p-mt-5 p-p-0">{{'landing-page.platform.text2' | translate}}</div>
         </div>
     </div>
-    <div class="info-platform-2" fxLayout="column"   fxLayoutAlign="center center">
-        <h1>{{'landing-page.platform.about-courses' | translate}}</h1>
-        <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="center center" fxLayoutAlign="start start">
-            <div class="Rectangle-Copy-3">
-                <div class="Rectangle-Copy-12"></div>
-                <div class="Oval-Copy-3"></div>
-            </div>
-            <h2>
-                {{'landing-page.platform.text2' | translate}}
-            </h2>
+    <div class="spacingY-16 display-none-sm"></div>
+
+    <!--SOBRE OS CURSOS-->
+    <div class="p-lg-10 p-md-11 p-col-11 p-p-0" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center" >
+        <div class="p-lg-4 p-md-4 p-p-0" fxLayoutAlign="center">
+            <div class="img-platform-courses"></div>
+        </div>
+        <div class="p-lg-6 p-md-8 p-p-0">
+            <div class="h1-section">{{'landing-page.platform.about-courses' | translate | uppercase}}</div>
+            <div class="p-lg-11 body-section p-mt-5 p-p-0">{{'landing-page.platform.text3' | translate}}</div>
         </div>
     </div>
-    <div class="info-platform-2" fxLayout="column"  fxLayoutAlign="center center">
-        <h1>{{'landing-page.platform.target-audience' | translate}}</h1>
-        <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="center center" fxLayoutAlign="start start" style="height: 400px;">
-            <div class="Rectangle-Copy-3">
-                <div class="Rectangle-Copy-12"></div>
-                <div class="Oval-Copy-3"></div>
-            </div>
-            <h2>
-                {{'landing-page.platform.text3' | translate}}
-            </h2>
+    <div class="spacingY-16 display-none-sm"></div>
+
+    <!--PUBLICO ALVO-->
+    <div class="p-lg-10 p-md-11 p-col-11 p-p-0" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center" >
+        <div class="p-lg-4 p-md-4 p-p-0" fxLayoutAlign="center">
+            <div class="img-platform-public"></div>
+        </div>
+        <div class="p-lg-6 p-md-8 p-p-0">
+            <div class="h1-section">{{'landing-page.platform.target-audience' | translate | uppercase}}</div>
+            <div class="p-lg-11 body-section p-mt-5 p-p-0">{{'landing-page.platform.text4' | translate}}</div>
         </div>
     </div>
-</div>
-<div class="platform-access" fxLayout="row" fxLayoutAlign="center center">
-    <button class="button-radius-white" routerLink="login">{{'landing-page.info-software.access-now' | translate}}</button>
-    <button class="button-radius-white" routerLink="login">{{'landing-page.info-software.know-more' | translate}}</button>   
+
+    <div class="p-m-sm-3" fxLayout="row" fxLayoutAlign="center center">
+        <button class="button-md" mat-stroked-button color="accent">{{'buttons.know-more' | translate | uppercase}}</button>
+        <button class="button-md p-m-4" mat-flat-button routerLink="login" color="accent">{{'landing-page.info-software.access-now' | translate | uppercase}}</button>
+    </div>
+
 </div>
