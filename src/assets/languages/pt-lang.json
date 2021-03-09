@@ -70,7 +70,8 @@
             "text4": "Esta Plataforma EAD representa um recurso disponível aos usuários vinculados às instituições públicas dos níveis federal, estadual e municipal que aderirem ao projeto, permitindo assim o acesso às imagens de satélite Planet."
         },
         "common-questions": {
-            "title": "Perguntas frequentes"
+            "title": "Perguntas frequentes",
+            "no-meet": "Nenhum item encontrado para o texto digitado"
         },
         "faq": {
             "title": "Envia suas dúvidas e sugestões"
@@ -83,6 +84,7 @@
     },
     "buttons": {
         "send": "Enviar",
+        "send-data": "Enviar Dados",
         "register": "Cadastre-se",
         "access-now": "Acessar agora",
         "know-more": "Saiba mais"

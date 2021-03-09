@@ -297,39 +297,42 @@ $secondary: #ffd079;
     }
 
     .common-questions {
-      position: relative;
-      width: 100%;
-      border: 1px solid #777777;
+      min-height: 600px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 
-      .accordion {
-        width: 70%;
-        padding: 8px;
-      }
-    }
-
-    .faq {
-      width: 100%;
-
-      h1 {
-        font-size: 30px !important;
-        color: #777777;
-        margin-top: 20px !important;
-        text-align: center;
+      .img-questions {
+        width: 100%;
+        height: 344px;
+        background-image: url("../imgs/Bitmap-10.png");
+        background-size: 100% 344px;
       }
 
-      .container {
-        width: 60%;
+      .img-questions-bk {
+        width: 100%;
+        height: 344px;
+        background-color: rgba(0,0,0,0.4);
       }
-    }
 
-    .input-50 {
-      width: 50%;
-      padding: 10px;
-    }
+      .mat-expansion-panel-header{
+        margin: 40px 0;
+      }
 
-    .input-100 {
-      width: 100%;
-      padding: 10px;
+      .mat-expansion-panel-header:hover{
+        background-color: rgba(0,0,0,0) !important;
+      }
+
+      .mat-expansion-panel-header {
+        text-align: start;
+      }
+
+      .mat-expansion-panel:not([class*=mat-elevation-z]) {
+        box-shadow: none;
+      }
+
+      .mat-expansion-panel-header:not([aria-disabled=true]) {
+        height: auto;
+      }
+
     }
 
     .info-news {
@@ -407,16 +410,17 @@ $secondary: #ffd079;
     }
 
     .footer {
-      height: 100px;
-      background-color: #f1f2f3;
-      border: 1px solid #777777;
+      height: 240px;
+      width: 100%;
+      background-image: url("../imgs/Bitmap-11.png");
+      background-size: 100% auto;
+      background-position-y: 50%;
 
-      h1 {
-        font-size: 36px;
-        margin: 0px !important;
+      .logo-footer {
+        height: 73px;
       }
     }
-
+        
     .request-access {
       width: 100%;
       height: 93%;
@@ -447,13 +451,21 @@ $secondary: #ffd079;
       font-style: normal;
       line-height: 1.27;
       letter-spacing: 0.6px;
-      text-align: right;
     }
     .body-section{
       font-size: 18px;
       color: $primary;
       line-height: 1.56; 
       font-weight: 500;
+      font-stretch: normal;
+      font-style: normal;
+      letter-spacing: normal;
+    }
+    .body-lg {
+      font-size: 18px;
+      color: $primary;
+      line-height: 1.56; 
+      font-weight: 600;
       font-stretch: normal;
       font-style: normal;
       letter-spacing: normal;
@@ -553,6 +565,13 @@ $secondary: #ffd079;
         background-repeat: no-repeat;
     }
 
+    .logo-sccon {
+      width: 100%;
+      height: auto;
+      background-image: url("../imgs/logos/sccon.svg");
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+    }
     /* END DESKTOP*/
   }
   

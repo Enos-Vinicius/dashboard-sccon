@@ -1,10 +1,10 @@
 <div class="faq" fxLayout="column" fxLayoutAlign="center center" fxLayoutAlign.xs="space-around center">
-  <div class="container" >
-    <h1>{{'landing-page.faq.title' | translate}}</h1>
+  <div class="container p-lg-7 p-md-11 p-p-0" >
+    <div class="h1-section p-m-6 p-text-center" fxLayoutAlign="center">{{'landing-page.faq.title' | translate}}</div>
     <div [formGroup]="formFaq" >
       <!-- 1ª Linha  -->
-      <div class="form" fxLayout="row"  fxLayout.xs="column">
-          <mat-form-field class="input-50" appearance="outline">
+      <div fxLayout="row"  fxLayout.xs="column">
+          <mat-form-field class="p-lg-6 p-md-6" appearance="outline">
             <mat-label>{{'forms-inputs.name' | translate}}</mat-label>
             <input id="name" name="input-name" formControlName="name" matInput placeholder="{{'forms-inputs.name' | translate}}">
             <mat-error *ngIf="formFaq.get('name').invalid && formFaq.get('name').touched">
@@ -17,7 +17,7 @@
             </mat-error>
           </mat-form-field>
   
-          <mat-form-field class="input-50" appearance="outline">
+          <mat-form-field class="p-lg-6 p-md-6" appearance="outline">
               <mat-label>{{'forms-inputs.email' | translate}}</mat-label>
               <input id="email" name="input-email" formControlName="email" matInput placeholder="{{'forms-inputs.email' | translate}}">
               <mat-error *ngIf="formFaq.get('email').invalid && formFaq.get('email').touched">
@@ -28,8 +28,8 @@
       </div>
   
       <!-- 2ª Linha  -->
-      <div class="form" fxLayout="row" fxLayout.xs="column">
-          <mat-form-field class="input-50" appearance="outline">
+      <div fxLayout="row" fxLayout.xs="column">
+          <mat-form-field class="p-lg-6 p-md-6" appearance="outline">
               <mat-label>{{'forms-inputs.institution' | translate}}</mat-label>
               <input id="instituicao" name="input-name" formControlName="organizationName" matInput placeholder="{{'forms-inputs.institution' | translate}}">
               <mat-error *ngIf="formFaq.get('organizationName').invalid && formFaq.get('organizationName').touched">
@@ -37,7 +37,7 @@
                 </mat-error>
           </mat-form-field>
   
-          <mat-form-field class="input-50" appearance="outline">
+          <mat-form-field class="p-lg-6 p-md-6" appearance="outline">
               <mat-label>{{'forms-inputs.phone' | translate}}</mat-label>
               <input id="telefone" name="input-telefone" formControlName="fone" maxlength="15" phoneValidatorMask matInput placeholder="{{'forms-inputs.phone' | translate}}">
               <mat-error *ngIf="formFaq.get('fone').invalid && formFaq.get('fone').touched">
@@ -47,22 +47,8 @@
       </div>
   
       <!-- 3ª Linha  -->
-      <!-- <div class="form" fxLayout="row">
-          <mat-form-field class="input-100" appearance="outline">
-              <mat-label>Título</mat-label>
-              <input id="email" name="input-email" formControlName="email" maxlength="9" matInput placeholder="Título">
-              <mat-error >
-                  *Preenchimento de campo obrigatório
-                </mat-error>
-                <mat-error >
-                  Quantidade minima de caracteres não informada!
-                </mat-error>
-          </mat-form-field>
-      </div> -->
-  
-      <!-- 4ª Linha  -->
-      <div class="form" fxLayout="row">
-          <mat-form-field class="input-100" appearance="outline">
+      <div fxLayout="row">
+          <mat-form-field class="p-col-12" appearance="outline">
               <mat-label>{{'forms-inputs.message' | translate}}</mat-label>
               <textarea rows="6" id="mensagem" name="input-mensagem" formControlName="doubt" matInput placeholder="{{'forms-inputs.message' | translate}}"></textarea>
               <mat-error *ngIf="formFaq.get('doubt').invalid && formFaq.get('doubt').touched">
@@ -70,9 +56,10 @@
               </mat-error>
           </mat-form-field>
       </div>
-      <re-captcha formControlName="captchaValue"></re-captcha>
-      <div fxLayoutAlign="center center">
-        <button class="button-radius" (click)="submitForm()">{{'buttons.send' | translate}}</button>
+
+      <div class="p-col-12 p-md-12 p-mb-6" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-between center">
+        <re-captcha formControlName="captchaValue"></re-captcha>
+        <button class="button-md p-mt-4" (click)="submitForm()" mat-flat-button color="accent" [disabled]="formFaq.invalid">{{'buttons.send-data' | translate | uppercase}}</button>
       </div>
     </div>
   </div>

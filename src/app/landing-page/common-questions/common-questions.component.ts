@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 import { CommonQuestions } from 'src/shared/models/common-questions.model';
 import { CommonQuestionsService } from 'src/shared/services/common-questions.service';
 
@@ -9,13 +10,19 @@ import { CommonQuestionsService } from 'src/shared/services/common-questions.ser
 })
 export class CommonQuestionsComponent implements OnInit {
 
-  commonQuestions: CommonQuestions[] = []
+  commonQuestions: CommonQuestions[] = [];
+  inputQuestion: FormControl;
 
   constructor(
     private common: CommonQuestionsService
   ) { }
 
   ngOnInit(): void {
+    this.getCommon();
+    this.buildForm();
+  }
+
+  getCommon(){
     this.common.getAll().subscribe(
       (data) => {
         this.commonQuestions = data;
@@ -24,6 +31,10 @@ export class CommonQuestionsComponent implements OnInit {
         console.log("error", err);
       }
     )
+  }
+
+  buildForm() {
+    this.inputQuestion = new FormControl('');
   }
 
 }

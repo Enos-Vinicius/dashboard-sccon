@@ -28,7 +28,7 @@ export class FaqComponent implements OnInit {
       email: [null, [Validators.required, Validators.email,Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]],
       organizationName: [null, Validators.required],
       appRefId: ['policiafederal'],
-      captchaValue: [null],
+      captchaValue: [null, Validators.required],
       fone: [null, Validators.required],
       doubt: [null, Validators.required],
       receiveCall: [false],
@@ -37,12 +37,13 @@ export class FaqComponent implements OnInit {
   }
 
   submitForm() {
-    console.log("Form: ", this.formFaq);
-    const support: Support = Support.fromJson(this.formFaq.value);
-    this.supportService.create(support).subscribe(
-      support => this.actionsForSuccess(support),
-      error => this.actionsForError(error) 
-    )
+    if(this.formFaq.valid){
+      const support: Support = Support.fromJson(this.formFaq.value);
+      this.supportService.create(support).subscribe(
+        support => this.actionsForSuccess(support),
+        error => this.actionsForError(error) 
+      )
+    }
   }
 
   private actionsForSuccess(support){
