@@ -36,6 +36,29 @@
             "text3": "Com centenas de satélites em órbita a Planet é capaz de obter imagens com resolução de 3 metros de qualquer local da Terra diariamente.",
             "text4": "As imagens Planet são obtidas pela constelação de satélites Dove que possuem o mesmo tipo de sensor, são adquiridas por mais de 130 satélites, com 04 bandas espectrais e resolução radiométrica de 12 bits, são ortorretificadas e possuem 3 metros de resolução espacial, o que permite obter imagens atuais de grandes áreas com alto padrão de qualidade e precisão planimétrica.",
             "text5": "A capacidade de recobrimento de todo o Brasil várias vezes ao longo de 30 dias com o mesmo tipo de sensor poderá permitir o monitoramento detalhado da dinâmica de ocupação no País ao longo de cada mês. Esta capacidade"
+        },
+        "dashboard": {
+            "title": "Dashboard de alertas de mudança",
+            "text": "Com centenas de satélites em órbita a Planet é capaz de obter imagens com resolução de 3 metros de qualquer local da Terra diariamente.",
+            "text2": "As imagens Planet são obtidas pela constelação de satélites Dove que possuem o mesmo tipo de sensor, são adquiridas por mais de 130 satélites, com 04 bandas espectrais e resolução radiométrica de 12 bits, são ortorretificadas e possuem 3 metros de resolução espacial, o que permite obter imagens atuais de grandes áreas com alto padrão de qualidade e precisão planimétrica.",
+            "class-alerts": "Classes de alertas",
+            "all": "- Todas;",
+            "burn-scar": "- Cicatriz de Queimadas;",
+            "deforestation-access": "- Desmatamento - Acesso;",
+            "deforestation-cut-small": "- Desmatamento - Corte Raso",
+            "deforestation-degradation": "- Desmatamento - Degradação;",
+            "deforestation-selective-cut": "- Desmatamento - Degradação - Corte Seletivo;",
+            "deforestation-extraction": "- Desmatamento - Extração de Mineral/Garimpo;",
+            "vessels": "- Embarcações;",
+            "burn-focus": "- Foco de Queimada;",
+            "airstrip": "- Pista de Pouso;",
+            "data-in-graphics": "DADOS EM GRÁFICOS",
+            "burns": "- Queimadas;",
+            "deforastation": "- Desmatamentos;",
+            "illicit-crops": "- Cultivos Ilícitos;",
+            "illegal-vessels": "- Embarcações Ilegais;",
+            "clandestine-landing": "- Pista de Pousos Clandestina;",
+            "disponible": "Disponível e acessível também para celulares"
         },  
         "platform": {
             "platform": "Plataforma EAD",
@@ -59,7 +82,9 @@
     },
     "buttons": {
         "send": "Enviar",
-        "register": "Cadastre-se"
+        "register": "Cadastre-se",
+        "access-now": "Acessar agora",
+        "know-more": "Saiba mais"
     },
     "forms-inputs": {
         "name": "Nome",

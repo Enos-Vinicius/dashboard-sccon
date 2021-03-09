@@ -1,42 +1,67 @@
 <div class="info-dashboard" fxLayout="column" >
-    <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign="start start">
-        <div class="div-left" fxLayout="column" fxLayoutAlign.xs="start center" fxLayoutAlign="end center">
-            <p>CLASSE DE ALERTAS</p> 
-            <p>- Todas</p>
-            <p>- Cicatriz de Queimadas;</p>
-            <p>- Desmatamento - Acesso;</p>
-            <p>- Desmatamento - Corte Raso;</p>
-            <p>- Desmatamento - Degradação;</p>
-            <p>- Desmatamento - Degradação - Corte Seletivo;</p>
-            <p>- Desmatamento - Extração de Mineral/Garimpo;</p>
-            <p>- Embarcações;</p>
-            <p>- Foco de Queimada;</p>
-            <p>- Pista de Pouso;</p>
-            <br><br>
-            <p> DADOS EM GRÁFICOS</p>
-            <p>- Queimadas</p>
-            <p>- Desmatamentos</p>
-            <p>- Cultivos Ilícitos</p>
-            <p>- Embarcações Ilegais</p>
-            <p>- Pista de Pousos Clandestina</p>
+    <div class="container" fxLayout="column" fxLayout.xs="column" fxLayoutAlign.sm="space-between" fxLayoutAlign.xs="space-between">
+        <div fxLayout="row" fxLayout.sm="column" fxLayout.xs="column" fxLayoutAlign.sm="center center" fxLayoutAlign.xs="center center">
+            <div class="div-left p-order-lg-1 p-order-md-2 p-order-2 p-lg-6 p-md-12 white-color p-p-0" fxLayout="column" fxLayoutAlign.sm="end end" fxLayoutAlign="end start">
+                <div class="p-lg-12 img-macbook p-p-0 p-mt-md-6 p-mt-3"></div>
+                <div class="p-lg-12 p-md-12 p-p-0" fxLayout="row">
+                    <div class="p-lg-4 display-none-md"></div>
+                    <div class="p-lg-8 list-section white-color p-ml-lg-0 p-ml-md-6 p-mb-lg-6">
+                        <div>{{'landing-page.dashboard.class-alerts' | translate | uppercase}}</div> 
+                        <div class="p-mt-4">{{'landing-page.dashboard.all' | translate}}</div>
+                        <div>{{'landing-page.dashboard.all' | translate}}</div>
+                        <div>{{'landing-page.dashboard.burn-scar' | translate}}</div>
+                        <div>{{'landing-page.dashboard.deforestation-access' | translate}}</div>
+                        <div>{{'landing-page.dashboard.deforestation-cut-small' | translate}}</div>
+                        <div>{{'landing-page.dashboard.deforestation-degradation' | translate}}</div>
+                        <div>{{'landing-page.dashboard.deforestation-selective-cut' | translate}}</div>
+                        <div>{{'landing-page.dashboard.deforestation-extraction' | translate}}</div>
+                        <div>{{'landing-page.dashboard.vessels' | translate}}</div>
+                        <div>{{'landing-page.dashboard.burn-focus' | translate}}</div>
+                        <div>{{'landing-page.dashboard.airstrip' | translate}}</div>
+
+                        <div class="p-mt-4">{{'landing-page.dashboard.data-in-graphics' | translate | uppercase}}</div>
+                        <div class="p-mt-4">{{'landing-page.dashboard.burns' | translate }}</div>
+                        <div >{{'landing-page.dashboard.deforastation' | translate }}</div>
+                        <div >{{'landing-page.dashboard.illicit-crops' | translate }}</div>
+                        <div >{{'landing-page.dashboard.illegal-vessels' | translate }}</div>
+                        <div >{{'landing-page.dashboard.clandestine-landing' | translate }}</div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="p-order-lg-2 p-order-md-1 p-order-1 p-lg-6 p-md-11 p-col-11 white-color p-p-0" fxLayout="column" fxLayoutAlign="space-between start">
+                <div fxLayout="column">
+                    <div class="spacingY-21 display-none-md display-none-sm"></div>
+                    <div class="spacingY-14 display-none-lg"></div>
+                    <div class="h1-section p-lg-7 white-color p-md-9">{{'landing-page.dashboard.title' | translate | uppercase}}</div>
+                    <div class="spacingY-11"></div>
+                    <div class="body-section white-color p-md-10 p-lg-11 ">{{'landing-page.dashboard.text' | translate }}</div>
+                    <div class="body-section white-color p-md-10 p-lg-11 ">{{'landing-page.dashboard.text2' | translate }}</div>
+                </div>
+
+                <!--IMG IPHONE DESKTOP-->
+                <div class="display-none-md display-none-sm" fxLayout="row">
+                    <div class="h2-section white-color p-lg-4">
+                        {{'landing-page.dashboard.disponible' | translate }}
+                    </div>
+                    <div class="img-iphone"></div>
+                </div>
+            </div>
         </div>
-        <div class="div-right" fxLayout="column" fxLayoutAlign="start start">
-            <h1>Dashboard de alertas de mudança</h1><br>
-            <p>
-                O Dashboard tem o objetivo de apresentar os alertas de detecção de mudanças gerados no âmbito do contrato, a partir de visualização interativa em um mapa e de gráficos produzidos automaticamente a partir dos filtros definidos pelo usuário.
-            </p><br>
-            <p>
-                No Dashboard, após realizar o login, o usuário terá acesso aos alertas de detecção de mudança gerados para as áreas definidas pela Polícia Federal. Vale observar que o Dashboard será disponibilizado somente para usuários com permissão de acesso. 
-            </p><br>
-            <p>   
-                É  possível no dashboard verificar a quantificação de alertas, filtrar por área e período de interesse, além de observar os polígonos no mapa e sua intersecção com outras camadas como, por exemplo, o CAR (Cadastro Ambiental Rural).
-            </p><br><br><br>
-            <p class="text-min">Disponível e acessível também para celulares</p>
+        
+        <!--IMG IPHONE TABLET/MOBILE-->
+        <div class="display-none-lg" fxLayout.sm="row" fxLayout.xs="column" fxLayoutAlign.xs="start center">
+            <div class="p-order-2 p-order-md-1 img-iphone"></div>
+            <div class="p-order-1 p-order-md-2 text-disponible  h2-section white-color p-md-4 p-col-9 p-ml-md-6 p-p-0 p-mt-5 p-mb-5">
+                {{'landing-page.dashboard.disponible' | translate }}
+            </div>
         </div>
-    </div>
-    <p class="text-min-mobile">Disponível e acessível também para celulares</p>
-    <div class="can-access-open" fxLayout="row" fxLayoutAlign="center center">
-        <button class="button-radius-white" routerLink="request-access">Saiba Mais</button>
-        <button class="button-radius-white" routerLink="login">Acessar Agora</button>
+
+        <div fxLayoutAlign="center center" style="position: relative; bottom: 100px;">
+            <button class="button-md" mat-button color="accent">{{'buttons.know-more' | translate | uppercase}}</button>
+            <button class="button-md p-ml-lg-6 p-ml-md-3 p-ml-3" mat-flat-button color="accent">{{'buttons.access-now' | translate | uppercase}}</button>
+        </div>
+
     </div>
 </div>

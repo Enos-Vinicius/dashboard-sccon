@@ -158,43 +158,6 @@ body { margin: 0; font-family: 'Montserrat', sans-serif; }
   padding: 10px;
 }
 
-.button-radius {
-  height: 40px;
-  border-radius: 29.5px;
-  border: solid 1px #777777;
-  background-color: #f1f2f3;
-  color: #777777;
-  font-size: 16px;
-  padding: 0 20px;
-  margin: 10px;
-  cursor: pointer;
-}
-
-.button-radius-long {
-  height: 40px;
-  width: 90%;
-  border-radius: 29.5px;
-  border: solid 1px #777777;
-  background-color: #f1f2f3;
-  color: #777777;
-  font-size: 16px;
-  padding: 0 20px;
-  margin: 10px;
-  cursor: pointer;
-}
-
-.button-radius-white {
-  height: 40px;
-  border-radius: 29.5px;
-  border: solid 1px #777777;
-  background-color: white;
-  color: #777777;
-  font-size: 16px;
-  padding: 0 20px;
-  margin: 10px;
-  cursor: pointer !important;
-}
-
 .menu-style {
   margin-left: -16px !important;
   height: 850px !important;
@@ -327,7 +290,9 @@ body { margin: 0; font-family: 'Montserrat', sans-serif; }
 }
 
 .mat-button.mat-accent, .mat-icon-button.mat-accent, .mat-stroked-button.mat-accent:hover {
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
 }
 
 .mat-button.mat-accent, .mat-icon-button.mat-accent {
