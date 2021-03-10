@@ -1,6 +1,6 @@
 <div class="faq" fxLayout="column" fxLayoutAlign="center center" fxLayoutAlign.xs="space-around center">
   <div class="container p-lg-7 p-md-11 p-p-0" >
-    <div class="h1-section p-m-6 p-text-center" fxLayoutAlign="center">{{'landing-page.faq.title' | translate}}</div>
+    <div *ngIf="!hiddenTitle" class="h1-section p-m-6 p-text-center" fxLayoutAlign="center">{{'landing-page.faq.title' | translate}}</div>
     <div [formGroup]="formFaq" >
       <!-- 1ª Linha  -->
       <div fxLayout="row"  fxLayout.xs="column">

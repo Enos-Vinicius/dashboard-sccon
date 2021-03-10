@@ -27,7 +27,8 @@
         },
         "info-news": {
             "news": "+ Notícias",
-            "indicate-content": "Indique + conteúdos"
+            "indicate-content": "Indique + conteúdos",
+            "close": "Fechar"
         },
         "images-mosaics": {
             "title": "Imagens diárias e Mosaicos Planet",

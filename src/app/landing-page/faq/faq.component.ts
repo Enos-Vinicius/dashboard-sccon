@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { SupportService } from 'src/shared/services/support.service';
 import { Support } from '../../../shared/models/support.model';
@@ -10,6 +10,7 @@ import { Support } from '../../../shared/models/support.model';
 })
 export class FaqComponent implements OnInit {
 
+  @Input() hiddenTitle: boolean;
   formFaq: FormGroup;
 
 

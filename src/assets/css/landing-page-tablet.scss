@@ -26,7 +26,6 @@ $secondary: #ffd079;
     }
 
     .news {
-        height: 950px;
         width: 768px;
         font-size: 20px;
         padding: 10px;
@@ -350,10 +349,7 @@ $secondary: #ffd079;
 
 @media (min-width: 900px) and (max-width: 1024px){
     .news {
-        height: 700px;
-        font-size: 20px;
-        padding: 10px;
-        
+
         .product-item {
             width: 900px;
             .product-item-content {

@@ -67,7 +67,8 @@ export class NewsComponent implements OnInit {
   },
   ];
   responsiveOptions;
-  
+  viewForm: boolean = false;
+
   constructor() {
     this.responsiveOptions = [
       {
