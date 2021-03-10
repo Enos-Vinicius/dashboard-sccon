@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -7,12 +8,21 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent implements OnInit {
-
+  viewText: boolean = false;
+  
   constructor(
     private translate: TranslateService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
   }
-
+    
+  redirecTo(page){
+    this.router.navigate([page])
+  }
+  
+  viewTextLegend(){
+    this.viewText = !this.viewText;
+  }
 }

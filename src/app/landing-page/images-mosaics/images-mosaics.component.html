@@ -1,53 +1,65 @@
-<div class="images-mosaics" fxLayout="column" fxLayoutAlign="space-around center">
-    <h1>Imagens diárias e Mosaicos Planet</h1>
-    <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="center center" fxLayoutAlign="space-around center">
-        <div fxFlex="40" fxLayout="column" fxLayoutAlign="start center">
-            <p-splitter styleClass="spliter p-mb-5">
-                <ng-template>
-                    <div class="p-col p-d-flex p-ai-center p-jc-center">
-
-                    </div>
-                </ng-template>
-                <ng-template>
-                    <div class="p-col p-d-flex p-ai-center p-jc-center">
-
-                    </div>
-                </ng-template>
-            </p-splitter>
-            <br>
-            <p class="title">Comparação de imagens - (desmatamento)</p>
-            <br><br>
-            <p>
-                Nenhuma outra constelação de satélites atualmente em operação tem a capacidade de monitoramento e cobertura para aquisição de imagens de alta resolução e precisão planimétrica como a Planet.<br><br>
-    
-                As imagens Planet são adquiridas nas bandas do visível: azul, verde e vermelho e, também, no infravermelho próximo (NIR), favorecendo o monitoramento ambiental e o mapeamento de uso e 
-                cobertura do solo em similaridade com as bandas RapidEye.<br><br>
-    
-                Revisita diária e análise de séries temporais Tenha o contexto histórico e entenda o que está acontecendo na sua área de interesse com imagens diárias.<br><br>
-    
-                Coleta de mais de 300 milhões de km² diariamente Acervo desde 2016<br><br>
-    
-                Monitore alterações em grandes áreas com recursos de alta resolução
-            </p>
+<div class="images-mosaics" fxLayout="column" fxLayoutAlign="start center" fxLayoutAlign.sm="center center" fxLayoutAlign.xs="center center">
+    <div class="container p-lg-12 p-md-12 p-sm-12 p-p-0" >
+        <!-- 1ª Linha de Dados -->
+        <div fxLayout="row" fxLayout.sm="column" fxLayout.xs="column" fxLayoutAlign="start start" fxLayoutAlign.sm="center center"  fxLayoutAlign.xs="center center">
+            <div class="p-lg-1"></div>
+            <div class="p-lg-5 p-md-11 p-p-0 p-mt-md-6 p-m-3 p-m-lg-0" fxLayout="column" fxLayoutAlign="start start">
+                <div class="h1-section p-lg-8 p-md-8 p-p-0">{{'landing-page.images-mosaics.title' | translate | uppercase}}</div>    
+                <div class="body-section p-lg-12 p-p-0 p-mt-3 p-mt-md-5">{{'landing-page.images-mosaics.text' | translate }}</div>
+                <div class="body-section p-lg-12 p-p-0 p-mt-3 p-mt-md-5">{{'landing-page.images-mosaics.text2' | translate }}</div>
+            </div>
+            <div class="p-lg-1"></div>
+            <div class="p-lg-5 p-md-12 p-sm-12 p-p-0 p-mt-md-5 p-m-lg-0" fxLayout="column" fxLayout.sm="column" fxLayoutAlign="center" fxLayoutAlign.sm="end end">
+                <div class="p-lg-12 p-md-11 p-sm-12 p-d-flex p-p-0 img-after"></div>
+                <div class="p-lg-12 p-md-11 caption-section p-mt-2" fxLayoutAlign="start start" fxLayoutAlign.sm="start start">Lorem ipsum dolor sit amet</div>
+            </div>
         </div>
-        <div fxFlex="40" fxLayout="column" fxLayoutAlign="center center">
-            <p>
-                Com centenas de satélites em órbita a Planet é capaz de obter imagens com resolução de 3 metros de qualquer local da Terra diariamente. <br><br>
-                As imagens Planet são obtidas pela constelação de satélites Dove que possuem o mesmo tipo de sensor, são adquiridas por mais de 130 satélites, com 04 bandas espectrais e resolução radiométrica de 12 bits, são ortorretificadas e possuem 3 metros de resolução espacial, o que permite obter imagens atuais de grandes áreas com alto padrão de qualidade e precisão planimétrica.<br><br>
-                A capacidade de recobrimento de todo o Brasil várias vezes ao longo de 30 dias com o mesmo tipo de sensor poderá permitir o monitoramento detalhado da dinâmica de ocupação no País ao longo de cada mês. Esta capacidade garante também coberturas completas com baixos índices de cobertura de nuvem, bem inferiores aqueles normalmente estabelecidos pelos padrões normais de aquisição.
-            </p><br><br>
-            <p class="title">Foco de queimada</p>
-             <div  fxLayout="column" fxLayoutAlign="space-evenly end">
-                 <div class="panel"></div>
-                 <div fxLayout="row" fxLayoutAlign="end end" fxFlex="100">
-                     <button pButton pRipple type="button" label="1 Out 2020" class="p-button-outlined p-button-secondary"></button>
-                     <button pButton pRipple type="button" label="10 Out 2020" class="p-button-outlined p-button-secondary"></button>
-                     <button pButton pRipple type="button" label="20 Out 2020" class="p-button-outlined p-button-secondary"></button>
-                     <button pButton pRipple type="button" label="1 Nov 2020" class="p-button-outlined p-button-secondary"></button>
-                 </div>
-             </div>
-    
+
+        <div class="spacingY-21 display-none-md display-none-sm" fxLayout="row"></div>
+        
+        <!-- 2ª Linha de Dados -->
+        <div fxLayout="row" fxLayout.sm="column" fxLayout.xs="column" fxLayoutAlign="start start" fxLayoutAlign.sm="center center">
+            <div class="p-order-lg-1 p-order-md-2 p-order-2 p-lg-5 p-md-12 p-p-0 p-mt-md-6 p-m-lg-0" fxLayout="column" fxLayoutAlign="center">
+                <div class="p-lg-12 p-md-11 p-d-flex p-p-0 p-ai-center p-jc-center img-timeline" fxLayoutAlign="end end" fxLayoutAlign.sm="end end">
+                    <div class="p-lg-12 p-md-12 p-col-12" style="background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));" fxLayoutAlign="center">
+                        
+                        <!--TIME LINE DESKTOP/TABLET-->
+                        <div class="p-lg-10 p-md-12 display-none-sm">
+                            <p-timeline [value]="events" layout="horizontal">
+                                <ng-template pTemplate="content" let-event>
+                                    <span class="h3-featured white-color">{{event.status}}</span> 
+                                </ng-template>
+                            </p-timeline>
+                        </div>
+                        
+                        <!--TIME LINE DESKTOP/TABLET-->
+                        <div class="p-lg-10 p-md-12 p-col-8 display-none-md display-none-lg">
+                            <p-timeline [value]="eventsMobile" layout="horizontal">
+                                <ng-template pTemplate="content" let-event>
+                                    <span class="h3-featured white-color">{{event.status}}</span> 
+                                </ng-template>
+                            </p-timeline>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="p-lg-12 p-md-11 caption-section p-mt-2 p-ml-2" fxLayoutAlign="end end" fxLayoutAlign.xs="start">Lorem ipsum dolor sit amet</div>
+            </div>
+            <div class="p-lg-1 p-order-lg-2"></div>
+            <div class="p-order-1 p-order-lg-3 p-order-md-1 p-lg-5 p-md-11 p-p-0 p-m-3 p-m-lg-0" fxLayout="column" fxLayoutAlign="start start">
+                <div class="body-section p-lg-12 p-md-11 p-p-0">{{'landing-page.images-mosaics.text3' | translate | uppercase}}</div>
+                <div class="body-section p-lg-12 p-md-11 p-p-0 p-mt-3">{{'landing-page.images-mosaics.text4' | translate | uppercase}}</div>
+                <div class="body-section p-lg-12 p-md-11 p-p-0 p-mt-3">{{'landing-page.images-mosaics.text5' | translate | uppercase}}</div>
+            </div>
+            <div class="p-lg-1 p-order-lg-4"></div>
         </div>
+
+        <!-- 3ª Linha de Dados -->
+        <div class="p-mt-6" fxLayout="row" fxLayoutAlign="center center">
+            <button class="button-md" mat-stroked-button color="accent">{{'buttons.know-more' | translate | uppercase}}</button>
+            <button class="button-md p-ml-6" mat-flat-button color="accent">{{'buttons.access-now' | translate | uppercase}}</button>
+        </div>
+
+        <div class="spacingY-13" fxLayout="row"></div>
     </div>
-    <br><br>
 </div>

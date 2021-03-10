@@ -7,9 +7,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ImagesMosaicsComponent implements OnInit {
 
+  events: any[];
+  eventsMobile: any[];
+
   constructor() { }
 
   ngOnInit(): void {
+    this.events = [
+      {status: 'NOV', date: '15/10/2020 10:30'},
+      {status: 'NOV', date: '15/10/2020 14:00'},
+      {status: 'NOV', date: '15/10/2020 16:15'},
+      {status: 'NOV', date: '15/10/2020 16:15'},
+      {status: 'NOV', date: '15/10/2020 16:15'},
+      {status: 'NOV', date: '15/10/2020 16:15'},
+      {status: 'NOV', date: '16/10/2020 10:00'}
+    ];
+
+    this.eventsMobile = [
+      {status: 'NOV', date: '15/10/2020 10:30'},
+      {status: 'NOV', date: '15/10/2020 14:00'},
+      {status: 'NOV', date: '15/10/2020 16:15'}
+    ];
   }
+
+
 
 }

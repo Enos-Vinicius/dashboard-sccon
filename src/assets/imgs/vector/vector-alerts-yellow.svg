@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="271px" height="200px" viewBox="0 0 271 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>vector/vector-alerts-yellow</title>
+    <defs>
+        <filter id="filter-1">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 1.000000 0 0 0 0 0.815686 0 0 0 0 0.474510 0 0 0 1.000000 0"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="vector/vector-alerts-yellow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ector-alerts-1" transform="translate(-0.000000, 0.000000)" filter="url(#filter-1)">
+            <g transform="translate(-0.000000, 0.000000)" id="Group-42" stroke="#000000" stroke-width="1.5">
+                <polygon id="Stroke-1" points="17.2847884 85.5816114 50.0947694 66.0479621 33.6900155 38.1574408"></polygon>
+                <polygon id="Stroke-2" opacity="0" points="49.1436978 86.1314218 81.9536787 66.5977725 65.5489249 38.7072512"></polygon>
+                <polygon id="Stroke-3" opacity="0" points="66.5000911 56.372654 82.4557173 47.1470616 74.477431 33.3096209"></polygon>
+                <polygon id="Stroke-4" opacity="0" points="50.544039 104.291327 66.5001384 95.0662085 58.5218521 81.2282938"></polygon>
+                <polygon id="Stroke-5" opacity="0" points="24.3414403 119.440995 40.2975397 110.215403 32.3192534 96.3779621"></polygon>
+                <polygon id="Stroke-6" points="83.3213174 104.097867 116.131298 84.5646919 99.7265445 56.6736967"></polygon>
+                <polygon id="Stroke-7" points="114.811838 47.9515166 147.621819 28.4183412 131.217065 0.527819905"></polygon>
+                <polygon id="Stroke-9" opacity="0" points="115.629449 66.4488152 131.585548 57.2232227 123.607262 43.385782"></polygon>
+                <polygon id="Stroke-10" points="81.8187985 28.8868246 97.7748979 19.6617062 89.7966116 5.82379147"></polygon>
+                <polygon id="Stroke-11" points="18.3413032 160.705166 51.1512842 141.171991 34.7465303 113.280995"></polygon>
+                <polygon id="Stroke-12" points="50.2002126 161.255024 83.0101935 141.721848 66.6054397 113.831327"></polygon>
+                <polygon id="Stroke-13" opacity="0" points="67.5566059 131.496209 83.5127054 122.27109 75.534419 108.433175"></polygon>
+                <polygon id="Stroke-14" opacity="0" points="181.784247 104.291327 197.740346 95.0662085 189.76206 81.2282938"></polygon>
+                <polygon id="Stroke-15" points="238.924877 180.017014 254.880977 170.791422 246.902691 156.953981"></polygon>
+                <polygon id="Stroke-16" opacity="0" points="214.594322 104.291327 230.550422 95.0662085 222.572135 81.2282938"></polygon>
+                <polygon id="Stroke-17" opacity="0" points="230.999123 132.745877 246.955223 123.520758 238.976936 109.682844"></polygon>
+                <g id="Group-24" transform="translate(0.000000, 90.913270)">
+                    <polygon id="Stroke-18" points="0.173782581 23.5306161 16.129882 14.3054976 8.15159568 0.467582938"></polygon>
+                    <polygon id="Stroke-20" opacity="0" points="49.735278 108.694265 65.6913774 99.468673 57.7130911 85.6312322"></polygon>
+                    <polygon id="Stroke-22" points="17.7337741 108.226825 33.6898736 99.0012322 25.7115872 85.1637915"></polygon>
+                </g>
+                <polygon id="Stroke-25" points="197.409818 76.8295735 213.365918 67.603981 205.387632 53.7660664"></polygon>
+                <polygon id="Stroke-26" points="213.84098 48.359763 229.79708 39.1346445 221.818794 25.2967299"></polygon>
+                <polygon id="Stroke-27" points="254.725178 98.9627962 270.681278 89.7376777 262.702991 75.899763"></polygon>
+                <polygon id="Stroke-29" points="148.262477 47.649763 164.218576 38.4246445 156.24029 24.5867299"></polygon>
+                <polygon id="Stroke-30" points="131.885409 95.2634597 147.841508 86.0383412 139.863222 72.2004265"></polygon>
+                <polygon id="Stroke-31" opacity="0" points="148.500481 123.390758 164.45658 114.16564 156.478294 100.327725"></polygon>
+                <polygon id="Stroke-32" points="131.676037 191.782085 147.632136 182.556493 139.65385 168.719052"></polygon>
+                <polygon id="Stroke-33" points="84.3783054 179.221896 117.188286 159.688246 100.783059 131.797725"></polygon>
+                <polygon id="Stroke-34" points="132.641969 170.286588 165.45195 150.753412 149.047196 122.862891"></polygon>
+                <polygon id="Stroke-35" points="149.998362 103.342986 182.808343 83.8093365 166.403116 55.9188152"></polygon>
+                <polygon id="Stroke-36" points="181.167726 47.7936967 213.977706 28.2600474 197.572479 0.369526066"></polygon>
+                <polygon id="Stroke-38" points="230.382555 76.2482464 263.192536 56.7145972 246.787782 28.8240758"></polygon>
+                <polygon id="Stroke-39" points="163.894958 171.081232 196.704939 151.547583 180.300185 123.657062"></polygon>
+                <polygon id="Stroke-40" points="222.78908 151.947583 255.599061 132.413934 239.193833 104.523412"></polygon>
+                <polygon id="Stroke-41" points="116.685964 141.572417 132.642063 132.347299 124.663777 118.509384"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

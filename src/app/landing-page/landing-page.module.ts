@@ -25,6 +25,7 @@ import { FaqComponent } from './faq/faq.component';
 import { FooterComponent } from './footer/footer.component';
 import { SharedModule } from 'src/shared/shared.module';
 import { RecaptchaModule, RECAPTCHA_SETTINGS, RecaptchaSettings, RecaptchaLoaderService, RecaptchaFormsModule } from 'ng-recaptcha';
+import { NavbarModule } from '../navbar/navbar.module';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { RecaptchaModule, RECAPTCHA_SETTINGS, RecaptchaSettings, RecaptchaLoader
     MaterialModule,
     SharedModule,
     RecaptchaModule,
+    NavbarModule,
     RecaptchaFormsModule,
     TranslateModule.forChild({
       loader: {

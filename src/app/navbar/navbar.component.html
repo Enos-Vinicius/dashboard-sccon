@@ -1,26 +1,52 @@
-<div class="navbar-dash">
-  <mat-toolbar style="background-color: white;">
-    <button mat-icon-button [matMenuTriggerFor]="menu">
-      <mat-icon>menu</mat-icon>
-    </button>
+<div class="navbar-dash fixed-top p-lg-12" fxLayout="row" fxLayoutAlign="start center">
+  <mat-toolbar class="p-lg-12 p-pl-0">
+    <!-- ICON MENU -->
+    <div class="p-lg-1">
+      <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon class="accent-color">menu</mat-icon>
+      </button>
+    </div>
+
+    <!--MENU ITENS-->
     <mat-menu #menu="matMenu" class="menu-style">
       <button mat-menu-item (click)="redirecTo('landing-page')" routerLinkActive="active">Plataforma PF - SCCON</button>
       <button mat-menu-item (click)="redirecTo('landing-page')">Imagens diárias e Mosaicos Planet</button>
       <button mat-menu-item (click)="redirecTo('landing-page')">Dashboard de alertas de mudança</button>
       <button mat-menu-item (click)="redirecTo('landing-page')">Plataforma EAD</button>
       <button mat-menu-item (click)="redirecTo('landing-page/info-news')" >Notícias</button>
+      <button mat-menu-item (click)="redirecTo('landing-page/design')" >Design/Systens</button>
       <button class="button-radius-long" (click)="redirecTo('landing-page/login')">Login</button>
       <button class="button-radius-long" (click)="redirecTo('landing-page/login/logout')">Logout</button>
       <div class="text-access">
         <a mat-flat-button (click)="redirecTo('landing-page/request-access')">Sem Acesso? Solicite Cadastro</a>
       </div>
     </mat-menu>
-  
-    <span class="spacer text-center ml-5 cursor-pointer" (click)="redirecTo('landing-page')">PLATAFORMA PF - SCCON</span>
-  
-    <div class="menu-right text-login">
-      <a mat-flat-button (click)="redirecTo('landing-page/login')">Acessar Agora</a>
+
+    <!--LOGO COMPANYS TABLET / DESKTOP -->
+    <div class="p-lg-6 p-md-12 display-none-sm">
+      <div class="p-lg-12 p-md-11 p-md-jc-center p-p-0 p-d-flex p-flex-row p-jc-between p-js-md-between p-jc-lg-start p-d-none">
+        <div class="logo-justica"></div>
+        <div class="logo-pf p-ml-4"></div>
+        <div class="logo-senasp p-ml-4"></div>
+      </div>
+    </div>
+
+    <!--LOGO COMPANYS MOBILE -->
+    <div class="p-p-0 p-col-10 display-none-md display-none-lg">
+      <div fxLayout="row" fxLayoutAlign.xs="space-between">
+        <div class="logo-pf"></div>
+        <div fxLayout="column" fxLayoutAlign="end end">
+          <div class="logo-senasp"></div>
+          <div class="logo-justica p-mt-2"></div>
+        </div>
+      </div>
+    </div>
+    
+    <!--BUTTON LOGIN-->
+    <div class="p-lg-5 display-none-md display-none-sm" fxLayoutAlign="end">
+      <button (click)="redirecTo('landing-page/login')" mat-raised-button color="accent">LOGIN</button>
     </div>
   </mat-toolbar>
+
 </div>
 

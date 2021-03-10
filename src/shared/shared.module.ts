@@ -4,10 +4,12 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { PrimeNgModule } from './external-libs/primeng.module';
 import { MaterialModule } from './external-libs/material.module';
 import { PhoneValidatorMaskDirective } from './directivas/phone-mask.diretive';
+import { FilterPipe } from './pipes/filter.pipe';
 
 @NgModule({
   declarations: [
-    PhoneValidatorMaskDirective
+    PhoneValidatorMaskDirective,
+    FilterPipe
   ],
   imports: [
     CommonModule,
@@ -20,7 +22,8 @@ import { PhoneValidatorMaskDirective } from './directivas/phone-mask.diretive';
     ReactiveFormsModule,
     PhoneValidatorMaskDirective,
     PrimeNgModule,
-    MaterialModule
+    MaterialModule,
+    FilterPipe
   ]
 })
 export class SharedModule { }

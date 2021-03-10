@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="763px" height="721px" viewBox="0 0 763 721" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>vector/vector-publico</title>
+    <g id="vector/vector-publico" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <polygon id="Path-3" fill="#FFFFFF" opacity="0" points="0 621 173 721 243 681 763 381 763 100 589 0 0 340"></polygon>
+        <g id="Group-31" transform="translate(34.000000, 120.000000)" stroke="#000000" stroke-width="3">
+            <path d="M347.2996,480.7007 L347.2996,320.5967 C347.2996,320.5967 347.2996,240.5447 416.6266,200.5177 L416.6266,440.6747 L347.2996,480.7007 Z" id="Stroke-1" fill="#FFD079"></path>
+            <path d="M243.3088,540.7398 L243.3088,380.6358 C243.3088,380.6358 243.3088,300.5838 312.6358,260.5568 L312.6358,500.7138 L243.3088,540.7398 Z" id="Stroke-3" fill="#FFD079"></path>
+            <path d="M451.2903,420.6617 L451.2903,260.5577 C451.2903,260.5577 451.2903,180.5057 520.6183,140.4787 L520.6183,380.6357 L451.2903,420.6617 Z" id="Stroke-5" fill="#FFD079"></path>
+            <path d="M555.1345,360.7066 L555.1345,200.6026 C555.1345,200.6026 555.1345,120.5506 624.4615,80.5246 L624.4615,320.6816 L555.1345,360.7066 Z" id="Stroke-7" fill="#FFD079"></path>
+            <line x1="0.6638" y1="240.5445" x2="0.6638" y2="520.7275" id="Stroke-15"></line>
+            <line x1="35.3274" y1="260.2896" x2="35.3274" y2="540.4726" id="Stroke-17"></line>
+            <line x1="69.991" y1="280.733" x2="69.991" y2="560.915" id="Stroke-19"></line>
+            <line x1="104.6545" y1="301.0592" x2="104.6545" y2="581.2422" id="Stroke-21"></line>
+            <line x1="659.2722" y1="21.7603" x2="659.2722" y2="301.9423" id="Stroke-23"></line>
+            <line x1="728.5994" y1="260.5572" x2="659.2724" y2="220.5312" id="Stroke-25"></line>
+            <line x1="693.9353" y1="0.3883" x2="693.9353" y2="240.5443" id="Stroke-27"></line>
+            <line x1="208.6452" y1="280.5699" x2="208.6452" y2="560.7529" id="Stroke-29"></line>
+            <line x1="208.6452" y1="560.7529" x2="139.3182" y2="520.7269" id="Stroke-29"></line>
+        </g>
+        <g id="Group-7" stroke="#000000" stroke-width="3">
+            <line x1="173.3181" y1="440.0364" x2="173.3181" y2="720.2194" id="Stroke-1"></line>
+            <polygon id="Stroke-3" points="173.3181 720.7786 0.0001 620.7136 0.0001 340.5306 589.2811 0.3096 762.5991 100.3746 762.5991 380.5566"></polygon>
+            <polyline id="Stroke-5" points="762.5994 100.3743 173.3184 440.5963 0.0004 340.5303"></polyline>
+        </g>
+    </g>
+</svg>

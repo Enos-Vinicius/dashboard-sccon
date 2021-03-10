@@ -9,6 +9,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
 import { registerLocaleData } from '@angular/common';
 import { CoreModule } from './core/core.module';
+import { NavbarModule } from './navbar/navbar.module';
 
 registerLocaleData(localePt);
 
@@ -22,6 +23,7 @@ export function createTranslateLoader(http: HttpClient) {
   imports: [
     AppRoutingModule,
     CoreModule,
+    NavbarModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -35,7 +37,8 @@ export function createTranslateLoader(http: HttpClient) {
     TranslateService
   ],
   exports: [
-    TranslateModule
+    TranslateModule,
+    NavbarModule
   ],
   bootstrap: [AppComponent]
 })
