@@ -1,48 +1,50 @@
 <div class="p-col-12 info-news p-p-0" fxLayout="column" fxLayoutAlign="center center">
     
+    <!--NOTÍCIA PRINCIPAL-->
     <div class="info-news-main">
-        <div class="container-news" fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="end end" fxLayoutAlign="center end">
+        <div class="container-news" fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="end center" fxLayoutAlign="center end">
 
-            <div class="p-lg-9 p-p-0" fxLayout="column" fxLayoutAlign="space-around start">
+            <div class="p-lg-9 p-md-11 p-col-11 p-p-0" fxLayout="column" fxLayoutAlign="space-around start">
                 <div class="h1-featured-mb white-color"> <span class="accent-color">+</span> NOTICIAS</div>
-                <div class="h1-news p-lg-8 p-mt-lg-5 white-color p-p-0">Operação da PF faz a maior apreensão de madeira da história</div>
-                <div class="body-section p-lg-6 p-mt-lg-4 white-color p-p-0">Batizada de Handroanthus GLO, ação reteve 131,1 mil metros cúbicos de toras extraídas no oeste do Pará</div>
-                <div class="caption-featured p-lg-6 p-mt-lg-4 p-mb-lg-6 white-color p-p-0">GOV.BR</div>
+                <div class="h1-news p-lg-8 p-md-10 p-mt-lg-5 p-mt-md-5 p-mt-3 white-color p-p-0">Operação da PF faz a maior apreensão de madeira da história</div>
+                <div class="body-section p-lg-6 p-md-8 p-mt-lg-4 p-mt-md-4 p-mt-3 white-color p-p-0">Batizada de Handroanthus GLO, ação reteve 131,1 mil metros cúbicos de toras extraídas no oeste do Pará</div>
+                <div class="caption-featured p-lg-3 p-md-3 p-mt-lg-4 p-mt-md-4 p-mt-3 p-mb-col-3 p-mb-lg-6 p-mb-md-4 white-color p-p-0">GOV.BR</div>
             </div>
 
         </div>
     </div>
 
-    <div class="p-lg-9 p-p-0 p-mt-6" *ngFor="let item of arrNews" fxLayout="column">
+    <!--LISTA DE NOTÍCIAS-->
+    <div class="p-lg-9 p-md-11 p-col-12 p-p-0 p-lg-6 p-lg-6" *ngFor="let item of arrNews" fxLayout="column" fxLayout.xs="column">
+        <div class="separator-news bk-color-secondary p-mb-3 p-mt-4"></div>
 
-        <div class="separator-news bk-color-secondary p-mb-3"></div>
-        <div fxLayout="row" fxLayoutAlign="space-between">
-            <div class="item-news p-col-5 p-order-{{item.order_img}} p-p-0">
+        <!--DESKTOP / TABLET -->
+        <div *ngIf="widthScreen > 375" fxLayout="row" fxLayoutAlign="space-between" fxLayout.xs="column">
+            <div class="item-news p-lg-5 p-md-2 p-order-{{item.order_img}} p-p-0">
                 <img class="img-news" src="../../../assets/imgs/Bitmap-3.png" alt="">
             </div>
-            <div class="p-col-7 p-order-{{item.order}} p-p-0" fxLayout="column" fxLayoutAlign="space-between">
-                <div class="h1-news">{{item.title}}</div>
+            <div class="p-col-7 p-md-6 p-order-{{item.order}} p-p-0" fxLayout="column" fxLayoutAlign="space-between" >
+                <div class="h1-news-xs">{{item.title}}</div>
                 <div class="body-section p-lg-10 p-p-0">{{item.description}}</div>
                 <div class="caption-featured">{{item.origin}}</div>
             </div>
         </div>
 
-        <!-- <div fxLayout="row" fxLayoutAlign="space-around start">
-            <div fxLayout="column" class="info-news-description">
-                <div class="title-news-container-item">{{item.title}}</div>
-                <div class="description-news-container">
-                    {{item.description}}
-                </div>
-                <div class="locale-news">{{item.origin}}</div>
+        <!--MOBILE -->
+        <div *ngIf="widthScreen <= 375" fxLayout="column" fxLayoutAlign.xs="center">
+            <img class="img-news" src="../../../assets/imgs/Bitmap-3.png" alt="">
+            <div class="p-col-12 p-p-3" >
+                <div class="h1-news-xs">{{item.title}}</div>
+                <div class="body-section p-mt-3">{{item.description}}</div>
+                <div class="caption-featured p-mt-3 p-mb-3">{{item.origin}}</div>
             </div>
-            <div class="img-news"></div>
-        </div> -->
+        </div>
 
 
     </div>
-
+    
     <div class="p-col-12">
-        <app-faq></app-faq>
+        <!-- <app-faq></app-faq> -->
     </div>
 </div>
 <app-footer></app-footer>

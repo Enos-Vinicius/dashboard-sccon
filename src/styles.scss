@@ -213,6 +213,33 @@ body { margin: 0; font-family: 'Montserrat', sans-serif; }
   z-index: 6;
 }
 
+.navbar-min {
+  height: 64px;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: background-color 1s ease 0s;
+
+  .logo-justica {
+    background-size: 140px 41px;
+    margin-top: 10px;
+  }
+
+  .container-logo {
+    height: 60px;
+  }
+
+  .logo-pf {
+    background-size: 40px 48px;
+    margin-top: 5px;
+  }
+
+  .logo-senasp {
+    background-size: 180px 28px;
+    margin-top: 15px;
+  }
+}
+
 .fixed-top {
   position: fixed;
   top: 0;

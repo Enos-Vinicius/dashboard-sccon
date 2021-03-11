@@ -1,4 +1,4 @@
-<div class="navbar-dash fixed-top p-lg-12" fxLayout="row" fxLayoutAlign="start center">
+<div class="fixed-top p-lg-12 p-p-0" [ngClass]="{'navbar-dash': navbarMin === false, 'navbar-min': navbarMin === true }" fxLayout="row" fxLayoutAlign="start center">
   <mat-toolbar class="p-lg-12 p-pl-0">
     <!-- ICON MENU -->
     <div class="p-lg-1">
@@ -24,7 +24,7 @@
 
     <!--LOGO COMPANYS TABLET / DESKTOP -->
     <div class="p-lg-6 p-md-12 display-none-sm">
-      <div class="p-lg-12 p-md-11 p-md-jc-center p-p-0 p-d-flex p-flex-row p-jc-between p-js-md-between p-jc-lg-start p-d-none">
+      <div class="container-logo p-lg-12 p-md-11 p-md-jc-center p-p-0 p-d-flex p-flex-row p-jc-between p-js-md-between p-jc-lg-start p-d-none">
         <div class="logo-justica"></div>
         <div class="logo-pf p-ml-4"></div>
         <div class="logo-senasp p-ml-4"></div>
@@ -32,13 +32,13 @@
     </div>
 
     <!--LOGO COMPANYS MOBILE -->
-    <div class="p-p-0 p-col-10 display-none-md display-none-lg">
+    <div class="container-logo p-p-0 p-col-10 display-none-md display-none-lg">
       <div fxLayout="row" fxLayoutAlign.xs="space-between">
         <div class="logo-pf"></div>
-        <div fxLayout="column" fxLayoutAlign="end end">
+        <!-- <div fxLayout="column" fxLayoutAlign="end end">
           <div class="logo-senasp"></div>
           <div class="logo-justica p-mt-2"></div>
-        </div>
+        </div> -->
       </div>
     </div>
     
