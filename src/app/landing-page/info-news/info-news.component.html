@@ -21,7 +21,7 @@
         <!--DESKTOP / TABLET -->
         <div *ngIf="widthScreen > 375" fxLayout="row" fxLayoutAlign="space-between" fxLayout.xs="column">
             <div class="item-news p-lg-5 p-md-2 p-order-{{item.order_img}} p-p-0">
-                <img class="img-news" src="../../../assets/imgs/Bitmap-3.png" alt="">
+                <img class="img-news" src="assets/imgs/Bitmap-3.png" alt="">
             </div>
             <div class="p-col-7 p-md-6 p-order-{{item.order}} p-p-0" fxLayout="column" fxLayoutAlign="space-between" >
                 <div class="h1-news-xs">{{item.title}}</div>
@@ -32,7 +32,7 @@
 
         <!--MOBILE -->
         <div *ngIf="widthScreen <= 375" fxLayout="column" fxLayoutAlign.xs="center">
-            <img class="img-news" src="../../../assets/imgs/Bitmap-3.png" alt="">
+            <img class="img-news" src="assets/imgs/Bitmap-3.png" alt="">
             <div class="p-col-12 p-p-3" >
                 <div class="h1-news-xs">{{item.title}}</div>
                 <div class="body-section p-mt-3">{{item.description}}</div>

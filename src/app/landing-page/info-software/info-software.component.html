@@ -1,28 +1,5 @@
 <div class="p-grid" style="margin-top: 100px;">
     <p-tabView class="p-col-12" fxLayoutAlign="center center">
-
-        <p-tabPanel header="Comparisson slider" >
-            <div style="width: 1600px;" fxLayoutAlign="center center">
-                    <div class="p-col-12" style="margin-bottom: 20px; border: 1px solid black; padding: 0px; height: 500px;" fxLayout="column" fxLayoutAlign="start center">
-                        <div class="p-col-12 bk-color-secondary" style="height: 80px; ;" fxLayout="row" fxLayoutAlign="center center">
-                            <div fxLayout="column" fxLayoutAlign="start start">
-                                <div class="list-section">SCCON - PF - DS</div>
-                                <span class="kicker-featured">Comparisson slider</span>
-                            </div>
-                        </div>
-                        <div class="p-col-8">
-                            <p-splitter [style]="{'height': '300px', 'background-color': '#333333'}">
-                                <ng-template>
-
-                                </ng-template>
-                                <ng-template>
-
-                                </ng-template>
-                            </p-splitter>
-                        </div>
-                    </div>
-            </div>
-        </p-tabPanel>
         
         <p-tabPanel header="Grid System">
             <!-- GRID DESKTOP -->
@@ -361,15 +338,15 @@
                         <div class="info-software" fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="center center" fxLayoutAlign="space-evenly center">
                             <div class="white-color">{{'landing-page.info-software.access' | translate | uppercase}}</div> 
                             <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutAlign.xs="center center">
-                                 <img src="../../../assets/imgs/icons/icon-nav-satelite.png" width="110" height="94" alt="Ícone de Satélite">
+                                 <img src="assets/imgs/icons/icon-nav-satelite.png" width="110" height="94" alt="Ícone de Satélite">
                                  <p class="margin-description white-color">{{'landing-page.info-software.images' | translate}} <br> {{'landing-page.info-software.mosaics' | translate}}</p>
                              </div>
                              <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutAlign.xs="center center">
-                                 <img src="../../../assets/imgs/icons/icon-nav-dashboard.png" width="64" height="94" alt="Ícone de Satélite">
+                                 <img src="assets/imgs/icons/icon-nav-dashboard.png" width="64" height="94" alt="Ícone de Satélite">
                                  <p class="margin-description white-color">{{'landing-page.info-software.dashboard' | translate}}  <br> {{'landing-page.info-software.alerts' | translate}} </p>
                              </div>
                              <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutAlign.xs="center center">
-                                 <img src="../../../assets/imgs/icons/icon-nav-ead.png" width="65" height="94" alt="Ícone de Satélite">
+                                 <img src="assets/imgs/icons/icon-nav-ead.png" width="65" height="94" alt="Ícone de Satélite">
                                  <p class="margin-description white-color">{{'landing-page.info-software.platform' | translate}}  <br>{{'landing-page.info-software.ead' | translate}} </p>
                              </div>
                              <button mat-raised-button color="accent">{{'buttons.register' | translate | uppercase}}</button>
@@ -481,6 +458,28 @@
             </div>
         </p-tabPanel>
 
+        <p-tabPanel header="Comparisson slider" >
+            <div style="width: 1600px;" fxLayoutAlign="center center">
+                    <div class="p-col-12" style="margin-bottom: 20px; border: 1px solid black; padding: 0px; height: 500px;" fxLayout="column" fxLayoutAlign="start center">
+                        <div class="p-col-12 bk-color-secondary" style="height: 80px; ;" fxLayout="row" fxLayoutAlign="center center">
+                            <div fxLayout="column" fxLayoutAlign="start start">
+                                <div class="list-section">SCCON - PF - DS</div>
+                                <span class="kicker-featured">Comparisson slider</span>
+                            </div>
+                        </div>
+                        <div class="p-col-8">
+                            <p-splitter [style]="{'height': '300px', 'background-color': '#333333'}">
+                                <ng-template>
+
+                                </ng-template>
+                                <ng-template>
+
+                                </ng-template>
+                            </p-splitter>
+                        </div>
+                    </div>
+            </div>
+        </p-tabPanel>
     </p-tabView>
     
 

@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { WhoCanAccessComponent } from './who-can-access.component';
+import { InfoImagesMosaicsComponent } from './info-image-mosaics.component';
 
-describe('WhoCanAccessComponent', () => {
-  let component: WhoCanAccessComponent;
-  let fixture: ComponentFixture<WhoCanAccessComponent>;
+describe('InfoImagesMosaicsComponent', () => {
+  let component: InfoImagesMosaicsComponent;
+  let fixture: ComponentFixture<InfoImagesMosaicsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ WhoCanAccessComponent ]
+      declarations: [ InfoImagesMosaicsComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(WhoCanAccessComponent);
+    fixture = TestBed.createComponent(InfoImagesMosaicsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

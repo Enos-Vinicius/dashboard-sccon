@@ -162,7 +162,8 @@ body { margin: 0; font-family: 'Montserrat', sans-serif; }
   margin-left: -16px !important;
   height: 850px !important;
   width: 250px !important;
-  margin-top: 100px;
+  position: fixed;
+  top: 0;
 }
 
 .text-center {
