@@ -1,0 +1,47 @@
+<div class="p-col-12 info-image p-p-0" fxLayout="column" fxLayoutAlign="center center">
+    
+    <!--NOTÍCIA PRINCIPAL-->
+    <div class="info-image-main">
+        <div class="container-image" fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="end center" fxLayoutAlign="center end">
+
+            <div class="p-lg-9 p-md-11 p-col-11 p-p-0" fxLayout="column" fxLayoutAlign="space-around start">
+                <div class="h2-section accent-color">{{'landing-page.main.program-brazil' | translate | uppercase}}</div>
+                <div class="h1-featured-mb white-color p-mt-3">{{'landing-page.images-mosaics.image-days' | translate | uppercase}}</div>
+                <div class="h1-featured-mb-fine white-color p-mt-1">{{'landing-page.images-mosaics.mosaics-planet' | translate | uppercase}}</div>
+                <button class="p-mt-6 p-mb-6" routerLink="'landing-page/login'" mat-raised-button color="accent">{{'buttons.access-now' | translate | uppercase}}</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!--LISTA DE NOTÍCIAS-->
+    <div class="p-lg-9 p-md-11 p-col-12 p-p-0 p-lg-6 p-lg-6" *ngFor="let item of arrImage" fxLayout="column" fxLayout.xs="column">
+        
+        
+        <div class="p-mt-6" *ngIf="widthScreen > 375" fxLayout="row" fxLayoutAlign="space-between start" fxLayout.xs="column">
+            <div class="separator-image bk-color-secondary"></div>
+            <div class="item-image p-lg-5 p-md-2 p-order-{{item.order_img}} p-p-0">
+                <img class="img-image" src="assets/imgs/Bitmap-3.png" alt="">
+            </div>
+            <div class="p-col-7 p-md-6 p-order-{{item.order}} p-p-0" fxLayout="column" fxLayoutAlign="space-between" >
+                <div class="h1-news-xs">{{item.title | uppercase}}</div>
+                <div class="body-section p-lg-10 p-p-0">{{item.description}}</div>
+            </div>
+        </div>
+
+        <!--MOBILE -->
+        <div *ngIf="widthScreen <= 375" fxLayout="column" fxLayoutAlign.xs="center">
+            <div class="separator-image bk-color-secondary"></div>
+            <div class="p-col-12 p-p-3" >
+                <div class="h1-news-xs">{{item.title | uppercase}}</div>
+                <div class="body-section p-mt-3">{{item.description}}</div>
+            </div>
+            <img class="img-image" src="assets/imgs/Bitmap-3.png" alt="">
+        </div> 
+    </div>
+</div>
+<div class="p-mt-6">
+    <app-footer></app-footer>
+</div>
+
+

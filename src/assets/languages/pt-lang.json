@@ -32,6 +32,8 @@
         },
         "images-mosaics": {
             "title": "Imagens diárias e Mosaicos Planet",
+            "image-days": "Imagens diárias",
+            "mosaics-planet": " e Mosaicos Planet",
             "text": "Com centenas de satélites em órbita a Planet é capaz de obter imagens com resolução de 3 metros de qualquer local da Terra diariamente.",
             "text2": "As imagens Planet são obtidas pela constelação de satélites Dove que possuem o mesmo tipo de sensor, são adquiridas por mais de 130 satélites, com 04 bandas espectrais e resolução radiométrica de 12 bits, são ortorretificadas e possuem 3 metros de resolução espacial, o que permite obter imagens atuais de grandes áreas com alto padrão de qualidade e precisão planimétrica.",
             "text3": "Com centenas de satélites em órbita a Planet é capaz de obter imagens com resolução de 3 metros de qualquer local da Terra diariamente.",

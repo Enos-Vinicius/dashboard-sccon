@@ -16,9 +16,13 @@ export class InfoNewsComponent implements OnInit {
     {order: "1", order_img: "2", title: "Ministério da Justiça e Segurança Pública institui Programa Brasil MAIS como um dos projetos estratégicos da Pasta", description: "Medida aplica geotecnologia em apoio às funções de segurança pública com finalidade e objetivos relacionados ao MJSP", origin: "GOV.BR"},
   ]
 
+  widthScreen: number;
+
   constructor() { }
 
   ngOnInit(): void {
+    this.widthScreen = window?.screen?.width;
+    
   }
 
 }

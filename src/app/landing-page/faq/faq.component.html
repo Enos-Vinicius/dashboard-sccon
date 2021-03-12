@@ -58,7 +58,7 @@
       </div>
 
       <div class="p-col-12 p-md-12 p-mb-6 p-p-0" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-between center">
-        <re-captcha class="p-col-6" formControlName="captchaValue"></re-captcha>
+        <re-captcha class="p-col-6 mobile-captcha" formControlName="captchaValue"></re-captcha>
         <button class="button-md p-mt-4" (click)="submitForm()" mat-flat-button color="accent" [disabled]="formFaq.invalid">{{'buttons.send-data' | translate | uppercase}}</button>
       </div>
     </div>
