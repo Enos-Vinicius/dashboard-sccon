@@ -5,9 +5,11 @@ import { PrimeNgModule } from './external-libs/primeng.module';
 import { MaterialModule } from './external-libs/material.module';
 import { PhoneValidatorMaskDirective } from './directivas/phone-mask.diretive';
 import { FilterPipe } from './pipes/filter.pipe';
+import { Components } from './components/components';
 
 @NgModule({
   declarations: [
+    Components,
     PhoneValidatorMaskDirective,
     FilterPipe
   ],
@@ -23,7 +25,8 @@ import { FilterPipe } from './pipes/filter.pipe';
     PhoneValidatorMaskDirective,
     PrimeNgModule,
     MaterialModule,
-    FilterPipe
-  ]
+    FilterPipe,
+    Components,
+  ],
 })
 export class SharedModule { }

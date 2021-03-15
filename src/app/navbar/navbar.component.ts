@@ -1,4 +1,6 @@
+import { LoginComponent } from './../../shared/components/login/login.component';
 import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 
 @Component({
@@ -12,23 +14,35 @@ export class NavbarComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private renderer : Renderer2, 
-    private element : ElementRef, 
+    private renderer: Renderer2,
+    private element: ElementRef,
+    public dialog: MatDialog
   ) { }
 
   ngOnInit(): void {
 
     this.renderer.listen('window', 'scroll', (event) => {
-      const number = window.scrollY;     
+      const number = window.scrollY;
       if (number > 150 || window.pageYOffset > 150) {
         this.navbarMin = true;
       } else {
-        this.navbarMin = false; 
+        this.navbarMin = false;
       }
-  });
+    });
   }
 
-  redirecTo(page){
+  redirecTo(page) {
     this.router.navigate([page])
+  }
+
+  goLogin() {
+    const dialogRef = this.dialog.open(LoginComponent, {
+      data: {action : 'login'}
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+
+    });
   }
 }

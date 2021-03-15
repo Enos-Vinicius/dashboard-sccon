@@ -27,26 +27,11 @@
             </mat-form-field>
             <button class="button-radius-long">Login</button>
             <div class="recover-password">
-                <a mat-flat-button (click)="redirecTo('landing-page/login/recover')">Recuperar senha</a>
+                <a mat-flat-button (click)="currentAction = 'recover'">Recuperar senha</a>
             </div>
         </div>
     </div>
 </div>
-
-<!-- LOGOUT -->
-<div *ngIf="currentAction == 'logout'" class="login" fxLayout="column" fxLayoutAlign="center center">
-    <div class="card-login" fxLayout="column" fxLayoutAlign="space-evenly center">
-        <h1>Sair da Plataforma</h1>
-        <div class="form-login" fxLayout="column" fxLayoutAlign="center center">
-            <p> Tem certeza que deseja sair da plataforma ?</p>
-            <div fxFlex="row">
-                <button class="button-radius-white">Não</button>
-                <button class="button-radius">Sim</button>
-            </div>
-        </div>
-    </div>
-</div>
-
 
 <!-- RECUPERAR SENHA -->
 <div *ngIf="currentAction == 'recover'" class="login" fxLayout="row" fxLayoutAlign="center center">
@@ -72,4 +57,18 @@
             </div>
         </div>
     </div>
+</div>
+
+<!-- LOGOUT -->
+<div *ngIf="currentAction == 'logout'" class="login" fxLayout="column" fxLayoutAlign="center center">
+  <div class="card-login" fxLayout="column" fxLayoutAlign="space-evenly center">
+      <h1>Sair da Plataforma</h1>
+      <div class="form-login" fxLayout="column" fxLayoutAlign="center center">
+          <p> Tem certeza que deseja sair da plataforma ?</p>
+          <div fxFlex="row">
+              <button class="button-radius-white">Não</button>
+              <button class="button-radius">Sim</button>
+          </div>
+      </div>
+  </div>
 </div>

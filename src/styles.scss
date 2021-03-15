@@ -1,6 +1,7 @@
 
 @import '~@angular/material/theming';
 
+
 @include mat-core();
 $md-mcgpalette-main: (
   50 : #e0e0e0,
@@ -114,9 +115,9 @@ $dashboard-theme: mat-light-theme((
   color: (
     primary: $dashboard-accent,
     accent: $dashboard-accent,
-    warn: $dashboard-warn 
+    warn: $dashboard-warn
   ))
-  
+
 );
 $white: white;
 $primary: #000000;
@@ -197,8 +198,8 @@ body { margin: 0; font-family: 'Montserrat', sans-serif; }
 }
 
 .card-logo {
-  height: 70px; 
-  width: 100px; 
+  height: 70px;
+  width: 100px;
   background-color: white;
   margin-right: 10px;
   border: solid 1px #777777;
@@ -401,7 +402,7 @@ body { margin: 0; font-family: 'Montserrat', sans-serif; }
     height: 10px !important;
     width: 10px !important;
   }
-  
+
   .p-carousel .p-carousel-indicators .p-carousel-indicator button {
     background-color: #d6d6d6;
     border: 1px solid #d6d6d6;
@@ -412,7 +413,7 @@ body { margin: 0; font-family: 'Montserrat', sans-serif; }
     height: 10px !important;
     width: 10px !important;
   }
-  
+
 }
 
 
@@ -430,3 +431,8 @@ button:disabled {
 .p-timeline .p-timeline-event-marker {
   border-color: $white;
 }
+
+@import 'assets/css/landing-page-mobile.scss';
+@import 'assets/css/landing-page-tablet.scss';
+@import 'assets/css/landing-page.scss';
+
