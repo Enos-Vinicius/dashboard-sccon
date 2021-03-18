@@ -1,0 +1,87 @@
+/* MENU */
+
+.menu {
+  float: left;
+  position: absolute;
+  padding: 10px;
+}
+
+::ng-deep .mat-menu-panel {
+  margin-left: -16px !important;
+  height: 100vh !important;
+  max-height: 100vh !important;
+  max-width: 330px !important;
+  position: fixed;
+  top: 0;
+
+  .mat-menu-content {
+    padding-left: 16px !important;
+
+    .mat-menu-item{
+      font-size: 15px;
+     }
+
+     button.mat-menu-item:hover {
+       background-color: var(--primary-color);
+       color: var(--primary-color-text);
+     }
+  }
+
+  .active-list-item {
+
+  }
+
+  .profile {
+    width: 100%;
+    padding: 16px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    .photo {
+      width: 64px;
+      height: 64px;
+      min-width: 64px;
+      min-height: 64px;
+      max-width: 64px;
+      max-height: 64px;
+      background-color:var(--primary-color);
+      border-radius: 100px;
+      background-size: cover;
+      background-position: center;
+      border: 2px solid white;;
+      box-shadow: 0 0 0 2px var(--primary-color);
+      margin-right: 16px;
+    }
+
+    .name {
+      font-family: Montserrat;
+      font-size: 18px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.56;
+      letter-spacing: normal;
+      text-align: left;
+      color: var(--primary-color-text);
+    }
+  }
+
+  .rectangle {
+    width: 32px;
+    height: 4px;
+    margin: 10px 0px 10px 16px;
+    background-color: var(--primary-color);
+  }
+
+  .text-access {
+    width: 90%;
+    font-size: 14px;
+    margin-left: 10px;
+    border-bottom: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    text-align: center;
+  }
+
+}
+

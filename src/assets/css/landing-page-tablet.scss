@@ -249,14 +249,14 @@ $secondary: #ffd079;
 
       .info-news-main {
         width: 100%;
-        height: 1024px;
+        height: 100vh;
         background-image: url(~src/assets/imgs/Bitmap-2.png);
         background-size: 100% auto;
       }
 
       .container-news {
         width: 100%;
-        height: 1024px;
+        height: 100vh;
         background-color: rgba(0,0,0,0.3);
         background-size: 100% auto;
       }
@@ -426,7 +426,7 @@ $secondary: #ffd079;
       height: auto;
       background-image: url(~src/assets/imgs/logos/sccon.svg);
       background-repeat: no-repeat;
-      background-size: 100% auto;
+      background-size: 100% 100%;
     }
 }
 

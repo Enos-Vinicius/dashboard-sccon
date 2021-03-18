@@ -7,15 +7,14 @@ $secondary: #ffd079;
 
   .main {
     width: 100%;
-    height: 900px;
+    height: 100vh;
     background-image: url(~src/assets/imgs/Bitmap-1.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100% 900px;
+    background-size: 100% 100vh;
   }
 
   .legenda {
-    height: 150px;
     padding: 20px;
   }
 
@@ -43,7 +42,6 @@ $secondary: #ffd079;
   }
 
   .info-software {
-    height: 200px;
     background-color: rgba(0, 0, 0, 0.6);
   }
 
@@ -331,7 +329,7 @@ $secondary: #ffd079;
 
     .container-news {
       width: 100%;
-      height: 900px;
+      height: 100vh;
       background-color: rgba(0, 0, 0, 0.3);
       background-size: 100% auto;
     }

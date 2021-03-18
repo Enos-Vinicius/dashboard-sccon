@@ -1,6 +1,9 @@
 
 @import '~@angular/material/theming';
 
+.cdk-overlay-dark-backdrop {
+  background: rgba(0, 0, 0, 0.6) !important;
+}
 
 @include mat-core();
 $md-mcgpalette-main: (
@@ -125,16 +128,28 @@ $secondary: #ffd079;
 
 @include angular-material-theme($dashboard-theme);
 
+:root {
+  --primary-color:#ffd079;
+  --primary-color-text:#000000;
+}
+
 html, body { height: 100%; }
 body { margin: 0; font-family: 'Montserrat', sans-serif; }
+
 
 .accent-color {
   color: mat-color($dashboard-accent) !important;
 }
 
+.warn-color {
+  color: mat-color($dashboard-warn) !important;
+}
+
 .white-color {
   color: $white !important;
 }
+
+
 
 /*DESIGN SYSTEM*/
 
@@ -153,20 +168,6 @@ body { margin: 0; font-family: 'Montserrat', sans-serif; }
   border:  1px solid #979797;
 }
 
-.menu {
-  float: left;
-  position: absolute;
-  padding: 10px;
-}
-
-.menu-style {
-  margin-left: -16px !important;
-  height: 850px !important;
-  width: 250px !important;
-  position: fixed;
-  top: 0;
-}
-
 .text-center {
   text-align: center;
 }
@@ -177,24 +178,6 @@ body { margin: 0; font-family: 'Montserrat', sans-serif; }
 
 .cursor-pointer {
   cursor: pointer;
-}
-
-.text-access {
-  width: 90%;
-  font-size: 14px;
-  margin-left: 10px;
-  border-bottom: 1px solid #777777;
-  color: #777777;
-  text-align: center;
-}
-
-.recover-password {
-  width: 40%;
-  font-size: 14px;
-  margin-left: 10px;
-  border-bottom: 1px solid #777777;
-  color: #777777;
-  text-align: center;
 }
 
 .card-logo {

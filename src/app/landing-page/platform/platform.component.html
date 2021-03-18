@@ -39,7 +39,7 @@
 
     <div class="p-m-sm-3" fxLayout="row" fxLayoutAlign="center center">
         <button class="button-md" mat-stroked-button color="accent">{{'buttons.know-more' | translate | uppercase}}</button>
-        <button class="button-md p-m-4" mat-flat-button routerLink="login" color="accent">{{'landing-page.info-software.access-now' | translate | uppercase}}</button>
+        <button class="button-md p-m-4" mat-flat-button routerLink="login" color="accent" (click)="authService?.openModalLogin()">{{'landing-page.info-software.access-now' | translate | uppercase}}</button>
     </div>
 
 </div>

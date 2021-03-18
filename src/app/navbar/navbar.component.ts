@@ -1,3 +1,5 @@
+import { AuthService } from './../../shared/services/auth.service';
+import { Helper } from './../../shared/utils/Helper';
 import { LoginComponent } from './../../shared/components/login/login.component';
 import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
@@ -16,7 +18,8 @@ export class NavbarComponent implements OnInit {
     private router: Router,
     private renderer: Renderer2,
     private element: ElementRef,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    public authService : AuthService
   ) { }
 
   ngOnInit(): void {
@@ -35,14 +38,11 @@ export class NavbarComponent implements OnInit {
     this.router.navigate([page])
   }
 
-  goLogin() {
-    const dialogRef = this.dialog.open(LoginComponent, {
-      data: {action : 'login'}
-    });
+  doLogin() {
+    this.authService.openModalLogin();
+  }
 
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-
-    });
+  doLogout() {
+    this.authService.logout();
   }
 }
