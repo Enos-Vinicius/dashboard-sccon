@@ -82,6 +82,40 @@
     color: var(--primary-color);
     text-align: center;
   }
+}
 
+.profile-right {
+  width: 300px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  .photo {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    min-height: 48px;
+    max-width: 48px;
+    max-height: 48px;
+    background-color:var(--primary-color);
+    border-radius: 100px;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid white;;
+    box-shadow: 0 0 0 2px var(--primary-color);
+    margin-left: 16px;
+  }
+
+  .name {
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.56;
+    letter-spacing: normal;
+    text-align: left;
+    color: white;
+  }
 }
 

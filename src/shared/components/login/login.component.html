@@ -12,7 +12,7 @@
     <div class="form-login" fxLayout="column" fxLayout.xs="column" fxLayoutAlign="center center">
       <mat-form-field class="p-lg-12 p-md-12" appearance="outline" style="padding-top:0px;padding-bottom:0px">
         <mat-label>Email</mat-label>
-        <input id="username" name="input-username" matInput placeholder="Email" formControlName="username" required>
+        <input type="email" id="username" name="input-username" matInput placeholder="Email" formControlName="username" required>
         <mat-error *ngIf="checkError('username', 'required')">
           *Preenchimento de campo obrigatório
         </mat-error>
@@ -33,11 +33,15 @@
         </mat-error>
       </mat-form-field>
 
+      <div class="p-lg-12 p-md-12 warn-color text-center" *ngIf="msgError != null" [innerHTML]="msgError">
+
+      </div>
+
       <div class="p-lg-12 p-md-12" fxLayout="row" fxLayoutAlign="space-between center">
         <div class="recover-password">
           <a type="button" mat-flat-button (click)="currentAction = 'recover'">Recuperar senha</a>
         </div>
-        <button mat-raised-button color="accent" type="submit">ACESSAR</button>
+        <button mat-raised-button color="accent" type="submit" [ladda]="loading" [disabled]="loading">ACESSAR</button>
       </div>
 
       <div class="p-lg-12 p-md-12" fxLayout="column" fxLayoutAlign="space-between center">

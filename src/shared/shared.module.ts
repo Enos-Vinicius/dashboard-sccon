@@ -6,6 +6,7 @@ import { MaterialModule } from './external-libs/material.module';
 import { PhoneValidatorMaskDirective } from './directivas/phone-mask.diretive';
 import { FilterPipe } from './pipes/filter.pipe';
 import { Components } from './components/components';
+import { LaddaModule } from 'angular2-ladda';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { Components } from './components/components';
     CommonModule,
     ReactiveFormsModule,
     PrimeNgModule,
-    MaterialModule
+    MaterialModule,
+    LaddaModule
   ],
   exports: [
     CommonModule,

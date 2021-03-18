@@ -10,7 +10,10 @@ import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dial
 })
 export class LoginComponent implements OnInit {
 
-  currentAction: string;
+  public currentAction: string;
+  public msgError = null;
+
+  public loading = false;
 
   public form: FormGroup;
 
@@ -21,7 +24,7 @@ export class LoginComponent implements OnInit {
     private authService: AuthService
   ) {
     this.form = this.formBuilder.group({
-      username: [null, Validators.compose([Validators.minLength(6), Validators.required, Validators.maxLength(60)])],
+      username: [null, Validators.compose([Validators.minLength(6), Validators.email, Validators.required, Validators.maxLength(60)])],
       password: [null],
     });
   }
@@ -43,13 +46,27 @@ export class LoginComponent implements OnInit {
   public doLogin() {
     if (this.form.invalid) {
       this.form.markAllAsTouched();
+      this.loading = false;
       return
     }
 
-    this.authService.login(this.form.value).subscribe(result => {
-      console.log(result);
-    }, error => {
-      console.log(error);
+    this.msgError = null;
+    this.loading = true;
+
+    this.authService.doLogin(this.form.value).then(sucesso => {
+      console.log(sucesso);
+      this.loading = false;
+      this.dialogRef.close();
+
+    }).catch(error => {
+      this.loading = false;
+      this.form.markAllAsTouched();
+
+      if (error >= 300) {
+        this.msgError = "Não foi possível realizar login com seus dados.<br> Por favor, verifique seu e-mail e senha.";
+      } else {
+        this.msgError = "Ocorreu um problema na comunicação com o servidor.<br> Por favor tente novamente."
+      }
     });
   }
 

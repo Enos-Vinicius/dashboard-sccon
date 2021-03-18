@@ -1,6 +1,4 @@
-import { AuthService } from './../../shared/services/auth.service';
-import { Helper } from './../../shared/utils/Helper';
-import { LoginComponent } from './../../shared/components/login/login.component';
+import { AuthService } from '../../../shared/services/auth.service';
 import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
@@ -19,7 +17,7 @@ export class NavbarComponent implements OnInit {
     private renderer: Renderer2,
     private element: ElementRef,
     public dialog: MatDialog,
-    public authService : AuthService
+    public authService: AuthService
   ) { }
 
   ngOnInit(): void {
@@ -35,7 +33,16 @@ export class NavbarComponent implements OnInit {
   }
 
   redirecTo(page) {
-    this.router.navigate([page])
+    if (page == 'imagens') {
+      window.location.href = 'https://plataforma-pf.sccon.com.br/imagens/#/mapa';
+    } else if (page == 'dashboard') {
+      window.location.href = 'https://plataforma-pf.sccon.com.br/#/dashboard';
+    } else if (page == 'ead') {
+      window.location.href = 'https://ead.sccon.com.br/ead/';
+    } else {
+      this.router.navigate([page])
+    }
+
   }
 
   doLogin() {

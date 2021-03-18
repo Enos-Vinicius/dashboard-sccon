@@ -13,22 +13,20 @@
 
       <div class="profile" *ngIf="authService?.isLogged()">
         <div class="photo" [ngStyle]="{ 'background-image': 'url('+authService?.getUser()?.photoURL+')'}"></div>
-        <div class="name">Daniel Leonardo de Souza Teixeira</div>
+        <div class="name">{{authService?.getUser()?.name}}</div>
       </div>
 
       <div class="rectangle"></div>
 
-      <button mat-menu-item (click)="redirecTo('inicio')" routerLink="/inicio"
-        routerLinkActive="active-list-item">Página principal</button>
-      <button mat-menu-item (click)="redirecTo('inicio')" routerLinkActive="active-list-item">Imagens e mosaicos
+      <button mat-menu-item routerLink="/inicio" routerLinkActive="active-list-item">Página principal</button>
+      <button mat-menu-item (click)="redirecTo('imagens')" routerLinkActive="active-list-item">Imagens e mosaicos
         Planet via Web</button>
-      <button mat-menu-item (click)="redirecTo('inicio')" routerLinkActive="active-list-item">Imagens e mosaicos
+      <button mat-menu-item (click)="redirecTo('qgis')" routerLinkActive="active-list-item">Imagens e mosaicos
         Planet via QGIS</button>
-      <button mat-menu-item (click)="redirecTo('inicio')" routerLinkActive="active-list-item">Dashboard de alertas de
+      <button mat-menu-item (click)="redirecTo('dashboard')" routerLinkActive="active-list-item">Dashboard de alertas de
         mudanças</button>
-      <button mat-menu-item (click)="redirecTo('inicio')" routerLinkActive="active-list-item">Plataforma EAD</button>
-      <button mat-menu-item (click)="redirecTo('inicio/info-news')"
-        routerLinkActive="active-list-item">Notícias</button>
+      <button mat-menu-item (click)="redirecTo('ead')" routerLinkActive="active-list-item">Plataforma EAD</button>
+      <button mat-menu-item routerLink="/inicio/info-news" routerLinkActive="active-list-item">Notícias</button>
       <button mat-menu-item (click)="redirecTo('inicio/info-news')" routerLinkActive="active-list-item">FAQ</button>
       <button mat-menu-item (click)="redirecTo('inicio/info-news')" routerLinkActive="active-list-item">Suporte</button>
       <button mat-menu-item (click)="doLogin()" *ngIf="!authService?.isLogged()">Entrar</button>
@@ -63,6 +61,11 @@
     <!--BUTTON LOGIN-->
     <div class="p-lg-5 display-none-md display-none-sm" fxLayoutAlign="end">
       <button (click)="doLogin()" mat-raised-button color="accent" *ngIf="!authService?.isLogged()">LOGIN</button>
+
+      <div class="profile-right" *ngIf="authService?.isLogged()">
+        <div class="name">{{authService?.getUser()?.name}}</div>
+        <div class="photo" [ngStyle]="{ 'background-image': 'url('+authService?.getUser()?.photoURL+')'}"></div>
+      </div>
     </div>
   </mat-toolbar>
 

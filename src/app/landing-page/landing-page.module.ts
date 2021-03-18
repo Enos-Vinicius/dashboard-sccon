@@ -13,7 +13,7 @@ import { MaterialModule } from 'src/shared/external-libs/material.module';
 import { SharedModule } from 'src/shared/shared.module';
 
 import { createTranslateLoader } from '../app.module';
-import { NavbarModule } from '../navbar/navbar.module';
+import { NavbarModule } from '../common/navbar/navbar.module';
 import { CommonQuestionsComponent } from './common-questions/common-questions.component';
 import { FaqComponent } from './faq/faq.component';
 import { FooterComponent } from './footer/footer.component';
