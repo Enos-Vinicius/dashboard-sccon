@@ -23,7 +23,7 @@
             "text": "A Plataforma Web permite o acesso e compartilhamento das imagens de satélites diárias adquiridas pela constelação PlanetScope, composta por mais de 130 satélites, fornecidas no âmbito do contrato n° 018/2020 celebrado entre Polícia Federal e a Santiago & Cintra Consultoria – SCCON.",
             "text2": "O compartilhamento das imagens por meio da Plataforma Web visa contribuir para que o acesso e a utilização dos produtos fornecidos sejam potencializados e compartilhados entre as instituições e milhares de usuários públicos de todo Brasil cadastrados na Plataforma a partir de termo de adesão ao Programa Brasil M.A.I.S. a ser firmado junto ao Ministério da Justiça e Segurança Pública pelas respectivas instituições públicas.",
             "platform": "+ Plataforma",
-            "numbers-of-platform": "+ Números da Plataforma"            
+            "numbers-of-platform": "+ Números da Plataforma"
         },
         "info-news": {
             "news": "+ Notícias",
@@ -62,7 +62,7 @@
             "illegal-vessels": "- Embarcações Ilegais;",
             "clandestine-landing": "- Pista de Pousos Clandestina;",
             "disponible": "Disponível e acessível também para celulares"
-        },  
+        },
         "platform": {
             "platform": "Plataforma EAD",
             "text": "Plataforma para aprendizado à distância e compartilhamento de conhecimento e informações fornecidas no âmbito do contrato n° 018/2020 celebrado entre Polícia Federal e SCCON, com o objetivo de apresentar as especificações técnicas da tecnologia Planet e demais produtos contemplados no projeto, além de aplicações práticas e conteúdos conceituais relacionados a tecnologias de Sensoriamento Remoto e Geoprocessamento. ",
@@ -77,7 +77,7 @@
             "no-meet": "Nenhum item encontrado para o texto digitado"
         },
         "faq": {
-            "title": "Envia suas dúvidas e sugestões"
+            "title": "Envie suas dúvidas e sugestões"
         }
     },
     "set-erros": {

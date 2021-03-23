@@ -1,0 +1,109 @@
+<div *ngIf="currentAction == 'login'" class="login">
+  <!-- LOGIN -->
+  <form [formGroup]="form" (ngSubmit)="doLogin()" class="card-login">
+
+    <div fxLayout="row" fxLayoutAlign="space-between center">
+      <h1>Autenticação</h1>
+      <button mat-icon-button [mat-dialog-close]="true">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+
+    <div class="form-login" fxLayout="column" fxLayout.xs="column" fxLayoutAlign="center center">
+      <mat-form-field class="p-lg-12 p-md-12" appearance="outline" style="padding-top:0px;padding-bottom:0px">
+        <mat-label>Email</mat-label>
+        <input type="email" id="username" name="input-username" matInput placeholder="Email" formControlName="username" required>
+        <mat-error *ngIf="checkError('username', 'required')">
+          *Preenchimento de campo obrigatório
+        </mat-error>
+        <mat-error *ngIf="checkError('username', 'minLength')">
+          *O campo deve conter pelo menos 6 caracteres.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="p-lg-12 p-md-12" appearance="outline">
+        <mat-label>Senha</mat-label>
+        <input type="password" id="password" name="input-password" maxlength="50" matInput placeholder="Senha"
+          formControlName="password" required>
+        <mat-error *ngIf="checkError('password', 'required')">
+          *Preenchimento de campo obrigatório
+        </mat-error>
+        <mat-error *ngIf="checkError('password', 'minLength')">
+          *O campo deve conter pelo menos 6 caracteres.
+        </mat-error>
+      </mat-form-field>
+
+      <div class="p-lg-12 p-md-12 warn-color text-center" *ngIf="msgError != null" [innerHTML]="msgError">
+
+      </div>
+
+      <div class="p-lg-12 p-md-12" fxLayout="row" fxLayoutAlign="space-between center">
+        <div class="recover-password">
+          <a type="button" mat-flat-button (click)="currentAction = 'recover'">Recuperar senha</a>
+        </div>
+        <button mat-raised-button color="accent" type="submit" [ladda]="loading" [disabled]="loading">ACESSAR</button>
+      </div>
+
+      <div class="p-lg-12 p-md-12" fxLayout="column" fxLayoutAlign="space-between center">
+        <h3>
+          Ou acessar pelo
+        </h3>
+        <img width="170px" src="assets/imgs/marca-sinesp-pro.png" (click)="doSinespLogin()" style="cursor: pointer;">
+      </div>
+
+    </div>
+  </form>
+</div>
+
+<!-- RECUPERAR SENHA -->
+<div *ngIf="currentAction == 'recover'" class="login">
+
+  <div [formGroup]="form" (ngSubmit)="doRecovery()" class="card-login">
+
+    <div fxLayout="row" fxLayoutAlign="space-between center">
+      <h1>Recuperar Senha</h1>
+      <button mat-icon-button [mat-dialog-close]="true">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+
+    <div class="form-login" fxLayout="column" fxLayout.xs="column" fxLayoutAlign="center center">
+      <mat-form-field class="p-lg-12 p-md-12" appearance="outline">
+        <mat-label>Email</mat-label>
+        <input id="username" name="input-email" matInput placeholder="Email" formControlName="username" required>
+        <mat-error *ngIf="checkError('username', 'required')">
+          *Preenchimento de campo obrigatório
+        </mat-error>
+        <mat-error *ngIf="checkError('username', 'minLength')">
+          *O campo deve conter pelo menos 6 caracteres.
+        </mat-error>
+      </mat-form-field>
+      <p class="warn-color">Você irá reber um email com instruções para recuperar sua senha</p>
+
+      <div class="recover-password">
+        <a mat-raised-button color="accent" type="submit">Recuperar senha</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- LOGOUT -->
+<div *ngIf="currentAction == 'logout'" class="login">
+  <div class="card-login">
+
+    <div fxLayout="row" fxLayoutAlign="space-between center">
+      <h1>Sair da Plataforma</h1>
+      <button mat-icon-button [mat-dialog-close]="true">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+
+    <div class="form-login" fxLayout="column" fxLayoutAlign="center center">
+      <p> Tem certeza que deseja sair da plataforma ?</p>
+      <div fxFlex="row">
+        <button class="button-radius-white">Não</button>
+        <button class="button-radius">Sim</button>
+      </div>
+    </div>
+  </div>
+</div>

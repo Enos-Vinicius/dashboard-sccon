@@ -9,7 +9,8 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
 import { registerLocaleData } from '@angular/common';
 import { CoreModule } from './core/core.module';
-import { NavbarModule } from './navbar/navbar.module';
+import { NavbarModule } from './common/navbar/navbar.module';
+import { LaddaModule } from 'angular2-ladda';
 
 registerLocaleData(localePt);
 
@@ -30,6 +31,11 @@ export function createTranslateLoader(http: HttpClient) {
         useFactory: (createTranslateLoader),
         deps: [HttpClient]
       }
+    }),
+    LaddaModule.forRoot({
+      style: "expand-left",
+      spinnerSize: 30,
+      spinnerLines: 12
     }),
 
   ],

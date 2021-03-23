@@ -1,5 +1,5 @@
 <div class="common-questions" fxLayout="column" fxLayoutAlign="center center" fxLayoutAlign.xs="space-around center">
-    <!-- HEADER QUESTIONS -->  
+    <!-- HEADER QUESTIONS -->
     <div class="img-questions">
       <div class="img-questions-bk" fxLayout="column" fxLayoutAlign="center center">
         <div class="h1-section white-color p-mt-md-4">{{'landing-page.common-questions.title' | translate | uppercase}}</div>
@@ -20,7 +20,7 @@
                                (closed)="panelOpenState = false" >
             <mat-expansion-panel-header fxLayoutAlign="start">
               <mat-panel-title >
-                 <span class="body-lg">{{item.question}}</span> 
+                 <span class="body-lg">{{item.question}}</span>
               </mat-panel-title>
             </mat-expansion-panel-header>
             <p style="white-space: pre-wrap;">{{item.answer}}</p>
@@ -34,6 +34,6 @@
       </div>
     </ng-template>
 
-    <button class="button-md p-m-6" mat-flat-button color="accent">{{'buttons.access-now' | translate | uppercase}}</button>
-      
+    <button class="button-md p-m-6" mat-flat-button color="accent" (click)="authService?.openModalLogin()">{{'buttons.access-now' | translate | uppercase}}</button>
+
 </div>

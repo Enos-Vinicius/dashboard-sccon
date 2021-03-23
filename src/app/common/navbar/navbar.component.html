@@ -1,0 +1,72 @@
+<div class="fixed-top p-lg-12 p-p-0" [ngClass]="{'navbar-dash': navbarMin === false, 'navbar-min': navbarMin === true }"
+  fxLayout="row" fxLayoutAlign="start center">
+  <mat-toolbar class="p-lg-12 p-pl-0">
+    <!-- ICON MENU -->
+    <div class="p-lg-1">
+      <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon class="accent-color">menu</mat-icon>
+      </button>
+    </div>
+
+    <!--MENU ITENS-->
+    <mat-menu #menu="matMenu">
+
+      <div class="profile" *ngIf="authService?.isLogged()">
+        <div class="photo" [ngStyle]="{ 'background-image': 'url('+authService?.getUser()?.photoURL+')'}"></div>
+        <div class="name">{{authService?.getUser()?.name}}</div>
+      </div>
+
+      <div class="rectangle"></div>
+
+      <button mat-menu-item routerLink="/inicio" routerLinkActive="active-list-item">Página principal</button>
+      <button mat-menu-item (click)="redirecTo('imagens')" routerLinkActive="active-list-item">Imagens e mosaicos
+        Planet via Web</button>
+      <button mat-menu-item (click)="redirecTo('qgis')" routerLinkActive="active-list-item">Imagens e mosaicos
+        Planet via QGIS</button>
+      <button mat-menu-item (click)="redirecTo('dashboard')" routerLinkActive="active-list-item">Dashboard de alertas de
+        mudanças</button>
+      <button mat-menu-item (click)="redirecTo('ead')" routerLinkActive="active-list-item">Plataforma EAD</button>
+      <button mat-menu-item routerLink="/inicio/info-news" routerLinkActive="active-list-item">Notícias</button>
+      <button mat-menu-item (click)="redirecTo('inicio/info-news')" routerLinkActive="active-list-item">FAQ</button>
+      <button mat-menu-item (click)="redirecTo('inicio/info-news')" routerLinkActive="active-list-item">Suporte</button>
+      <button mat-menu-item (click)="doLogin()" *ngIf="!authService?.isLogged()">Entrar</button>
+      <button mat-menu-item (click)="doLogout()" *ngIf="authService?.isLogged()">Sair</button>
+      <button mat-menu-item (click)="redirecTo('inicio/design')">Design/Systens</button>
+      <div class="text-access">
+        <a mat-flat-button (click)="redirecTo('cadastro')">Sem Acesso? Solicite Cadastro</a>
+      </div>
+    </mat-menu>
+
+    <!--LOGO COMPANYS TABLET / DESKTOP -->
+    <div class="p-lg-6 p-md-12 display-none-sm">
+      <div
+        class="container-logo p-lg-12 p-md-11 p-md-jc-center p-p-0 p-d-flex p-flex-row p-jc-between p-js-md-between p-jc-lg-start p-d-none">
+        <div class="logo-justica"></div>
+        <div class="logo-pf p-ml-4"></div>
+        <div class="logo-senasp p-ml-4"></div>
+      </div>
+    </div>
+
+    <!--LOGO COMPANYS MOBILE -->
+    <div class="container-logo p-p-0 p-col-10 display-none-md display-none-lg">
+      <div fxLayout="row" fxLayoutAlign.xs="space-between">
+        <div class="logo-pf"></div>
+        <div fxLayout="column" fxLayoutAlign="end end">
+          <!-- <div class="logo-senasp"></div>
+          <div class="logo-justica p-mt-2"></div> -->
+        </div>
+      </div>
+    </div>
+
+    <!--BUTTON LOGIN-->
+    <div class="p-lg-5 display-none-md display-none-sm" fxLayoutAlign="end">
+      <button (click)="doLogin()" mat-raised-button color="accent" *ngIf="!authService?.isLogged()">LOGIN</button>
+
+      <div class="profile-right" *ngIf="authService?.isLogged()">
+        <div class="name">{{authService?.getUser()?.name}}</div>
+        <div class="photo" [ngStyle]="{ 'background-image': 'url('+authService?.getUser()?.photoURL+')'}"></div>
+      </div>
+    </div>
+  </mat-toolbar>
+
+</div>

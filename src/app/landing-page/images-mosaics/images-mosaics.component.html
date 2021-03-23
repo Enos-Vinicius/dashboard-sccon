@@ -4,7 +4,7 @@
         <div fxLayout="row" fxLayout.sm="column" fxLayout.xs="column" fxLayoutAlign="start start" fxLayoutAlign.sm="center center"  fxLayoutAlign.xs="center center">
             <div class="p-lg-1"></div>
             <div class="p-lg-5 p-md-11 p-p-0 p-mt-md-6 p-m-3 p-m-lg-0" fxLayout="column" fxLayoutAlign="start start">
-                <div class="h1-section p-lg-8 p-md-8 p-p-0">{{'landing-page.images-mosaics.title' | translate | uppercase}}</div>    
+                <div class="h1-section p-lg-8 p-md-8 p-p-0">{{'landing-page.images-mosaics.title' | translate | uppercase}}</div>
                 <div class="body-section p-lg-12 p-p-0 p-mt-3 p-mt-md-5">{{'landing-page.images-mosaics.text' | translate }}</div>
                 <div class="body-section p-lg-12 p-p-0 p-mt-3 p-mt-md-5">{{'landing-page.images-mosaics.text2' | translate }}</div>
             </div>
@@ -16,31 +16,31 @@
         </div>
 
         <div class="spacingY-21 display-none-md display-none-sm" fxLayout="row"></div>
-        
+
         <!-- 2ª Linha de Dados -->
         <div fxLayout="row" fxLayout.sm="column" fxLayout.xs="column" fxLayoutAlign="start start" fxLayoutAlign.sm="center center">
             <div class="p-order-lg-1 p-order-md-2 p-order-2 p-lg-5 p-md-12 p-p-0 p-mt-md-6 p-m-lg-0" fxLayout="column" fxLayoutAlign="center">
                 <div class="p-lg-12 p-md-11 p-d-flex p-p-0 p-ai-center p-jc-center img-timeline" fxLayoutAlign="end end" fxLayoutAlign.sm="end end">
                     <div class="p-lg-12 p-md-12 p-col-12" style="background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));" fxLayoutAlign="center">
-                        
+
                         <!--TIME LINE DESKTOP/TABLET-->
                         <div class="p-lg-10 p-md-12 display-none-sm">
                             <p-timeline [value]="events" layout="horizontal">
                                 <ng-template pTemplate="content" let-event>
-                                    <span class="h3-featured white-color">{{event.status}}</span> 
+                                    <span class="h3-featured white-color">{{event.status}}</span>
                                 </ng-template>
                             </p-timeline>
                         </div>
-                        
+
                         <!--TIME LINE DESKTOP/TABLET-->
                         <div class="p-lg-10 p-md-12 p-col-8 display-none-md display-none-lg">
                             <p-timeline [value]="eventsMobile" layout="horizontal">
                                 <ng-template pTemplate="content" let-event>
-                                    <span class="h3-featured white-color">{{event.status}}</span> 
+                                    <span class="h3-featured white-color">{{event.status}}</span>
                                 </ng-template>
                             </p-timeline>
                         </div>
-                        
+
                     </div>
                 </div>
                 <div class="p-lg-12 p-md-11 caption-section p-mt-2 p-ml-2" fxLayoutAlign="end end" fxLayoutAlign.xs="start">Lorem ipsum dolor sit amet</div>
@@ -57,7 +57,7 @@
         <!-- 3ª Linha de Dados -->
         <div class="p-mt-6" fxLayout="row" fxLayoutAlign="center center">
             <button class="button-md" routerLink="info-images" mat-stroked-button color="accent">{{'buttons.know-more' | translate | uppercase}}</button>
-            <button class="button-md p-ml-6" mat-flat-button color="accent">{{'buttons.access-now' | translate | uppercase}}</button>
+            <button class="button-md p-ml-6" mat-flat-button color="accent" (click)="authService?.openModalLogin()">{{'buttons.access-now' | translate | uppercase}}</button>
         </div>
 
         <div class="spacingY-13" fxLayout="row"></div>

@@ -1,3 +1,4 @@
+import { AuthService } from './../../../shared/services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { CommonQuestions } from 'src/shared/models/common-questions.model';
@@ -14,7 +15,8 @@ export class CommonQuestionsComponent implements OnInit {
   inputQuestion: FormControl;
 
   constructor(
-    private common: CommonQuestionsService
+    private common: CommonQuestionsService,
+    public authService : AuthService
   ) { }
 
   ngOnInit(): void {
@@ -26,7 +28,7 @@ export class CommonQuestionsComponent implements OnInit {
     this.common.getAll().subscribe(
       (data) => {
         this.commonQuestions = data;
-      }, 
+      },
       (err) => {
         console.log("error", err);
       }

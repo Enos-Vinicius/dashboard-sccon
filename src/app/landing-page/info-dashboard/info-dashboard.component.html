@@ -6,7 +6,7 @@
                 <div class="p-lg-12 p-md-12 p-p-0" fxLayout="row">
                     <div class="p-lg-4 display-none-md"></div>
                     <div class="p-lg-8 list-section white-color p-ml-lg-0 p-ml-md-6 p-mb-lg-6">
-                        <div>{{'landing-page.dashboard.class-alerts' | translate | uppercase}}</div> 
+                        <div>{{'landing-page.dashboard.class-alerts' | translate | uppercase}}</div>
                         <div class="p-mt-4">{{'landing-page.dashboard.all' | translate}}</div>
                         <div>{{'landing-page.dashboard.burn-scar' | translate}}</div>
                         <div>{{'landing-page.dashboard.deforestation-access' | translate}}</div>
@@ -48,7 +48,7 @@
                 </div>
             </div>
         </div>
-        
+
         <!--IMG IPHONE TABLET/MOBILE-->
         <div class="display-none-lg" fxLayout.sm="row" fxLayout.xs="column" fxLayoutAlign.xs="start center">
             <div class="p-order-2 p-order-md-1 img-iphone"></div>
@@ -58,7 +58,7 @@
         </div>
 
         <div fxLayoutAlign="center center" style="position: relative; bottom: 100px;">
-            <button class="button-md p-ml-lg-6 p-ml-md-3 p-ml-3" mat-flat-button color="accent">{{'buttons.access-now' | translate | uppercase}}</button>
+            <button class="button-md p-ml-lg-6 p-ml-md-3 p-ml-3" mat-flat-button color="accent" (click)="authService?.openModalLogin()">{{'buttons.access-now' | translate | uppercase}}</button>
         </div>
 
     </div>
