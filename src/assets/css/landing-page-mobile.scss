@@ -379,21 +379,29 @@ $secondary: #ffd079;
   }
 
   .request-access {
-    width: 100%;
-    height: 93%;
-    border: 1px solid #777777;
-
-    p {
-      text-align: center;
+    .request-image-main {
+      width: 100%;
+      height: 400px;
+      background-image: url(~src/assets/imgs/Bitmap-3.png);
+      background-size: 100% 400px;
+      background-position-y: 50%;
+      background-repeat: no-repeat;
     }
 
-    .container {
-      width: 95%;
+    .container-image {
+      width: 100%;
+      height: 400px;
+      background-color: rgba(0, 0, 0, 0.3);
+      background-size: 100% auto;
     }
 
-    h1 {
-      text-align: center;
-      width: 90%;
+    
+    .p-steps .p-steps-item.p-highlight .p-steps-title {
+      font-size: 12px;
+    }
+
+    .p-steps .p-steps-item .p-menuitem-link .p-steps-title {
+      font-size: 12px;
     }
   }
 
@@ -604,3 +612,4 @@ $secondary: #ffd079;
     background-size: 100% 100%;
   }
 }
+

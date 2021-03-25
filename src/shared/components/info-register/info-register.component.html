@@ -1,0 +1,20 @@
+<div fxLayout="row" fxLayoutAlign="space-between center">
+    <div class="h2-section">Confirmação de Dados Cadastrais</div>
+    <button mat-icon-button [mat-dialog-close]="true">
+        <mat-icon>close</mat-icon>
+    </button>
+</div>
+<div fxLayout="column">
+    <span>Prezado <b>{{data.form.name}}</b>,</span>
+    <span>Por favor confirme os dados informados para finalizar o cadastro:</span>
+    <span>Nome: {{data.form.name}}</span>
+    <span>Email: {{data.form.email}}</span>
+    <span>Lotação/Exercício: {{data.form.stocking_unit}}</span>
+    <span>Munícipio de Lotação: {{data.form.county}}</span>
+    <span>Cargo/Emprego: {{data.form.work}}</span>
+    <span>Comissão/Função: {{data.form.employments}}</span>
+    <div class="p-mt-3" fxLayout="row" fxLayoutAlign="end end">
+        <button class="button-md" mat-stroked-button color="accent" (click)="back()">EDITAR DADOS</button>
+        <button class="button-md p-ml-3" mat-flat-button color="accent" (click)="openModal()" >CONFIRMAR DADOS</button>
+    </div>
+</div>

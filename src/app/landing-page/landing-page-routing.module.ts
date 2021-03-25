@@ -11,6 +11,7 @@ const routes: Routes = [
   { path: '', component: LandingPageComponent, pathMatch: 'full' },
   { path: 'info-news', component: InfoNewsComponent },
   { path: 'info-images', component: InfoImagesMosaicsComponent },
+  { path: 'request-access', component: RequestAccessComponent },
   { path: 'design', component: InfoSoftwareComponent }
 ];
 

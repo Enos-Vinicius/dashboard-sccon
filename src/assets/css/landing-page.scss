@@ -395,13 +395,22 @@ $secondary: #ffd079;
   }
 
   .request-access {
-    width: 100%;
-    height: 93%;
-    border: 1px solid #777777;
 
-    .container {
+    .request-image-main {
       width: 100%;
+      height: 480px;
+      background-image: url(~src/assets/imgs/Bitmap-3.png);
+      background-size: 100% auto;
+      background-position-y: 50%;
     }
+
+    .container-image {
+      width: 100%;
+      height: 480px;
+      background-color: rgba(0, 0, 0, 0.3);
+      background-size: 100% auto;
+    }
+
   }
 
   .more-info {

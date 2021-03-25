@@ -1,4 +1,14 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, Validators, FormBuilder } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
+import { MenuItem } from 'primeng/api';
+import { InfoRegisterComponent } from 'src/shared/components/info-register/info-register.component';
+import { CityService } from 'src/shared/services/city.service';
+import { EmploymentsService } from 'src/shared/services/employments.service';
+import { StateService } from 'src/shared/services/state.service';
+import { ValidateCpfService } from 'src/shared/services/validate-cpf.service';
+import { WorkService } from 'src/shared/services/work.service';
+import { Helper } from 'src/shared/utils/Helper';
 
 @Component({
   selector: 'app-request-access',
@@ -7,9 +17,154 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RequestAccessComponent implements OnInit {
 
-  constructor() { }
+  items: MenuItem[];
+  formAccess: FormGroup;
+  activeIndex: number = 1;
+  stateArr;
+  cityArr = [];
+  workArr = [];
+  employmentsArr = [];
+  viewCriterion: boolean = false;
+  viewCity: boolean = false;
+
+  constructor(
+    private validateCpf: ValidateCpfService,
+    private formBuilder: FormBuilder,
+    private stateService: StateService,
+    private workService: WorkService,
+    private dialog: MatDialog,
+    private employmentsService: EmploymentsService,
+    private cityService: CityService
+  ) { }
 
   ngOnInit(): void {
+    this.loadSteps();
+    this.buildForm();
+    this.stateArr = this.stateService.getStates();
   }
 
+  buildForm(){
+    this.formAccess = this.formBuilder.group({
+      name: [null],
+      email: [null, [Validators.required, Validators.email,Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]],
+      confirm_email: [null, [Validators.email,Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]],
+      stocking_unit: [null],
+      appRefId: ['policiafederal'],
+      state: [null],
+      fone: [null],
+      county: [null],
+      work: [false],
+      employments: [false],
+    });
+
+    const { county } = this.formAccess.controls;
+
+    if(!this.viewCity) {
+      county.disable();
+    } 
+  }
+
+  loadSteps(){
+    this.items = [{
+      label: 'Email Institucional',
+    },
+    {
+      label: 'Ficha Cadastral',
+    },
+    {
+      label: 'Cadastro Concluído',
+    }];
+  }
+
+  next(){
+    if(this.activeIndex < 2) {
+      this.activeIndex ++; 
+    }
+  }
+
+  back(){
+    this.validarRequiredForm('none');
+    if(this.activeIndex > 0) {
+      this.activeIndex --; 
+    }
+  }
+
+  validEmail() {
+    let cpf = this.formAccess.get('email').value;
+    this.validateCpf.getByString(cpf).subscribe(
+      res => {
+        this.next();
+        this.validarRequiredForm('validate');
+        this.getWork();
+        this.getEmployments();
+        this.viewCriterion = false;
+      }, 
+      err => {
+        this.viewCriterion = true;
+      })
+  }
+
+  setCity(code){
+    this.cityService.getByString(code + '/cities').subscribe (
+      res => {
+        this.cityArr = res;
+        this.viewCity = true;
+        this.formAccess.get('county').enable();
+      },
+      err => {
+        console.log("Erro");
+        this.viewCity = false;
+      }
+    )
+  }
+
+  getWork(){
+    this.workService.getAll().subscribe(
+      res => {
+        this.workArr = res;
+      },
+      err => {
+        console.log("Error, ", err);
+      }
+    )
+  }
+
+  getEmployments(){
+    this.employmentsService.getAll().subscribe(
+      res => {
+        this.employmentsArr = res;
+      }, 
+      err => {
+        console.log("Err::> ", err);
+      }
+    )
+  }
+
+  validarRequiredForm(option) {
+    if(option == 'validate'){
+      Object.keys(this.formAccess.controls).forEach(key => {
+        this.formAccess.controls[key].setValidators(Validators.required);       
+      });
+    } else {
+      Object.keys(this.formAccess.controls).forEach(key => {
+        if(key != 'email'){
+          this.formAccess.controls[key].setValidators(null);
+        }
+      });
+    }
+  }
+
+  public openModal() {
+    const dialogRef = this.dialog.open(InfoRegisterComponent, Helper.checkMobile() ? {
+      maxWidth: '100vw',
+      maxHeight: '100vh',
+      height: '100vh',
+      width: '100vw',
+      data: {form : this.formAccess.value}
+    } : {
+      minWidth: '25vw',
+        data: {form : this.formAccess.value}
+      },
+    );
+  }
 }

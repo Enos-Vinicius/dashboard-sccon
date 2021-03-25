@@ -34,7 +34,7 @@
               <input id="instituicao" name="input-name" formControlName="organizationName" matInput placeholder="{{'forms-inputs.institution' | translate}}">
               <mat-error *ngIf="formFaq.get('organizationName').invalid && formFaq.get('organizationName').touched">
                 <span *ngIf="formFaq.get('organizationName').errors.required">{{'set-erros.validate-required' | translate}}</span>
-                </mat-error>
+              </mat-error>
           </mat-form-field>
 
           <mat-form-field class="p-lg-6 p-md-6" appearance="outline">
@@ -42,7 +42,7 @@
               <input id="telefone" name="input-telefone" formControlName="fone" maxlength="15" phoneValidatorMask matInput placeholder="{{'forms-inputs.phone' | translate}}">
               <mat-error *ngIf="formFaq.get('fone').invalid && formFaq.get('fone').touched">
                 <span *ngIf="formFaq.get('fone').errors.required">{{'set-erros.validate-required' | translate}}</span>
-                </mat-error>
+              </mat-error>
           </mat-form-field>
       </div>
 

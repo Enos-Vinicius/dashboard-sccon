@@ -310,11 +310,35 @@ $secondary: #ffd079;
       }
     }
 
+    .request-access {
+
+      .request-image-main {
+        width: 100%;
+        height: 480px;
+        background-image: url(~src/assets/imgs/Bitmap-3.png);
+        background-size: 100% auto;
+        background-position-y: 50%;
+      }
+  
+      .container-image {
+        width: 100%;
+        height: 480px;
+        background-color: rgba(0, 0, 0, 0.3);
+        background-size: 100% auto;
+      }
+  
+    }
 
     /* TYPOGRAPHY */
     .kicker-featured{font-size: 32px;font-weight: 600; color: $primary;}
     .h1-featured{font-size: 80px;font-weight: bold; color: $primary; line-height: 80px;}
     .h1-featured-mb{font-size: 48px;font-weight: bold;line-height: 48px;color: $primary;}
+    .h1-featured-mb-fine {
+      font-size: 48px;
+      font-weight: 400;
+      line-height: 48px;
+      color: $primary;
+    }
     .h2-featured{font-size: 28px;font-weight: 600; color: $primary;}
     .h3-featured{font-size: 22px;font-weight: 500; color: $primary;}
     .h4-featured{font-size: 12px;font-weight: 500; color: $primary;}

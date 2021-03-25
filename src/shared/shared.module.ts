@@ -7,12 +7,14 @@ import { PhoneValidatorMaskDirective } from './directivas/phone-mask.diretive';
 import { FilterPipe } from './pipes/filter.pipe';
 import { Components } from './components/components';
 import { LaddaModule } from 'angular2-ladda';
+import { InfoRegisterComponent } from './components/info-register/info-register.component';
 
 @NgModule({
   declarations: [
     Components,
     PhoneValidatorMaskDirective,
-    FilterPipe
+    FilterPipe,
+    InfoRegisterComponent
   ],
   imports: [
     CommonModule,
