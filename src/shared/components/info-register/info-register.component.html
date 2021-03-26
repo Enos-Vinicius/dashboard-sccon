@@ -4,17 +4,58 @@
         <mat-icon>close</mat-icon>
     </button>
 </div>
-<div fxLayout="column">
+
+<div *ngIf="confirmData" class="p-mt-3" fxLayout="column">
     <span>Prezado <b>{{data.form.name}}</b>,</span>
     <span>Por favor confirme os dados informados para finalizar o cadastro:</span>
-    <span>Nome: {{data.form.name}}</span>
-    <span>Email: {{data.form.email}}</span>
-    <span>Lotação/Exercício: {{data.form.stocking_unit}}</span>
-    <span>Munícipio de Lotação: {{data.form.county}}</span>
-    <span>Cargo/Emprego: {{data.form.work}}</span>
-    <span>Comissão/Função: {{data.form.employments}}</span>
+    <span class="p-mt-3"><b>Nome:</b> {{data.form.name}}</span>
+    <span><b>Email:</b> {{data.form.email}}</span>
+    <span><b>Lotação/Exercício:</b> {{data.form.stocking_unit}}</span>
+    <span><b>Estado:</b> {{data.select.state.name}}</span>
+    <span><b>Munícipio de Lotação:</b> {{data.select.city.name}}</span>
+    <span><b>Cargo/Emprego:</b> {{data.select.work.label}}</span>
+    <span><b>Comissão/Função:</b> {{data.select.employment.label}}</span>
     <div class="p-mt-3" fxLayout="row" fxLayoutAlign="end end">
-        <button class="button-md" mat-stroked-button color="accent" (click)="back()">EDITAR DADOS</button>
-        <button class="button-md p-ml-3" mat-flat-button color="accent" (click)="openModal()" >CONFIRMAR DADOS</button>
+        <button class="button-md" mat-stroked-button color="accent" [mat-dialog-close]="true">EDITAR DADOS</button>
+        <button class="button-md p-ml-3" mat-flat-button color="accent" (click)="acceptTerms()" >CONFIRMAR DADOS</button>
+    </div>
+</div>
+
+
+<div *ngIf="!confirmData" class="p-mt-3" fxLayout="column">
+
+    <div class="p-mt-3">
+        <mat-checkbox>
+            <span class="white-text">Não repassarei imagens ou dados obtidos a terceiros que não façam parte das insituições participantes da RedeMAIS; </span>
+        </mat-checkbox>
+    </div>
+
+    <div class="p-mt-3">
+        <mat-checkbox>
+            <span class="white-text">Entendo que devo citar como fonte RedeMAIS e Planet, em todo documento que utilize as imagens ou produtos, da seguinte forma: “Fonte RedeMAIS e:direitos autorais: 2020 Planet Labs Inc.”;</span>
+        </mat-checkbox>
+    </div>
+
+    <div class="p-mt-3">
+        <mat-checkbox>
+            <span class="white-text">Me comprometo a fazer uso regular e lícito das ferramentas e produtos disponibilizados;</span>
+        </mat-checkbox>
+    </div>
+
+    <div class="p-mt-3">
+        <mat-checkbox>
+            <span class="white-text">Não compartilharei minhas credenciais ou chaves de acesso com terceiros; </span>
+        </mat-checkbox>
+    </div>
+
+    <div class="p-mt-3">
+        <mat-checkbox>
+            <span class="white-text">Entendo que estagiários, terceiros e particulares não podem ter acesso às imagens e dados disponibilizados</span>
+        </mat-checkbox>
+    </div>
+    <div class="p-mt-3" fxLayout="row" fxLayoutAlign="end end">
+        <button class="button-md p-ml-3" mat-flat-button color="accent" (click)="closeModal()">
+            ACEITAR TERMOS DE CONDIÇÕES
+        </button>
     </div>
 </div>

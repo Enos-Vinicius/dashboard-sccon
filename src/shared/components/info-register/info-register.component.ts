@@ -8,13 +8,22 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 })
 export class InfoRegisterComponent implements OnInit {
 
+  confirmData: boolean = true;
+
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: any,
     public dialogRef: MatDialogRef<InfoRegisterComponent>,
   ) { }
 
   ngOnInit(): void {
-    console.log("Data: ", this.data.form);    
+ 
   }
 
+  acceptTerms() {
+    this.confirmData = false;
+  }
+
+  closeModal(){
+    this.dialogRef.close({res: "success"})
+  }
 }

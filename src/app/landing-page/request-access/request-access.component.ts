@@ -19,7 +19,7 @@ export class RequestAccessComponent implements OnInit {
 
   items: MenuItem[];
   formAccess: FormGroup;
-  activeIndex: number = 1;
+  activeIndex: number = 0;
   stateArr;
   cityArr = [];
   workArr = [];
@@ -160,11 +160,34 @@ export class RequestAccessComponent implements OnInit {
       maxHeight: '100vh',
       height: '100vh',
       width: '100vw',
-      data: {form : this.formAccess.value}
+      data: {form : this.formAccess.value, select: this.filterDataSelect()}
     } : {
       minWidth: '25vw',
-        data: {form : this.formAccess.value}
+        data: {form : this.formAccess.value, select: this.filterDataSelect()}
       },
     );
+
+    dialogRef.afterClosed().subscribe(res => {
+      if(res.res === 'success'){
+        this.next();
+      }   
+    })
+
+  }
+
+  filterDataSelect(){
+    let data = {
+      state: this.searchValue(this.stateArr ,this.formAccess.get('state').value),
+      work: this.searchValue(this.workArr ,this.formAccess.get('work').value),
+      employment: this.searchValue(this.employmentsArr ,this.formAccess.get('employments').value),
+      city: this.searchValue(this.cityArr ,this.formAccess.get('county').value)
+    }
+
+    return data;
+  }
+
+  searchValue(arr, value){
+    const result = arr.filter((res) => { return res.id === parseInt(value) })
+    return result[0];
   }
 }
