@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { Helper } from 'src/shared/utils/Helper';
 
 @Component({
   selector: 'app-know-more',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./know-more.component.scss']
 })
 export class KnowMoreComponent implements OnInit {
+  @ViewChild('divKnow', {static: true}) divKnow: ElementRef;
+  
   items = [
     {
       "path": "assets/imgs/vector/vector-tiles-yellow.svg",
@@ -46,7 +49,10 @@ export class KnowMoreComponent implements OnInit {
   ];
   responsiveOptions;
 
-  constructor() { 
+  constructor(
+    private eleRef: ElementRef,
+    private renderer: Renderer2,
+  ) { 
     this.responsiveOptions = [
       {
           breakpoint: '2048px',
@@ -72,6 +78,26 @@ export class KnowMoreComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.renderer.listen('window', 'scroll', (event) => {
+      
+      let speed = 0;
+      let heighDiv = 0;
+      if(Helper.checkMobile()){
+        speed = 10;
+        heighDiv = 200;
+      } else if(Helper.checkIpad()){
+        speed = 4;
+        heighDiv = 300;
+      } else {
+        speed = 2;
+        heighDiv = 700;
+      }
+
+      let yPos = -((window.pageYOffset / speed) -heighDiv); 
+      let bgpos = '50%'+ yPos + 'px';
+      this.divKnow.nativeElement.style.backgroundPosition = bgpos;
+
+    })
   }
 
 }

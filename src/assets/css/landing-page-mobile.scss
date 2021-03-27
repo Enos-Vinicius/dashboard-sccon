@@ -19,6 +19,7 @@ $secondary: #ffd079;
     background-image: url(~src/assets/imgs/Bitmap-1.png);
     background-size: auto 884px;
     background-repeat: no-repeat;
+    background-attachment: fixed;
   }
 
   .info-principal {
@@ -66,6 +67,7 @@ $secondary: #ffd079;
     height: 1140px;
     background-image: url(~src/assets/imgs/Bitmap-3.png);
     background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: 1525px auto;
     background-position: center;
 
@@ -171,6 +173,7 @@ $secondary: #ffd079;
     background-image: url(~src/assets/imgs/Bitmap-4.png);
     background-size: 1000px 886px;
     background-repeat: no-repeat;
+    background-attachment: fixed; 
     opacity: 0.15;
     z-index: 1;
     content: ' ';

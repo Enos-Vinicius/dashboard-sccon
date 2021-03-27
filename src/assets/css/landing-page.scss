@@ -11,6 +11,7 @@ $secondary: #ffd079;
     background-image: url(~src/assets/imgs/Bitmap-1.png);
     background-repeat: no-repeat;
     background-position: center;
+    background-attachment: fixed;
     background-size: 100% 100vh;
   }
 
@@ -57,6 +58,7 @@ $secondary: #ffd079;
     width: 100%;
     height: 1173px;
     background-image: url(~src/assets/imgs/Bitmap-3.png);
+    background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: 100% 1173px;
 
@@ -88,28 +90,6 @@ $secondary: #ffd079;
     }
   }
 
-  .results {
-    position: relative;
-    padding-top: 50px;
-    border-left: 1px solid #777777;
-    border-right: 1px solid #777777;
-
-    h1 {
-      font-size: 28px;
-      text-align: center;
-      color: #777777;
-    }
-
-    .carousel-item {
-      padding: 30px;
-      color: #777777;
-
-      .carousel-item-content {
-        text-align: center;
-        padding: 2rem 0;
-      }
-    }
-  }
 
   .news {
 
@@ -167,6 +147,7 @@ $secondary: #ffd079;
 
   .images-mosaics::before {
     background-image: url(~src/assets/imgs/Bitmap-4.png);
+    background-attachment: fixed;
     background-size: 100% 1314px;
     background-repeat: no-repeat;
     opacity: 0.15;
@@ -233,7 +214,7 @@ $secondary: #ffd079;
     .img-macbook {
       height: 736px;
       width: 981px;
-      margin-left: -210px;
+      margin-left: -750px;
       background-image: url(~src/assets/imgs/notebook.png);
       background-repeat: no-repeat;
       background-size: 981px auto;

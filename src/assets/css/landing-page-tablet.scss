@@ -8,6 +8,7 @@ $secondary: #ffd079;
         height: 1096px;
         background-image: url(~src/assets/imgs/Bitmap-1.png);
         background-repeat: no-repeat;
+        background-attachment: fixed;
         background-size: 100% 100%;
     }
 
@@ -64,6 +65,7 @@ $secondary: #ffd079;
         height: 996px;
         background-image: url(~src/assets/imgs/Bitmap-3.png);
         background-repeat: no-repeat;
+        background-attachment: fixed;
         background-size: 100% 1173px;
 
         .container {
@@ -147,6 +149,7 @@ $secondary: #ffd079;
         .img-macbook {
           height: 689px;
           width: 900px;
+          margin-right: 550px;
           background-image: url(~src/assets/imgs/notebook.png);
           background-repeat: no-repeat;
           background-size: 900px auto;
