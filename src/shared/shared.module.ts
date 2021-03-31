@@ -8,11 +8,13 @@ import { FilterPipe } from './pipes/filter.pipe';
 import { Components } from './components/components';
 import { LaddaModule } from 'angular2-ladda';
 import { InfoRegisterComponent } from './components/info-register/info-register.component';
+import { HighlightDirective } from './directivas/highlight.diretive';
 
 @NgModule({
   declarations: [
     Components,
     PhoneValidatorMaskDirective,
+    HighlightDirective,
     FilterPipe,
     InfoRegisterComponent
   ],
@@ -27,6 +29,7 @@ import { InfoRegisterComponent } from './components/info-register/info-register.
     CommonModule,
     ReactiveFormsModule,
     PhoneValidatorMaskDirective,
+    HighlightDirective,
     PrimeNgModule,
     MaterialModule,
     FilterPipe,

@@ -20,7 +20,13 @@
                                (closed)="panelOpenState = false" >
             <mat-expansion-panel-header fxLayoutAlign="start">
               <mat-panel-title >
-                 <span class="body-lg">{{item.question}}</span>
+                 <p 
+                  appHighlight
+                  [content]="item.question"
+                  [searchTerm]="inputQuestion.value" 
+                  [caseSensitive]="false"
+                  class="body-lg"
+                ></p>
               </mat-panel-title>
             </mat-expansion-panel-header>
             <p style="white-space: pre-wrap;">{{item.answer}}</p>
@@ -34,6 +40,9 @@
       </div>
     </ng-template>
 
-    <button class="button-md p-m-6" mat-flat-button color="accent" (click)="authService?.openModalLogin()">{{'buttons.access-now' | translate | uppercase}}</button>
+    <div class="p-mt-6" fxLayout="row" fxLayoutAlign="center center">
+      <button *ngIf="knowMore" class="button-md" routerLink="info-common" mat-stroked-button color="accent">{{'buttons.know-more' | translate | uppercase}}</button>
+      <!-- <button class="button-md p-m-6" mat-flat-button color="accent" (click)="authService?.openModalLogin()">{{'buttons.access-now' | translate | uppercase}}</button> -->
+    </div>
 
 </div>

@@ -263,7 +263,6 @@ $secondary: #ffd079;
 
   .common-questions {
     min-height: 600px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 
     .img-questions {
       width: 100%;
@@ -368,7 +367,9 @@ $secondary: #ffd079;
     width: 100%;
     background-image: url(~src/assets/imgs/Bitmap-11.png);
     background-size: 100% auto;
-    background-position-y: 50%;
+    background-position-y: 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 
     .logo-footer {
       height: 82px;

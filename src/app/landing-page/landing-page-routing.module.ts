@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { InfoCommonQuestionComponent } from './info-common-question/info-common-question.component';
 
 import { InfoImagesMosaicsComponent } from './info-image-mosaics/info-image-mosaics.component';
 import { InfoNewsComponent } from './info-news/info-news.component';
@@ -11,6 +12,7 @@ const routes: Routes = [
   { path: '', component: LandingPageComponent, pathMatch: 'full' },
   { path: 'info-news', component: InfoNewsComponent },
   { path: 'info-images', component: InfoImagesMosaicsComponent },
+  { path: 'info-common', component: InfoCommonQuestionComponent },
   { path: 'request-access', component: RequestAccessComponent },
   { path: 'design', component: InfoSoftwareComponent }
 ];

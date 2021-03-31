@@ -21,26 +21,11 @@ export class InfoDashboardComponent implements OnInit {
     this.renderer.listen('window', 'scroll', (event) => {
       const number = window.scrollY;
 
-      // console.log("width: ", Helper.widthTablet());
-      
-      // if(Helper.checkMobile()){
-
-      // } else if(Helper.widthTablet()){
-      //   console.log("scroll: ", window.scrollY);
-      //   if(number > 500 && number < 3900){
-      //     this.divMackbook.nativeElement.style.marginLeft = (4100 - window.scrollY) + 'px';
-      //   } 
-      // } else {
-      //   if(number > 500 && number < 3900){
-      //     this.divMackbook.nativeElement.style.marginLeft = -(4100 - number) + 'px';
-      //   }    
-      // }
-
       if(Helper.widthTablet()){
         if(number > 4000 && number < 5200){
           this.divMackbook.nativeElement.style.marginRight = (5500 - (number + 300)) + 'px';
         } 
-      } else {
+      } else if(!Helper.widthPhone()){
         if(number > 500 && number < 3900){
           this.divMackbook.nativeElement.style.marginLeft = -(4100 - number) + 'px';
         }    
