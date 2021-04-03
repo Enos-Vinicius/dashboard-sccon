@@ -34,12 +34,7 @@ $secondary: #ffd079;
   }
 
   .info-principal {
-    margin-top: 150px;
-
-    .banner {
-      height: 250px;
-    }
-
+    max-width: 1400px;
   }
 
   .info-software {
@@ -227,6 +222,7 @@ $secondary: #ffd079;
       background-image: url(~src/assets/imgs/Bitmap-8.png);
       background-repeat: no-repeat;
       background-size: 382px 526px;
+      margin-left: 350px;
     }
   }
 
