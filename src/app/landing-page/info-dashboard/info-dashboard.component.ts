@@ -29,7 +29,7 @@ export class InfoDashboardComponent implements OnInit {
             this.divMackbook.nativeElement.style.marginRight = (5500 - (number + 300)) + 'px';
           } 
         } else if(!Helper.widthPhone()){
-            if(number > 500 && number < 4052){
+            if(number > 2000 && number < 4052){
               this.divMackbook.nativeElement.style.marginLeft = -(4100 - number) + 'px';      
             }    
             if(number > 3800 && number < 4000){
