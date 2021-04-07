@@ -45,7 +45,7 @@ import {OverlayModule} from '@angular/cdk/overlay';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
-  imports: [FlexLayoutModule],
+  imports: [MatIconModule, FlexLayoutModule],
   exports: [
     A11yModule,
     ClipboardModule,

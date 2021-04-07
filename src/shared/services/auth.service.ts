@@ -22,7 +22,7 @@ export class AuthService extends BaseRecursoService<User> {
     protected injector: Injector,
     private dialog: MatDialog
   ) {
-    super("/", injector, 'none', User.fromJson);
+    super("", injector, 'none', User.fromJson);
 
     if (window.sessionStorage.getItem('user')) {
       this.setUser(JSON.parse(window.sessionStorage.getItem('user')));
@@ -87,6 +87,11 @@ export class AuthService extends BaseRecursoService<User> {
     return this.http.get(url, { params: userData });
   }
 
+  public getTokenSinespRequest(tokenSinesp): Observable<Token> {
+    const url = this.env.apis.pf + `${this.apiPath}/auth/token-sinesp`;
+    return this.http.get(url, { params: {token: tokenSinesp} });
+  }
+
   public getUserRequest(): Observable<User> {
     const url = this.env.apis.pf + `${this.apiPath}/users/user`;
     return this.http.get(url, { headers: { 'Authorization': 'Bearer ' + this.token.access_token } });
@@ -105,6 +110,23 @@ export class AuthService extends BaseRecursoService<User> {
         })
       }).catch(error => {
         reject(error['status']);
+      });
+    });
+  }
+
+  public doLoginSinesp(token): Promise<User> {
+    return new Promise((resolve, reject) => {
+      this.getTokenSinespRequest(token).toPromise().then(tokenData => {
+        this.setToken(tokenData);
+
+        this.getUserRequest().toPromise().then(userDataResult => {
+          this.setUser(userDataResult);
+          resolve(userDataResult);
+        }).catch(error => {
+          reject(error);
+        })
+      }).catch(error => {
+        reject(error);
       });
     });
   }
@@ -132,6 +154,7 @@ export class AuthService extends BaseRecursoService<User> {
       data: { action: 'login' }
     },
     );
+
   }
 
   public isLogged() {
