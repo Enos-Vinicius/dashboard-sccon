@@ -25,19 +25,23 @@ export class LoginComponent implements OnInit {
   ) {
     this.form = this.formBuilder.group({
       username: [null, Validators.compose([Validators.minLength(6), Validators.email, Validators.required, Validators.maxLength(60)])],
-      password: [null],
+      password: [null, Validators.compose([Validators.minLength(6),  Validators.required, Validators.maxLength(60)])],
     });
   }
 
   ngOnInit(): void {
-    this.setCurrentAction()
+    this.setCurrentAction(this.data['action'])
   }
 
-  private setCurrentAction() {
-    console.log(this.data['action']);
+  private setCurrentAction(action) {
+    this.msgError = null;
 
-    if (this.data['action']) {
-      this.currentAction = this.data['action'];
+    if (action == 'recover') {
+      this.currentAction = action;
+      this.form.get('password').clearValidators();
+      this.form.get('password').updateValueAndValidity();
+    } else if (action) {
+      this.currentAction = action;
     } else {
       this.currentAction = 'login'
     }
@@ -71,7 +75,22 @@ export class LoginComponent implements OnInit {
   }
 
   public doRecovery() {
+    this.msgError = null;
+    this.loading = true;
 
+    if (this.form.invalid) {
+      this.form.markAllAsTouched();
+      this.loading = false;
+      return
+    }
+
+    this.authService.doRecovery(this.form.get('username').value).subscribe(retorno => {
+      this.loading = false;
+      this.setCurrentAction('recoverSuccess');
+    }, error => {
+      this.loading = false;
+      this.msgError = "Não foi possível solicitar a recuperação de senha.<br> Verifique se seu e-mail está correto ou tente novamente mais tarde.";
+    });
   }
 
   public doSinespLogin() {

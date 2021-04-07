@@ -41,7 +41,10 @@ export class FaqComponent implements OnInit {
     this.authService.userObserver.subscribe(userData => {
       this.formFaq.get('name').setValue(userData.name);
       this.formFaq.get('email').setValue(userData.email);
-      this.formFaq.get('organizationName').setValue(userData.organization.name);
+
+      if(userData.organization) {
+        this.formFaq.get('organizationName').setValue(userData.organization.name);
+      }
     })
   }
 
