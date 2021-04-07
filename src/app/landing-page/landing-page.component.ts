@@ -22,22 +22,18 @@ export class LandingPageComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    // AUTENTICAÇÃO COM A SINESP
     this.route.queryParams.subscribe(params => {
-      if (params['token']) {
 
+      if (params['token']) {
         let title = "Por favor aguarde, o sistema está se autenticando no sistema da Sinesp...";
-        let content = `<div class="text-center">
-          <img width='170px' src='assets/imgs/marca-sinesp-pro.png'>
-        </div>`;
+        let content;
 
         this.openModal(title, content, true);
 
         this.authService.doLoginSinesp(params['token']).then(sucess => {
-
           this.modalRef.close();
-
         }).catch(error => {
-
           this.modalRef.close();
 
           let organizationName = ((error.data || {}).message || "").replace(/.*\[([^\]]+)] not.*/, "$1");
@@ -74,7 +70,7 @@ export class LandingPageComponent implements OnInit {
     });
   }
 
-  private openModal(title, content, loading = false) {
+  private openModal(title, content, loadingSinesp = false) {
     this.modalRef = this.dialog.open(ModalCommonComponent, Helper.checkMobile() ? {
       maxWidth: '100vw',
       maxHeight: '100vh',
@@ -83,7 +79,7 @@ export class LandingPageComponent implements OnInit {
       data: {
         title: title,
         content: content,
-        loading
+        loadingSinesp
       }
     } : {
       minWidth: '25vw',
@@ -91,7 +87,7 @@ export class LandingPageComponent implements OnInit {
       data: {
         title: title,
         content: content,
-        loading
+        loadingSinesp
       }
     },
     );
