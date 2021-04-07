@@ -12,7 +12,8 @@
     <div class="form-login" fxLayout="column" fxLayout.xs="column" fxLayoutAlign="center center">
       <mat-form-field class="p-lg-12 p-md-12" appearance="outline" style="padding-top:0px;padding-bottom:0px">
         <mat-label>Email</mat-label>
-        <input type="email" id="username" name="input-username" matInput placeholder="Email" formControlName="username" required>
+        <input type="email" id="username" name="input-username" matInput placeholder="Email" formControlName="username"
+          required>
         <mat-error *ngIf="checkError('username', 'required')">
           *Preenchimento de campo obrigatório
         </mat-error>
@@ -39,7 +40,7 @@
 
       <div class="p-lg-12 p-md-12" fxLayout="row" fxLayoutAlign="space-between center">
         <div class="recover-password">
-          <a type="button" mat-flat-button (click)="currentAction = 'recover'">Recuperar senha</a>
+          <a type="button" mat-flat-button (click)="setCurrentAction('recover')">Recuperar senha</a>
         </div>
         <button mat-raised-button color="accent" type="submit" [ladda]="loading" [disabled]="loading">ACESSAR</button>
       </div>
@@ -58,7 +59,7 @@
 <!-- RECUPERAR SENHA -->
 <div *ngIf="currentAction == 'recover'" class="login">
 
-  <div [formGroup]="form" (ngSubmit)="doRecovery()" class="card-login">
+  <div [formGroup]="form" class="card-login">
 
     <div fxLayout="row" fxLayoutAlign="space-between center">
       <h1>Recuperar Senha</h1>
@@ -78,11 +79,39 @@
           *O campo deve conter pelo menos 6 caracteres.
         </mat-error>
       </mat-form-field>
-      <p class="warn-color">Você irá reber um email com instruções para recuperar sua senha</p>
 
-      <div class="recover-password">
-        <a mat-raised-button color="accent" type="submit">Recuperar senha</a>
+      <div class="p-lg-12 p-md-12 warn-color text-center" *ngIf="msgError != null" [innerHTML]="msgError">
+
       </div>
+
+      <button mat-raised-button color="accent" (click)="doRecovery()" type="submit" [ladda]="loading"
+        [disabled]="loading">Recuperar
+        senha
+      </button>
+
+    </div>
+  </div>
+</div>
+
+<!-- RECUPERAR SENHA SUCESSO -->
+<div *ngIf="currentAction == 'recoverSuccess'" class="login">
+
+  <div class="card-login">
+
+    <div fxLayout="row" fxLayoutAlign="space-between center">
+      <h1> </h1>
+      <button mat-icon-button [mat-dialog-close]="true">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+
+    <div class="p-lg-12 p-md-12 text-center">
+      <img src="assets/imgs/icons/success.png" width="80px">
+      <h1 style="margin-top: 10px;">Solicitação enviada com sucesso!</h1>
+    </div>
+
+    <div class="p-lg-12 p-md-12 text-center success-color">
+      Você irá reber um email com instruções para recuperar sua senha.
     </div>
   </div>
 </div>

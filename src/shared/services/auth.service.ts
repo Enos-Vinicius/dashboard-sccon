@@ -18,7 +18,10 @@ export class AuthService extends BaseRecursoService<User> {
 
   public userObserver = new BehaviorSubject<User>(this.user);
 
-  constructor(protected injector: Injector,  private dialog: MatDialog,) {
+  constructor(
+    protected injector: Injector,
+    private dialog: MatDialog
+  ) {
     super("/", injector, 'none', User.fromJson);
 
     if (window.sessionStorage.getItem('user')) {
@@ -86,10 +89,10 @@ export class AuthService extends BaseRecursoService<User> {
 
   public getUserRequest(): Observable<User> {
     const url = this.env.apis.pf + `${this.apiPath}/users/user`;
-    return this.http.get(url, {headers : {'Authorization': 'Bearer ' + this.token.access_token}});
+    return this.http.get(url, { headers: { 'Authorization': 'Bearer ' + this.token.access_token } });
   }
 
-  public doLogin(userData) : Promise<User> {
+  public doLogin(userData): Promise<User> {
     return new Promise((resolve, reject) => {
       this.getTokenRequest(userData).toPromise().then(tokenData => {
         this.setToken(tokenData);
@@ -101,9 +104,14 @@ export class AuthService extends BaseRecursoService<User> {
           reject(error['status']);
         })
       }).catch(error => {
-          reject(error['status']);
+        reject(error['status']);
       });
     });
+  }
+
+  public doRecovery(email): Observable<any> {
+    const url = this.env.apis.pf + `${this.apiPath}/users/passwd/recovery/`;
+    return this.http.post(url, {email : email});
   }
 
   public logout() {
@@ -118,11 +126,11 @@ export class AuthService extends BaseRecursoService<User> {
       maxHeight: '100vh',
       height: '100vh',
       width: '100vw',
-      data: {action : 'login'}
+      data: { action: 'login' }
     } : {
       minWidth: '25vw',
-        data: {action : 'login'}
-      },
+      data: { action: 'login' }
+    },
     );
   }
 

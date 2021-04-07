@@ -136,6 +136,9 @@ $secondary: #ffd079;
 html, body { height: 100%; }
 body { margin: 0; font-family: 'Montserrat', sans-serif; }
 
+.success-color {
+  color: green !important;
+}
 
 .accent-color {
   color: mat-color($dashboard-accent) !important;
