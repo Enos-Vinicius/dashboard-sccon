@@ -49,6 +49,10 @@ export class NavbarComponent implements OnInit {
     this.authService.openModalLogin();
   }
 
+  doQGIS() {
+    this.authService.openModalQGIS();
+  }
+
   doLogout() {
     this.authService.logout();
   }

@@ -2,6 +2,7 @@ import { Injectable, Injector } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { LoginComponent } from '../components/login/login.component';
+import { QgisComponent } from '../components/qgis/qgis.component';
 import { Helper } from '../utils/Helper';
 
 import { Token } from './../models/token.model';
@@ -122,6 +123,18 @@ export class AuthService extends BaseRecursoService<User> {
     } : {
       minWidth: '25vw',
         data: {action : 'login'}
+      },
+    );
+  }
+
+  public openModalQGIS() {
+    const dialogRef = this.dialog.open(QgisComponent, Helper.checkMobile() ? {
+      maxWidth: '100vw',
+      maxHeight: '100vh',
+      height: '100vh',
+      width: '100vw'
+    } : {
+      width: "50%"
       },
     );
   }

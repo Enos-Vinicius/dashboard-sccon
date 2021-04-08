@@ -34,7 +34,7 @@ export abstract class BaseRecursoService<T extends BaseRecursoModel> {
 
     getById(id: number): Observable<T>{
         const url = this.env.apis.pf + `${this.apiPath}/${id}`;
-
+        
         return this.http.get(url).pipe(
             map(this.jsonDataToRecurso.bind(this)), 
             catchError(this.handleError)

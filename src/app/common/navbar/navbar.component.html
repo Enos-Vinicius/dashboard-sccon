@@ -20,7 +20,7 @@
 
       <button mat-menu-item routerLink="inicio" routerLinkActive="active-list-item" [routerLinkActiveOptions]="{exact: true}">Página principal</button>
       <button mat-menu-item (click)="redirecTo('imagens')" routerLinkActive="active-list-item">Imagens e mosaicos Planet via Web</button>
-      <button mat-menu-item (click)="redirecTo('qgis')" routerLinkActive="active-list-item">Imagens e mosaicos Planet via QGIS</button>
+      <button mat-menu-item (click)="doQGIS()" routerLinkActive="active-list-item">Imagens e mosaicos Planet via QGIS</button>
       <button mat-menu-item (click)="redirecTo('dashboard')" routerLinkActive="active-list-item">Dashboard de alertas de mudanças</button>
       <button mat-menu-item (click)="redirecTo('ead')" routerLinkActive="active-list-item">Plataforma EAD</button>
       <button mat-menu-item routerLink="inicio/info-news" routerLinkActive="active-list-item">Notícias</button>
