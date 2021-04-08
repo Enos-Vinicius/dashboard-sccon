@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NewsService } from 'src/shared/services/news.service';
 
 @Component({
   selector: 'app-news',
@@ -6,70 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./news.component.scss']
 })
 export class NewsComponent implements OnInit {
-  products = [{
-    "id": "1000",
-    "code": "f230fh0g3",
-    "name": "17",
-    "description": "Product Description",
-    "image": "bamboo-watch.jpg",
-    "price": 'Milhões',
-    "category": "Accessories",
-    "quantity": 24,
-    "inventoryStatus": "INSTOCK",
-    "rating": 5
-  },{
-    "id": "1000",
-    "code": "f230fh0g3",
-    "name": "200",
-    "description": "Product Description",
-    "image": "bamboo-watch.jpg",
-    "price": "mil",
-    "category": "Accessories",
-    "quantity": 24,
-    "inventoryStatus": "INSTOCK",
-    "rating": 5
-  },
-  {
-    "id": "1000",
-    "code": "f230fh0g3",
-    "name": "98",
-    "description": "Product Description",
-    "image": "bamboo-watch.jpg",
-    "price": "%",
-    "category": "Accessories",
-    "quantity": 24,
-    "inventoryStatus": "INSTOCK",
-    "rating": 5
-  },
-  {
-    "id": "1000",
-    "code": "f230fh0g3",
-    "name": "98",
-    "description": "Product Description",
-    "image": "bamboo-watch.jpg",
-    "price": "%",
-    "category": "Accessories",
-    "quantity": 24,
-    "inventoryStatus": "INSTOCK",
-    "rating": 5
-  },
-  {
-    "id": "1000",
-    "code": "f230fh0g3",
-    "name": "98",
-    "description": "Product Description",
-    "image": "bamboo-watch.jpg",
-    "price": "%",
-    "category": "Accessories",
-    "quantity": 24,
-    "inventoryStatus": "INSTOCK",
-    "rating": 5
-  },
-  ];
+  news = [];
   responsiveOptions;
   viewForm: boolean = false;
 
-  constructor() {
+  constructor(
+    private newsService: NewsService
+  ) {
     this.responsiveOptions = [
       {
           breakpoint: '2048px',
@@ -95,6 +39,18 @@ export class NewsComponent implements OnInit {
    }
 
   ngOnInit(): void {
+    this.getNews();
+  }
+
+  getNews(){
+    this.newsService.getAll().subscribe(
+      res => {
+        this.news = res;
+      },
+      err => {
+        console.log("err: ", err);
+      }
+    )
   }
 
 }
