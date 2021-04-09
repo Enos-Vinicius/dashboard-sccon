@@ -9,7 +9,6 @@ import {
   RecaptchaModule,
   RecaptchaSettings,
 } from 'ng-recaptcha';
-import { MaterialModule } from 'src/shared/external-libs/material.module';
 import { SharedModule } from 'src/shared/shared.module';
 
 import { createTranslateLoader } from '../app.module';
@@ -51,7 +50,6 @@ import { InfoCommonQuestionComponent } from './info-common-question/info-common-
   ],
   imports: [
     CommonModule,
-    MaterialModule,
     SharedModule,
     RecaptchaModule,
     NavbarModule,

@@ -1,16 +1,15 @@
-
-import { NgModule } from '@angular/core';
+import { registerLocaleData } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
 import localePt from '@angular/common/locales/pt';
+import { NgModule } from '@angular/core';
+import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { LaddaModule } from 'angular2-ladda';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
-import { HttpClient } from '@angular/common/http';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
-import { registerLocaleData } from '@angular/common';
-import { CoreModule } from './core/core.module';
 import { NavbarModule } from './common/navbar/navbar.module';
-import { LaddaModule } from 'angular2-ladda';
+import { CoreModule } from './core/core.module';
 
 registerLocaleData(localePt);
 
@@ -19,7 +18,7 @@ export function createTranslateLoader(http: HttpClient) {
 }
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     AppRoutingModule,
