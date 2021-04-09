@@ -1,0 +1,39 @@
+<p-toast></p-toast>
+<div fxLayout="row" fxLayoutAlign="space-between center">
+    <div class="h2-section">Dados de Acesso ao plugin planet explorer via QGIS</div>
+    <button mat-icon-button [mat-dialog-close]="true">
+        <mat-icon>close</mat-icon>
+    </button>
+</div>
+<div *ngIf="!qgisData" fxLayout="row" fxLayoutAlign="center center">
+    <p-progressSpinner  [style]="{width: '50px', height: '50px'}" styleClass="custom-spinner" strokeWidth="8" ></p-progressSpinner>
+</div>
+<div *ngIf="qgisData" fxLayout="column">
+    <div fxLayout="row">
+        <b>1. </b> 
+        <div class="a-link p-ml-2" target="_blank" href="https://ead.sccon.com.br/ead/enrol/index.php?id=23">
+            Instale o plugin Planet Explorer no QGis
+        </div>
+    </div>
+    <div class="p-col-12 p-p-0 p-mt-2">
+        <b>2.</b> Utilize o usuário e a senha disponibilizados abaixo para visualização de imagens diárias e mosaicos mensais no QGis, por meio do Plugin Planet Explorer.
+    </div>   
+    <div class="p-mt-4">
+        <b>Tipo de acesso: </b> com renovação diária
+    </div>
+    <div>
+        <b>Usuário: </b> {{qgisData?.userName}} <img (click)="copyText(qgisData?.userName)" class="cursor-pointer" src="./../../../assets/imgs/icons/copy.png" alt="" width="20">
+    </div>
+
+    <div>
+        <b>Senha: </b> {{qgisData?.password}} <img (click)="copyText(qgisData?.password)" class="cursor-pointer" src="./../../../assets/imgs/icons/copy.png" alt="" width="20">
+    </div>
+    <div>
+        <b>Data de Expiração: </b> {{qgisData?.validUntil | date: 'dd/MM/yyyy hh:mm'}}
+    </div>
+    <div class="p-mt-3" fxLayout="row" fxLayoutAlign="end end">
+        <button class="button-md p-ml-3" mat-flat-button color="accent" (click)="closeModal()">
+            OK
+        </button>
+    </div>
+</div>

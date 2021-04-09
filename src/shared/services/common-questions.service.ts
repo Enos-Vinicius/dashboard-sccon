@@ -1,5 +1,4 @@
 import { Injectable, Injector } from '@angular/core';
-import { element } from 'protractor';
 
 import { CommonQuestions } from "../models/common-questions.model";
 import { BaseRecursoService } from "./base-resource.service";

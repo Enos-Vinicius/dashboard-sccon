@@ -58,10 +58,8 @@ export class LoginComponent implements OnInit {
     this.loading = true;
 
     this.authService.doLogin(this.form.value).then(sucesso => {
-      console.log(sucesso);
       this.loading = false;
       this.dialogRef.close();
-
     }).catch(error => {
       this.loading = false;
       this.form.markAllAsTouched();

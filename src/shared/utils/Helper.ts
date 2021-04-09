@@ -61,6 +61,21 @@ export class Helper {
       .replace(/-+$/, '');
   }
 
+  public static widthTablet() {
+    if(window.screen.width > 500 && window.screen.width <= 768) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  public static widthPhone() {
+    if(window.screen.width < 500) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 
   public static phoneMask(userInput) {
     const numbers = userInput.match(/\d/g);

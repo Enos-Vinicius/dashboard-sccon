@@ -34,10 +34,19 @@ export abstract class BaseRecursoService<T extends BaseRecursoModel> {
 
     getById(id: number): Observable<T>{
         const url = this.env.apis.pf + `${this.apiPath}/${id}`;
+        
+        return this.http.get(url).pipe(
+            map(this.jsonDataToRecurso.bind(this)), 
+            catchError(this.handleError)
+        )
+    }
+
+    getByString(description: string): Observable<T>{
+        const url = this.env.apis.pf + `${this.apiPath}/${description}`;
 
         return this.http.get(url).pipe(
-            catchError(this.handleError),
-            map(this.jsonDataToRecurso)
+            map(this.jsonDataToRecurso.bind(this)),
+            catchError(this.handleError)
         )
     }
 

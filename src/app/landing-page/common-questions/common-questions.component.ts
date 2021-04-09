@@ -1,5 +1,5 @@
 import { AuthService } from './../../../shared/services/auth.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { CommonQuestions } from 'src/shared/models/common-questions.model';
 import { CommonQuestionsService } from 'src/shared/services/common-questions.service';
@@ -11,6 +11,7 @@ import { CommonQuestionsService } from 'src/shared/services/common-questions.ser
 })
 export class CommonQuestionsComponent implements OnInit {
 
+  @Input('knowMore') knowMore;
   commonQuestions: CommonQuestions[] = [];
   inputQuestion: FormControl;
 

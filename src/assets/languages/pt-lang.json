@@ -78,12 +78,52 @@
         },
         "faq": {
             "title": "Envie suas dúvidas e sugestões"
+        },
+        "request-access": {
+            "title": "Cadastro para acesso",
+            "title2": "à plataforma web",
+            "first-access": "Primeiro, informe seu email institucional",
+            "success-register": "Cadastro realizado com sucesso!",
+            "success-message": "A plataforma enviará em instantes um link para o seu endereço de email. Você deve clicar nesse link e seguir as instrucões do sistema para ",
+            "action-register": "ativação do seu cadastro ",
+            "platform": "na Plataforma.",
+            "next": "Avançar",
+            "come-back": "Voltar",
+            "insert-email": "Insira seu email institucional",
+            "confirm-email": "Confirmação do email",
+            "institution": "Instituição não habilitada",
+            "institution-not-enabled": "Sua instituição não está habilitada para acesso à Plataforma Web.",
+            "if-you-are-interested": "Caso tenha interesse em acessar, por favor, informe ao dirigente máximo da sua instituição para que solicite a habilitação:",
+            "option-a": "a) No caso de instituição de segurança pública estadual, distrital ou municipal, com a Secretaria Nacional de Segurança Pública - Senasp, solicitando o acesso, através do seguinte contato:",
+            "option-b": "b) Para as demais instituições públicas federais, estaduais, distritais e municipais, com a Secretaria-Executiva do Ministério da Justiça e Segurança Pública, solicitando o acesso, através do seguinte contato:",
+            "responsible": "Responsável: ",
+            "name-a": "Agrício da Silva",
+            "name-b": "Washington Leonardo Guanaes Bonini",
+            "office": "Cargo: ",
+            "office-a": "Chefe de gabinete da Senasp",
+            "office-b": "Secretário-Executivo adjunto",
+            "address": "Endereço: ",
+            "address-a": "Esplanada dos Ministérios, Palácio da Justiça, Bloco T, Edifício Sede, 5º Andar, Sala 522. Brasília/DF - CEP: 70.064-900",
+            "address-b": "Esplanada dos Ministérios, Bloco T, Edifício Sede. Brasília/DF - CEP: 70.064-900",
+            "phone-a": "(61) 2025-3780 / (61) 2025-9169",
+            "phone-b": "(61) 2025-2169 / (61) 2025-7982 / (61) 2025-3914",
+            "phone": "Telefone: ",
+            "email": "Email: ",
+            "email-a": "agricio.silva@mj.gov.br",
+            "email-b": "agendase@mj.gov.br / secretaria.executiva@mj.gov.br",
+            "conclude-register": "Conclua seu Cadastro na Organização Polícia Federal",
+            "name-complete": "Nome completo",
+            "phone-institute": "Telefone Institucional",
+            "stocking-unit": "Unidade de Lotação / Exercício",
+            "uf-stocking": "UF Lotação / Exercício",
+            "county": "Municíipio Lotação / Exercício"
         }
     },
     "set-erros": {
         "validate-required": "*Preenchimento de campo obrigatório",
         "minlength-name": "*Preenchimento de no mínimo 3 caracteres no campo",
-        "invalid-email": "*Email inválido"
+        "invalid-email": "*Email inválido",
+        "confirm-email": "O Email digitado não é igual ao do campo de Email"
     },
     "buttons": {
         "send": "Enviar",

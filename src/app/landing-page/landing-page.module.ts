@@ -28,6 +28,7 @@ import { MainComponent } from './main/main.component';
 import { NewsComponent } from './news/news.component';
 import { PlatformComponent } from './platform/platform.component';
 import { RequestAccessComponent } from './request-access/request-access.component';
+import { InfoCommonQuestionComponent } from './info-common-question/info-common-question.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { RequestAccessComponent } from './request-access/request-access.componen
     PlatformComponent,
     CommonQuestionsComponent,
     FaqComponent,
-    FooterComponent
+    FooterComponent,
+    InfoCommonQuestionComponent
   ],
   imports: [
     CommonModule,

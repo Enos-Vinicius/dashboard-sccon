@@ -1,31 +1,223 @@
-<div class="request-access" fxLayout="column" fxLayoutAlign="center center">
-    <div fxLayout="column" fxLayoutAlign="center center" fxLayoutAlign.xs="center center">
-        <h1>Cadastro para acesso à plataforma Web</h1>
-        <div class="container" fxLayout="row" fxLayoutAlign="center center">
-            <mat-form-field class="input-100" appearance="outline">
-                <mat-label>Insira seu email institucional</mat-label>
-                <input id="email" name="input-email" matInput placeholder="Email">
-                <mat-error >
-                    *Preenchimento de campo obrigatório
-                </mat-error>
-                <mat-error >
-                    Quantidade minima de caracteres não informada!
-                </mat-error>
-            </mat-form-field>
-            <button class="button-radius" style="margin-top: 5px;">Avançar</button>
+<p-toast></p-toast>
+<div class="p-col-12 request-access p-p-0" fxLayout="column" fxLayoutAlign="center center">
+
+    <!--NOTÍCIA PRINCIPAL-->
+    <div class="request-image-main">
+        
+        <div class="container-image" fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="end center" fxLayoutAlign="center end">
+            <div class="p-lg-9 p-md-11 p-col-11 p-p-0 p-mb-6" fxLayout="column" fxLayoutAlign="space-around start">
+                <div class="h2-section accent-color">{{'landing-page.main.program-brazil' | translate | uppercase}}</div>
+                <div class="h1-featured-mb white-color p-mt-3">{{'landing-page.request-access.title' | translate | uppercase}}</div>
+                <div class="h1-featured-mb-fine white-color p-mt-1">{{'landing-page.request-access.title2' | translate | uppercase}}</div>
+            </div>
         </div>
-    </div>
-    <div fxLayout="column" fxLayoutAlign="center start" fxLayoutAlign="center center">
-        <h2>Instituição não habilitada</h2>
-        <p>Sua instituição não está habilitada para acesso à Plataforma Web.    </p>
-        <p>Caso tenha interesse em acessar, por favor, informe ao dirigente máximo da sua instituição para que solicite a habilitação:</p>
-    
-        <p>a) No caso de instituição de segurança pública estadual, distrital ou municipal, com a Secretaria Nacional de Segurança Pública - Senasp, solicitando o acesso, através do seguinte contato:</p>
-    
-        <p>Sua instituição não está habilitada para acesso à Plataforma Web.</p>
-        <p>Caso tenha interesse em acessar, por favor, informe ao dirigente máximo da sua instituição para que solicite a habilitação:</p>
-    
-        <p>a) No caso de instituição de segurança pública estadual, distrital ou municipal, com a Secretaria Nacional de Segurança Pública - Senasp, solicitando o acesso, através do seguinte contato:</p>
+
     </div>
 
+    <p-steps class="p-lg-9 p-md-11 p-col-12 p-p-0 p-mt-4" [model]="items" [activeIndex]="activeIndex"></p-steps>
+
+    <!-- 1ª ETAPA -->
+    <div class="p-col-12" fxLayout="column" fxLayoutAlign="center center" fxLayoutAlign.xs="center center" *ngIf="activeIndex === 0">
+        <div [formGroup]="formAccess" class="p-lg-9 p-md-11 p-col-11 p-mt-6 p-p-0">
+            <div class="h1-section p-p-0">{{'landing-page.request-access.first-access' | translate }}</div>
+            <div class="p-mt-5" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start center" fxLayoutAlign.xs="start end">
+                <mat-form-field class="p-lg-8 p-md-10 p-col-12 p-p-0" appearance="outline">
+                    <mat-label>{{'landing-page.request-access.insert-email' | translate }}</mat-label>
+                    <input id="email" name="input-email" matInput placeholder="Email" formControlName="email">
+                    <mat-error >
+                        {{'set-erros.validate-required' | translate }}
+                    </mat-error>
+                </mat-form-field>
+                <button class="button-md p-ml-3" mat-flat-button color="accent" (click)="validEmail()" [disabled]="formAccess.invalid">{{'landing-page.request-access.next' | translate | uppercase}}</button>
+            </div>
+        </div>
+    
+        <div *ngIf="viewCriterion" class="p-lg-9 p-md-11 p-col-11 p-mt-3 p-p-0">
+            <div fxLayout="column">
+                <div class="h2-section">{{'landing-page.request-access.institution' | translate }} </div>
+                <div class="list-section p-mt-3">{{'landing-page.request-access.institution-not-enabled' | translate }} </div>
+                <div class="list-section p-mt-3">{{'landing-page.request-access.if-you-are-interested' | translate }} </div>
+
+                <!--PRIMEIRO CONTADO -->
+                <div class="list-section p-text-bold p-mt-3">{{'landing-page.request-access.option-a' | translate }} </div>
+                <div class="p-mt-3" fxLayout="row">
+                    <div class="list-section p-text-bold">{{'landing-page.request-access.responsible' | translate }}</div>
+                    <div class="list-section p-ml-2">{{'landing-page.request-access.name-a' | translate }}</div>
+                </div>
+                <div fxLayout="row">
+                    <div class="list-section p-text-bold">{{'landing-page.request-access.office' | translate }}</div>
+                    <div class="list-section p-ml-2">{{'landing-page.request-access.office-a' | translate }}</div>
+                </div>
+                <div fxLayout="row">
+                    <div class="list-section p-text-bold">{{'landing-page.request-access.address' | translate }}</div>
+                    <div class="list-section p-ml-2">{{'landing-page.request-access.address-a' | translate }}</div>
+                </div>
+                <div fxLayout="row">
+                    <div class="list-section p-text-bold">{{'landing-page.request-access.phone' | translate }}</div>
+                    <div class="list-section p-ml-2">{{'landing-page.request-access.phone-a' | translate }}</div>
+                </div>
+                <div fxLayout="row">
+                    <div class="list-section p-text-bold">{{'landing-page.request-access.email' | translate }}</div>
+                    <div class="list-section p-ml-2">{{'landing-page.request-access.email-a' | translate }}</div>
+                </div>
+
+                <!--SEGUNDO CONTADO -->
+                <div class="list-section p-text-bold p-mt-3">{{'landing-page.request-access.option-b' | translate }} </div>
+                <div class="p-mt-3" fxLayout="row">
+                    <div class="list-section p-text-bold">{{'landing-page.request-access.responsible' | translate }}</div>
+                    <div class="list-section p-ml-2">{{'landing-page.request-access.name-b' | translate }}</div>
+                </div>
+                <div fxLayout="row">
+                    <div class="list-section p-text-bold">{{'landing-page.request-access.office' | translate }}</div>
+                    <div class="list-section p-ml-2">{{'landing-page.request-access.office-b' | translate }}</div>
+                </div>
+                <div fxLayout="row">
+                    <div class="list-section p-text-bold">{{'landing-page.request-access.address' | translate }}</div>
+                    <div class="list-section p-ml-2">{{'landing-page.request-access.address-b' | translate }}</div>
+                </div>
+                <div fxLayout="row">
+                    <div class="list-section p-text-bold">{{'landing-page.request-access.phone' | translate }}</div>
+                    <div class="list-section p-ml-2">{{'landing-page.request-access.phone-b' | translate }}</div>
+                </div>
+                <div fxLayout="row">
+                    <div class="list-section p-text-bold">{{'landing-page.request-access.email' | translate }}</div>
+                    <div class="list-section p-ml-2">{{'landing-page.request-access.email-b' | translate }}</div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 2ª ETAPA -->
+    <div class="p-col-12" fxLayout="column" fxLayoutAlign="center center" fxLayoutAlign.xs="center center" *ngIf="activeIndex === 1">
+        <div [formGroup]="formAccess" class="p-lg-9 p-md-11 p-col-11 p-mt-6 p-p-0">
+            <div class="h1-section p-p-0">{{'landing-page.request-access.conclude-register' | translate }}</div>
+            
+            <!-- 1ª LINHA DO FORMULÁRIO-->
+            <div class="p-mt-5" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start center" fxLayoutAlign.xs="start end">
+
+                <!--EMAIL-->
+                <mat-form-field class="p-lg-6 p-md-6 p-col-12 p-p-0" appearance="outline">
+                    <mat-label>{{'landing-page.request-access.insert-email' | translate }}</mat-label>
+                    <input id="email" name="email" matInput placeholder="Email" formControlName="email">
+                    <mat-error *ngIf="formAccess.get('email').invalid && formAccess.get('email').touched">
+                       <span *ngIf="formAccess.get('email').errors.required">{{'set-erros.validate-required' | translate }}</span>
+                    </mat-error>
+                </mat-form-field>
+
+                <!--CONFIRMAÇÃO DE EMAIL-->
+                <mat-form-field class="p-lg-6 p-md-6 p-col-12 p-ml-1" appearance="outline">
+                    <mat-label>{{'landing-page.request-access.confirm-email' | translate }}</mat-label>
+                    <input id="confirm-email" name="confirm-email" matInput placeholder="Confirmação de Email" formControlName="confirm_email" (blur)="validEmailSecondary()">
+                    <mat-error *ngIf="formAccess.get('confirm_email').invalid && formAccess.get('confirm_email').touched">
+                       <span *ngIf="formAccess.get('confirm_email').errors.required">{{'set-erros.validate-required' | translate }}</span>
+                       <span *ngIf="formAccess.get('confirm_email').errors.errorEmail">{{'set-erros.confirm-email' | translate }}</span>
+                    </mat-error>
+                </mat-form-field>
+
+            </div>
+            
+            <!-- 2ª LINHA DO FORMULÁRIO-->
+            <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start center" fxLayoutAlign.xs="start end">
+
+                <!--NOME COMPLETO-->
+                <mat-form-field class="p-lg-6 p-md-6 p-col-12 p-p-0" appearance="outline">
+                    <mat-label>{{'landing-page.request-access.name-complete' | translate }}</mat-label>
+                    <input id="name" name="name" matInput placeholder="{{'landing-page.request-access.name-complete' | translate }}" formControlName="name">
+                    <mat-error *ngIf="formAccess.get('name').invalid && formAccess.get('name').touched">
+                       <span *ngIf="formAccess.get('name').errors.required">{{'set-erros.validate-required' | translate }}</span> 
+                    </mat-error>
+                </mat-form-field>
+
+                <!--TELEFONE INSTITUCIONAL-->
+                <mat-form-field class="p-lg-6 p-md-6 p-col-12 p-ml-1" appearance="outline">
+                    <mat-label>{{'landing-page.request-access.phone-institute' | translate }}</mat-label>
+                    <input id="phone" name="phone" matInput placeholder="{{'landing-page.request-access.phone-institute' | translate }}" phoneValidatorMask formControlName="fone">
+                    <mat-error *ngIf="formAccess.get('fone').invalid && formAccess.get('fone').touched">
+                        <span *ngIf="formAccess.get('fone').errors.required">{{'set-erros.validate-required' | translate }}</span>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+
+            <!-- 3ª LINHA DO FORMULÁRIO-->
+            <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start center" fxLayoutAlign.xs="start end">
+
+                <!--UNIDADE DE LOTAÇÃO/EXERCíCIO-->
+                <mat-form-field class="p-lg-4 p-md-4 p-col-12 p-p-0" appearance="outline">
+                    <mat-label>{{'landing-page.request-access.stocking-unit' | translate }}</mat-label>
+                    <input id="stocking_unit" name="stocking_unit" matInput placeholder="{{'landing-page.request-access.stocking-unit' | translate }}" formControlName="stocking_unit">
+                    <mat-error *ngIf="formAccess.get('stocking_unit').invalid && formAccess.get('stocking_unit').touched">
+                       <span *ngIf="formAccess.get('stocking_unit').errors.required">{{'set-erros.validate-required' | translate }}</span> 
+                    </mat-error>
+                </mat-form-field>
+
+                <!--ESTADO-->
+                <mat-form-field class="p-lg-4 p-md-4 p-col-12 p-ml-1" appearance="outline">
+                    <mat-label>{{'landing-page.request-access.uf-stocking' | translate }}</mat-label>
+                    <mat-select formControlName="state">
+                        <mat-option (click)="setCity(state.code)" *ngFor="let state of stateArr" value="{{state.id}}">{{state.name}}</mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="formAccess.get('state').invalid && formAccess.get('state').touched">
+                        <span *ngIf="formAccess.get('state').errors.required">{{'set-erros.validate-required' | translate }}</span>
+                    </mat-error>
+                </mat-form-field>
+
+                <!--MUNICIPIO-->
+                <mat-form-field class="p-lg-4 p-md-4 p-col-12 " appearance="outline">
+                    <mat-label>{{'landing-page.request-access.county' | translate }}</mat-label>
+                    <mat-select formControlName="county" >
+                        <mat-option *ngFor="let city of cityArr" value="{{city.id}}">{{city.name}}</mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="formAccess.get('county').invalid && formAccess.get('county').touched">
+                        <span *ngIf="formAccess.get('county').errors.required">{{'set-erros.validate-required' | translate }}</span>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+
+            <!-- 4ª LINHA DO FORMULÁRIO-->
+            <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start center" fxLayoutAlign.xs="start end">
+
+                <!--CARGO / EMPREGO-->
+                <mat-form-field class="p-lg-6 p-md-6 p-col-12 p-ml-1 p-p-0" appearance="outline">
+                    <mat-label>{{'landing-page.request-access.uf-stocking' | translate }}</mat-label>
+                    <mat-select formControlName="work">
+                        <mat-option *ngFor="let work of workArr" value="{{work.id}}">{{work.label}}</mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="formAccess.get('work').invalid && formAccess.get('work').touched">
+                        <span *ngIf="formAccess.get('work').errors.required">{{'set-erros.validate-required' | translate }}</span>
+                    </mat-error>
+                </mat-form-field>
+
+                <!--FUNÇÃO-->
+                <mat-form-field class="p-lg-6 p-md-6 p-col-12 p-ml-1" appearance="outline">
+                    <mat-label>{{'landing-page.request-access.county' | translate }}</mat-label>
+                    <mat-select formControlName="employments" >
+                        <mat-option *ngFor="let employ of employmentsArr" value="{{employ.id}}">{{employ.label}}</mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="formAccess.get('employments').invalid && formAccess.get('employments').touched">
+                        <span *ngIf="formAccess.get('employments').errors.required">{{'set-erros.validate-required' | translate }}</span>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+
+            <div fxLayout="row" fxLayoutAlign="end end">
+                <button class="button-md" mat-stroked-button color="accent" (click)="back()">{{'landing-page.request-access.come-back' | translate | uppercase}}</button>
+                <button class="button-md p-ml-3" mat-flat-button color="accent" (click)="openModal()" >{{'landing-page.request-access.next' | translate | uppercase}}</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 3ª ETAPA -->
+    <div class="p-col-12" fxLayout="column" fxLayoutAlign="center center" fxLayoutAlign.xs="center center" *ngIf="activeIndex === 2">
+        <div fxLayout="column" class="p-lg-9 p-md-11 p-col-11 p-mt-6 p-p-0">
+            <div class="h1-section p-p-0">{{'landing-page.request-access.success-register' | translate }}</div>
+            <div class="body-section p-p-0 p-lg-9 bk-color-secondary p-p-3 p-mt-3">
+                {{'landing-page.request-access.success-message' | translate }} 
+                <b>{{'landing-page.request-access.action-register' | translate }} </b> 
+                {{'landing-page.request-access.platform' | translate }}
+            </div>
+        </div>
+    </div>
 </div>
+

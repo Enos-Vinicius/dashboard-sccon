@@ -4,7 +4,7 @@
     <!--PLATAFORMA EAD-->
     <div class="p-lg-10 p-md-11 p-col-11 p-p-0" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center" >
         <div class="p-lg-4 p-md-4 p-p-0" fxLayoutAlign="center" fxLayoutAlign.sm="start">
-            <div class="img-platform-ead"></div>
+            <div class="img-platform-ead" @fade *ngIf="viewLaptop"></div>
         </div>
         <div class="p-lg-6 p-md-8 p-p-0">
             <div class="h1-section">{{'landing-page.platform.platform' | translate | uppercase}}</div>
@@ -17,7 +17,7 @@
     <!--SOBRE OS CURSOS-->
     <div class="p-lg-10 p-md-11 p-col-11 p-p-0" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center" >
         <div class="p-lg-4 p-md-4 p-p-0" fxLayoutAlign="center">
-            <div class="img-platform-courses"></div>
+            <div class="img-platform-courses" @fade *ngIf="viewVideo"></div>
         </div>
         <div class="p-lg-6 p-md-8 p-p-0">
             <div class="h1-section">{{'landing-page.platform.about-courses' | translate | uppercase}}</div>
@@ -29,7 +29,7 @@
     <!--PUBLICO ALVO-->
     <div class="p-lg-10 p-md-11 p-col-11 p-p-0" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center" >
         <div class="p-lg-4 p-md-4 p-p-0" fxLayoutAlign="center">
-            <div class="img-platform-public"></div>
+            <div class="img-platform-public" @fade *ngIf="viewSatellite"></div>
         </div>
         <div class="p-lg-6 p-md-8 p-p-0">
             <div class="h1-section">{{'landing-page.platform.target-audience' | translate | uppercase}}</div>

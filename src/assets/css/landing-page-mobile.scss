@@ -5,18 +5,24 @@ $secondary: #ffd079;
 /* MOBILE */
 @media (max-width: 375px) {
 
+  .mat-flat-button.mat-accent, .mat-raised-button.mat-accent, .mat-fab.mat-accent, .mat-mini-fab.mat-accent {
+    font-size: 12px;
+  }
+
+  .mat-button.mat-accent, .mat-icon-button.mat-accent, .mat-stroked-button.mat-accent {
+    font-size: 12px;
+  }
+
   .main {
     width: 100%;
     height: 884px;
     background-image: url(~src/assets/imgs/Bitmap-1.png);
     background-size: auto 884px;
     background-repeat: no-repeat;
+    background-attachment: fixed;
   }
 
   .info-principal {
-    margin-top: 200px;
-    width: 100% !important;
-
     .container {
       width: 360px;
     }
@@ -41,8 +47,6 @@ $secondary: #ffd079;
   .text-legenda {
     background-color: rgba(0, 0, 0, 0.4);
     padding: 10px;
-    font-size: 14px;
-    margin-top: 100px;
   }
 
   .img-logo {
@@ -58,6 +62,7 @@ $secondary: #ffd079;
     height: 1140px;
     background-image: url(~src/assets/imgs/Bitmap-3.png);
     background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: 1525px auto;
     background-position: center;
 
@@ -163,6 +168,7 @@ $secondary: #ffd079;
     background-image: url(~src/assets/imgs/Bitmap-4.png);
     background-size: 1000px 886px;
     background-repeat: no-repeat;
+    background-attachment: fixed; 
     opacity: 0.15;
     z-index: 1;
     content: ' ';
@@ -278,7 +284,6 @@ $secondary: #ffd079;
   }
 
   .common-questions {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 
     .img-questions {
       width: 100%;
@@ -379,21 +384,29 @@ $secondary: #ffd079;
   }
 
   .request-access {
-    width: 100%;
-    height: 93%;
-    border: 1px solid #777777;
-
-    p {
-      text-align: center;
+    .request-image-main {
+      width: 100%;
+      height: 400px;
+      background-image: url(~src/assets/imgs/Bitmap-3.png);
+      background-size: 100% 400px;
+      background-position-y: 50%;
+      background-repeat: no-repeat;
     }
 
-    .container {
-      width: 95%;
+    .container-image {
+      width: 100%;
+      height: 400px;
+      background-color: rgba(0, 0, 0, 0.3);
+      background-size: 100% auto;
     }
 
-    h1 {
-      text-align: center;
-      width: 90%;
+    
+    .p-steps .p-steps-item.p-highlight .p-steps-title {
+      font-size: 12px;
+    }
+
+    .p-steps .p-steps-item .p-menuitem-link .p-steps-title {
+      font-size: 12px;
     }
   }
 
@@ -604,3 +617,4 @@ $secondary: #ffd079;
     background-size: 100% 100%;
   }
 }
+
