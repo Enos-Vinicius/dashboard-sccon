@@ -34,8 +34,6 @@ export class LoginComponent implements OnInit {
   }
 
   private setCurrentAction() {
-    console.log(this.data['action']);
-
     if (this.data['action']) {
       this.currentAction = this.data['action'];
     } else {
@@ -54,10 +52,8 @@ export class LoginComponent implements OnInit {
     this.loading = true;
 
     this.authService.doLogin(this.form.value).then(sucesso => {
-      console.log(sucesso);
       this.loading = false;
       this.dialogRef.close();
-
     }).catch(error => {
       this.loading = false;
       this.form.markAllAsTouched();

@@ -123,7 +123,7 @@
         "validate-required": "*Preenchimento de campo obrigatório",
         "minlength-name": "*Preenchimento de no mínimo 3 caracteres no campo",
         "invalid-email": "*Email inválido",
-        "confirm-email": "A confirmação do email é obrigatória"
+        "confirm-email": "O Email digitado não é igual ao do campo de Email"
     },
     "buttons": {
         "send": "Enviar",

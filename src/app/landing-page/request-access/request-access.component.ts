@@ -1,19 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
-import { MenuItem } from 'primeng/api';
+import { MenuItem, MessageService, PrimeNGConfig } from 'primeng/api';
 import { InfoRegisterComponent } from 'src/shared/components/info-register/info-register.component';
 import { CityService } from 'src/shared/services/city.service';
 import { EmploymentsService } from 'src/shared/services/employments.service';
 import { StateService } from 'src/shared/services/state.service';
-import { ValidateCpfService } from 'src/shared/services/validate-cpf.service';
+import { ValidateEmailService } from 'src/shared/services/validate-email.service';
 import { WorkService } from 'src/shared/services/work.service';
 import { Helper } from 'src/shared/utils/Helper';
 
 @Component({
   selector: 'app-request-access',
   templateUrl: './request-access.component.html',
-  styleUrls: ['./request-access.component.scss']
+  styleUrls: ['./request-access.component.scss'],
+  providers: [MessageService]
 })
 export class RequestAccessComponent implements OnInit {
 
@@ -28,16 +29,19 @@ export class RequestAccessComponent implements OnInit {
   viewCity: boolean = false;
 
   constructor(
-    private validateCpf: ValidateCpfService,
+    private validateEmail: ValidateEmailService,
     private formBuilder: FormBuilder,
     private stateService: StateService,
     private workService: WorkService,
     private dialog: MatDialog,
+    private messageService: MessageService, 
+    private primengConfig: PrimeNGConfig,
     private employmentsService: EmploymentsService,
     private cityService: CityService
   ) { }
 
   ngOnInit(): void {
+    this.primengConfig.ripple = true;
     this.loadSteps();
     this.buildForm();
     this.stateArr = this.stateService.getStates();
@@ -90,8 +94,8 @@ export class RequestAccessComponent implements OnInit {
   }
 
   validEmail() {
-    let cpf = this.formAccess.get('email').value;
-    this.validateCpf.getByString(cpf).subscribe(
+    let email = this.formAccess.get('email').value;
+    this.validateEmail.getByString(email).subscribe(
       res => {
         this.next();
         this.validarRequiredForm('validate');
@@ -102,6 +106,17 @@ export class RequestAccessComponent implements OnInit {
       err => {
         this.viewCriterion = true;
       })
+  }
+
+  validEmailSecondary(){
+    const email = this.formAccess.get('email').value;
+    const confirmEmail = this.formAccess.get('confirm_email').value;
+    if(email != confirmEmail){
+      this.formAccess.get('confirm_email').setErrors({errorEmail: true})
+    } else {
+      this.formAccess.get('confirm_email').setErrors(null)
+    }
+    
   }
 
   setCity(code){
@@ -169,6 +184,7 @@ export class RequestAccessComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(res => {
       if(res.res === 'success'){
+        // this.messageService.add({severity:'success', summary: 'Solicitação concluída com sucesso', life: 3000, closable: false});
         this.next();
       }   
     })

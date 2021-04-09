@@ -10,6 +10,13 @@ import { LaddaModule } from 'angular2-ladda';
 import { InfoRegisterComponent } from './components/info-register/info-register.component';
 import { HighlightDirective } from './directivas/highlight.diretive';
 import { QgisComponent } from './components/qgis/qgis.component';
+import {
+  RECAPTCHA_SETTINGS,
+  RecaptchaFormsModule,
+  RecaptchaLoaderService,
+  RecaptchaModule,
+  RecaptchaSettings,
+} from 'ng-recaptcha';
 
 @NgModule({
   declarations: [
@@ -23,6 +30,8 @@ import { QgisComponent } from './components/qgis/qgis.component';
   imports: [
     CommonModule,
     ReactiveFormsModule,
+    RecaptchaModule,
+    RecaptchaFormsModule,
     PrimeNgModule,
     MaterialModule,
     LaddaModule
@@ -35,7 +44,18 @@ import { QgisComponent } from './components/qgis/qgis.component';
     PrimeNgModule,
     MaterialModule,
     FilterPipe,
+    RecaptchaModule,
+    RecaptchaFormsModule,
     Components,
   ],
+  providers: [
+    {
+      provide: RECAPTCHA_SETTINGS,
+      useValue: {
+        siteKey: '6Lc-XM8ZAAAAAMaf1-pwWNfwk7rDHKHCdKzoIhD8',
+      } as RecaptchaSettings,
+    },
+    RecaptchaLoaderService
+  ]
 })
 export class SharedModule { }

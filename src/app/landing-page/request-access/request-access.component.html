@@ -1,3 +1,4 @@
+<p-toast></p-toast>
 <div class="p-col-12 request-access p-p-0" fxLayout="column" fxLayoutAlign="center center">
 
     <!--NOTÍCIA PRINCIPAL-->
@@ -107,9 +108,10 @@
                 <!--CONFIRMAÇÃO DE EMAIL-->
                 <mat-form-field class="p-lg-6 p-md-6 p-col-12 p-ml-1" appearance="outline">
                     <mat-label>{{'landing-page.request-access.confirm-email' | translate }}</mat-label>
-                    <input id="confirm-email" name="confirm-email" matInput placeholder="Confirmação de Email" formControlName="confirm_email">
+                    <input id="confirm-email" name="confirm-email" matInput placeholder="Confirmação de Email" formControlName="confirm_email" (blur)="validEmailSecondary()">
                     <mat-error *ngIf="formAccess.get('confirm_email').invalid && formAccess.get('confirm_email').touched">
                        <span *ngIf="formAccess.get('confirm_email').errors.required">{{'set-erros.validate-required' | translate }}</span>
+                       <span *ngIf="formAccess.get('confirm_email').errors.errorEmail">{{'set-erros.confirm-email' | translate }}</span>
                     </mat-error>
                 </mat-form-field>
 

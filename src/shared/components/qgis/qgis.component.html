@@ -1,10 +1,14 @@
+<p-toast></p-toast>
 <div fxLayout="row" fxLayoutAlign="space-between center">
     <div class="h2-section">Dados de Acesso ao plugin planet explorer via QGIS</div>
     <button mat-icon-button [mat-dialog-close]="true">
         <mat-icon>close</mat-icon>
     </button>
 </div>
-<div fxLayout="column">
+<div *ngIf="!qgisData" fxLayout="row" fxLayoutAlign="center center">
+    <p-progressSpinner  [style]="{width: '50px', height: '50px'}" styleClass="custom-spinner" strokeWidth="8" ></p-progressSpinner>
+</div>
+<div *ngIf="qgisData" fxLayout="column">
     <div fxLayout="row">
         <b>1. </b> 
         <div class="a-link p-ml-2" target="_blank" href="https://ead.sccon.com.br/ead/enrol/index.php?id=23">

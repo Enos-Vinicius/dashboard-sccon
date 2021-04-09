@@ -1,3 +1,4 @@
+
 <div fxLayout="row" fxLayoutAlign="space-between center">
     <div class="h2-section">Confirmação de Dados Cadastrais</div>
     <button mat-icon-button [mat-dialog-close]="true">
@@ -32,7 +33,7 @@
 
     <div class="p-mt-3">
         <mat-checkbox>
-            <span class="white-text">Entendo que devo citar como fonte RedeMAIS e Planet, em todo documento que utilize as imagens ou produtos, da seguinte forma: “Fonte RedeMAIS e:direitos autorais: 2020 Planet Labs Inc.”;</span>
+            <span class="white-text">Entendo que devo citar como fonte RedeMAIS e a Planet, em todo documento que utilize as imagens ou produtos, da seguinte forma: “Fonte RedeMAIS e:direitos autorais: 2020 Planet Labs Inc.”;</span>
         </mat-checkbox>
     </div>
 
@@ -53,8 +54,9 @@
             <span class="white-text">Entendo que estagiários, terceiros e particulares não podem ter acesso às imagens e dados disponibilizados</span>
         </mat-checkbox>
     </div>
-    <div class="p-mt-3" fxLayout="row" fxLayoutAlign="end end">
-        <button class="button-md p-ml-3" mat-flat-button color="accent" (click)="closeModal()">
+    <div *ngIf="viewForm" [formGroup]="formTerms" class="p-mt-3" fxLayout="row" fxLayoutAlign="space-between center">
+        <re-captcha class="p-col-6 mobile-captcha" formControlName="captchaValue"></re-captcha>
+        <button class="button-md p-ml-3" mat-flat-button color="accent" [disabled]="formTerms.invalid" (click)="postAutoRegister()">
             ACEITAR TERMOS DE CONDIÇÕES
         </button>
     </div>

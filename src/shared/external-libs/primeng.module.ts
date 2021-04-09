@@ -8,6 +8,8 @@ import { SplitterModule } from 'primeng/splitter';
 import { TabViewModule } from 'primeng/tabview';
 import { TimelineModule } from 'primeng/timeline';
 import { StepsModule } from 'primeng/steps';
+import { RippleModule } from 'primeng/ripple';
+import {ProgressSpinnerModule} from 'primeng/progressspinner';
 @NgModule({
   imports: [
     CarouselModule,
@@ -18,6 +20,8 @@ import { StepsModule } from 'primeng/steps';
     TabViewModule,
     TimelineModule,
     AccordionModule,
+    RippleModule,
+    ProgressSpinnerModule,
     StepsModule
   ],
   exports: [ 
@@ -29,6 +33,8 @@ import { StepsModule } from 'primeng/steps';
     TabViewModule,
     TimelineModule,
     AccordionModule,
+    RippleModule,
+    ProgressSpinnerModule,
     StepsModule
    ],
 

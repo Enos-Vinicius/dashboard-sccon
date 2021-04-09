@@ -1,6 +1,6 @@
 import { BaseRecursoModel } from "./base-resource.model";
 
-export class ValidateCpf extends BaseRecursoModel {
+export class ValidateEmail extends BaseRecursoModel {
     constructor(
         public id?: number, 
         public creationDate?: Date, 
@@ -11,7 +11,7 @@ export class ValidateCpf extends BaseRecursoModel {
         super();
     }
         
-    static fromJson(jsonData: any): ValidateCpf{ 
-        return Object.assign(new ValidateCpf(), jsonData);
+    static fromJson(jsonData: any): ValidateEmail{ 
+        return Object.assign(new ValidateEmail(), jsonData);
     }
 }

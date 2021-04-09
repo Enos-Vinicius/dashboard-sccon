@@ -33,7 +33,7 @@ export class PlatformComponent implements OnInit {
 
       
         if(Helper.widthTablet()){
-          console.log("number: ", number);
+          // console.log("number: ", number);
           if(number > 6355){
             this.viewLaptop = true;
           }

@@ -24,11 +24,12 @@
       <button mat-menu-item (click)="redirecTo('dashboard')" routerLinkActive="active-list-item">Dashboard de alertas de mudanças</button>
       <button mat-menu-item (click)="redirecTo('ead')" routerLinkActive="active-list-item">Plataforma EAD</button>
       <button mat-menu-item routerLink="inicio/info-news" routerLinkActive="active-list-item">Notícias</button>
+      <button mat-menu-item routerLink="inicio/info-common" routerLinkActive="active-list-item">Perguntas Frequentes</button>
       <button mat-menu-item (click)="doLogin()" *ngIf="!authService?.isLogged()">Entrar</button>
       <button mat-menu-item (click)="doLogout()" *ngIf="authService?.isLogged()">Sair</button>
-      <button mat-menu-item routerLink="inicio/design">Design/Systens</button>
+      <!-- <button mat-menu-item routerLink="inicio/design">Design/Systens</button> -->
       <div class="text-access">
-        <a mat-flat-button (click)="redirecTo('inicio/request-access')">Sem Acesso? Solicite Cadastro</a>
+        <a mat-flat-button routerLink="inicio/request-access" routerLinkActive="active-list-item">Sem Acesso? Solicite Cadastro</a>
       </div>
     </mat-menu>
 

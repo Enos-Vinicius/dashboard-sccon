@@ -1,6 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { MessageService } from 'primeng/api';
+import { MessageService, PrimeNGConfig } from 'primeng/api';
 import { QGIS } from 'src/shared/models/qgis.model';
 import { AuthService } from 'src/shared/services/auth.service';
 import { QGISService } from 'src/shared/services/qgis.service';
@@ -20,10 +20,12 @@ export class QgisComponent implements OnInit {
     public dialogRef: MatDialogRef<QgisComponent>,
     private auth: AuthService,
     private messageService: MessageService, 
+    private primengConfig: PrimeNGConfig,
     private qgis: QGISService
   ) { }
 
   ngOnInit(): void {
+    this.primengConfig.ripple = true;
     if(!this.auth.isLogged()) {
       this.auth.openModalLogin();
     } else {
@@ -59,7 +61,7 @@ export class QgisComponent implements OnInit {
     selBox.select();
     document.execCommand("copy");
     document.body.removeChild(selBox);
-    this.messageService.add({severity:'success', summary: 'Success', detail: 'Message Content'});
+    this.messageService.add({severity:'success', summary: 'Item copiado com sucesso para área de transferência', life: 3000, closable: false});
   }
 
 }

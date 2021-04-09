@@ -14,10 +14,12 @@ export class InfoNewsComponent implements OnInit {
 
   constructor(
     private newsService: NewsService
+
   ) { }
 
   ngOnInit(): void {
     this.widthScreen = window?.screen?.width;
+
     this.getNews();
   }
 
