@@ -16,7 +16,7 @@ $secondary: #ffd079;
   .main {
     width: 100%;
     height: 884px;
-    background-image: url(~src/assets/imgs/Bitmap-1.png);
+    background-image: url("./../imgs/Bitmap-1.png");
     background-size: auto 884px;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -60,7 +60,7 @@ $secondary: #ffd079;
   .know-more {
     width: 375px;
     height: 1140px;
-    background-image: url(~src/assets/imgs/Bitmap-3.png);
+    background-image: url("./../imgs/Bitmap-3.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 1525px auto;
@@ -150,14 +150,14 @@ $secondary: #ffd079;
     }
 
     .img-after {
-      background-image: url(~src/assets/imgs/Bitmap12.png);
+      background-image: url("./../imgs/Bitmap12.png");
       background-size: 100% 375px;
       height: 375px;
       width: 375px;
     }
 
     .img-timeline {
-      background-image: url(~src/assets/imgs/Bitmap-6.png);
+      background-image: url("./../imgs/Bitmap-6.png");
       background-size: 100% 375px;
       height: 375px;
       width: 375px;
@@ -165,7 +165,7 @@ $secondary: #ffd079;
   }
 
   .images-mosaics::before {
-    background-image: url(~src/assets/imgs/Bitmap-4.png);
+    background-image: url("./../imgs/Bitmap-4.png");
     background-size: 1000px 886px;
     background-repeat: no-repeat;
     background-attachment: fixed; 
@@ -216,7 +216,7 @@ $secondary: #ffd079;
 
   .info-dashboard {
     height: 2055px;
-    background-image: url(~src/assets/imgs/Bitmap-7.png);
+    background-image: url("./../imgs/Bitmap-7.png");
     background-size: 100% 2055px;
     background-repeat: no-repeat;
     background-position: center;
@@ -230,7 +230,7 @@ $secondary: #ffd079;
     .img-macbook {
       width: 375px;
       height: 397px;
-      background-image: url(~src/assets/imgs/notebook.png);
+      background-image: url("./../imgs/notebook.png");
       background-repeat: no-repeat;
       background-size: 608px auto;
       margin-bottom: 10px;
@@ -239,7 +239,7 @@ $secondary: #ffd079;
     .img-iphone {
       width: 337px;
       height: 463px;
-      background-image: url(~src/assets/imgs/Bitmap-8.png);
+      background-image: url("./../imgs/Bitmap-8.png");
       background-repeat: no-repeat;
       background-size: 337px 463px;
     }
@@ -252,13 +252,13 @@ $secondary: #ffd079;
   .platform {
     position: relative;
     width: 100%;
-    background-image: url(~src/assets/imgs/Bitmap-9.png);
+    background-image: url("./../imgs/Bitmap-9.png");
     background-size: 250% auto;
 
     .img-platform-ead {
       width: 245px;
       height: 220px;
-      background-image: url(~src/assets/imgs/vector/vector-laptop.svg);
+      background-image: url("./../imgs/vector/vector-laptop.svg");
       background-repeat: no-repeat;
       background-size: 90% auto;
       margin-top: 56px;
@@ -267,7 +267,7 @@ $secondary: #ffd079;
     .img-platform-courses {
       width: 183px;
       height: 220px;
-      background-image: url(~src/assets/imgs/vector/vector-ead-1.svg);
+      background-image: url("./../imgs/vector/vector-ead-1.svg");
       background-repeat: no-repeat;
       background-size: 90% auto;
       margin-top: 20px;
@@ -276,7 +276,7 @@ $secondary: #ffd079;
     .img-platform-public {
       width: 233px;
       height: 220px;
-      background-image: url(~src/assets/imgs/vector/vector-publico.svg);
+      background-image: url("./../imgs/vector/vector-publico.svg");
       background-repeat: no-repeat;
       background-size: 90% auto;
       margin-top: 20px;
@@ -288,7 +288,7 @@ $secondary: #ffd079;
     .img-questions {
       width: 100%;
       height: 267px;
-      background-image: url(~src/assets/imgs/Bitmap-10.png);
+      background-image: url("./../imgs/Bitmap-10.png");
       background-size: 100% 267px;
     }
 
@@ -327,7 +327,7 @@ $secondary: #ffd079;
     .info-news-main {
       width: 100%;
       height: 812px;
-      background-image: url(~src/assets/imgs/Bitmap-2.png);
+      background-image: url("./../imgs/Bitmap-2.png");
       background-size: auto 812px;
       background-position-x: 50%;
       background-repeat: no-repeat;
@@ -360,7 +360,7 @@ $secondary: #ffd079;
     .info-image-main {
       width: 100%;
       height: 812px;
-      background-image: url(~src/assets/imgs/Bitmap-5.png);
+      background-image: url("./../imgs/Bitmap-5.png");
       background-size: auto 100%;
       background-repeat: no-repeat;
     }
@@ -387,7 +387,7 @@ $secondary: #ffd079;
     .request-image-main {
       width: 100%;
       height: 400px;
-      background-image: url(~src/assets/imgs/Bitmap-3.png);
+      background-image: url("./../imgs/Bitmap-3.png");
       background-size: 100% 400px;
       background-position-y: 50%;
       background-repeat: no-repeat;
@@ -420,7 +420,7 @@ $secondary: #ffd079;
   .footer {
     height: 160px;
     width: 100%;
-    background-image: url(~src/assets/imgs/Bitmap-11.png);
+    background-image: url("./../imgs/Bitmap-11.png");
     background-size: 100% auto;
     background-position-y: 50%;
     background-repeat: no-repeat;
@@ -563,7 +563,7 @@ $secondary: #ffd079;
   .icon-satelite {
     width: 75px;
     height: 64px;
-    background-image: url(~src/assets/imgs/icons/icon-nav-satelite.png);
+    background-image: url("./../imgs/icons/icon-nav-satelite.png");
     background-size: 75px 64px;
     background-repeat: no-repeat;
   }
@@ -571,7 +571,7 @@ $secondary: #ffd079;
   .icon-dashboard {
     width: 44px;
     height: 64px;
-    background-image: url(~src/assets/imgs/icons/icon-nav-dashboard.png);
+    background-image: url("./../imgs/icons/icon-nav-dashboard.png");
     background-size: 44px 64px;
     background-repeat: no-repeat;
   }
@@ -579,7 +579,7 @@ $secondary: #ffd079;
   .icon-ead {
     width: 44px;
     height: 64px;
-    background-image: url(~src/assets/imgs/icons/icon-nav-ead.png);
+    background-image: url("./../imgs/icons/icon-nav-ead.png");
     background-size: 44px 64px;
     background-repeat: no-repeat;
   }
@@ -588,7 +588,7 @@ $secondary: #ffd079;
   .logo-justica {
     width: 139px;
     height: 44px;
-    background-image: url(~src/assets/imgs/logos/logo-justica.png);
+    background-image: url("./../imgs/logos/logo-justica.png");
     background-size: 139px 44px;
     background-repeat: no-repeat;
   }
@@ -596,7 +596,7 @@ $secondary: #ffd079;
   .logo-pf {
     width: 66px;
     height: 80px;
-    background-image: url(~src/assets/imgs/logos/pf.png);
+    background-image: url("./../imgs/logos/pf.png");
     background-size: 66px 80px;
     background-repeat: no-repeat;
   }
@@ -604,7 +604,7 @@ $secondary: #ffd079;
   .logo-senasp {
     width: 169px;
     height: 30px;
-    background-image: url(~src/assets/imgs/logos/logo-senasp.png);
+    background-image: url("./../imgs/logos/logo-senasp.png");
     background-size: 169px 30px;
     background-repeat: no-repeat;
   }
@@ -612,7 +612,7 @@ $secondary: #ffd079;
   .logo-sccon {
     width: 100%;
     height: auto;
-    background-image: url(~src/assets/imgs/logos/sccon.svg);
+    background-image: url("./../imgs/logos/sccon.svg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
   }

@@ -1,7 +1,7 @@
 import { Renderer2, ViewChild } from '@angular/core';
 import { Component, ElementRef, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Helper } from 'src/shared/utils/Helper';
+import { Helper } from '../../../shared/utils/Helper';
 
 @Component({
   selector: 'app-main',

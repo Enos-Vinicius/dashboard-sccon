@@ -1,8 +1,8 @@
 import { AuthService } from './../../../shared/services/auth.service';
 import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { CommonQuestions } from 'src/shared/models/common-questions.model';
-import { CommonQuestionsService } from 'src/shared/services/common-questions.service';
+import { CommonQuestions } from '../../../shared/models/common-questions.model';
+import { CommonQuestionsService } from '../../../shared/services/common-questions.service';
 
 @Component({
   selector: 'app-common-questions',

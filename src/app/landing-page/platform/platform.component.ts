@@ -1,7 +1,7 @@
 import { AuthService } from './../../../shared/services/auth.service';
 import { Component, OnInit, Renderer2 } from '@angular/core';
 import {trigger, style, animate, transition} from '@angular/animations';
-import { Helper } from 'src/shared/utils/Helper';
+import { Helper } from '../../../shared/utils/Helper';
 @Component({
   selector: 'app-platform',
   templateUrl: './platform.component.html',

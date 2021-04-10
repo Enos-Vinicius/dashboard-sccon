@@ -2,13 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { MenuItem, MessageService, PrimeNGConfig } from 'primeng/api';
-import { InfoRegisterComponent } from 'src/shared/components/info-register/info-register.component';
-import { CityService } from 'src/shared/services/city.service';
-import { EmploymentsService } from 'src/shared/services/employments.service';
-import { StateService } from 'src/shared/services/state.service';
-import { ValidateEmailService } from 'src/shared/services/validate-email.service';
-import { WorkService } from 'src/shared/services/work.service';
-import { Helper } from 'src/shared/utils/Helper';
+import { InfoRegisterComponent } from '../../../shared/components/info-register/info-register.component';
+import { CityService } from '../../../shared/services/city.service';
+import { EmploymentsService } from '../../../shared/services/employments.service';
+import { StateService } from '../../../shared/services/state.service';
+import { ValidateEmailService } from '../../../shared/services/validate-email.service';
+import { WorkService } from '../../../shared/services/work.service';
+import { Helper } from '../../../shared/utils/Helper';
 
 @Component({
   selector: 'app-request-access',

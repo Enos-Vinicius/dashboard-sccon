@@ -1,5 +1,5 @@
 import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
-import { Helper } from 'src/shared/utils/Helper';
+import { Helper } from '../../../shared/utils/Helper';
 
 @Component({
   selector: 'app-know-more',

@@ -1,8 +1,8 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { AuthRegister } from 'src/shared/models/auth-register.model';
-import { AuthRegisterService } from 'src/shared/services/auth-register.service';
+import { AuthRegister } from '../../../shared/models/auth-register.model';
+import { AuthRegisterService } from '../../../shared/services/auth-register.service';
 
 @Component({
   selector: 'app-info-register',

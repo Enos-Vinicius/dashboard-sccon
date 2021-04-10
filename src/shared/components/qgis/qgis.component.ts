@@ -1,9 +1,9 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MessageService, PrimeNGConfig } from 'primeng/api';
-import { QGIS } from 'src/shared/models/qgis.model';
-import { AuthService } from 'src/shared/services/auth.service';
-import { QGISService } from 'src/shared/services/qgis.service';
+import { QGIS } from '../../../shared/models/qgis.model';
+import { AuthService } from '../../../shared/services/auth.service';
+import { QGISService } from '../../../shared/services/qgis.service';
 
 @Component({
   selector: 'app-qgis',

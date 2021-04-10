@@ -9,7 +9,7 @@ import {
   RecaptchaModule,
   RecaptchaSettings,
 } from 'ng-recaptcha';
-import { SharedModule } from 'src/shared/shared.module';
+import { SharedModule } from '../../shared/shared.module';
 
 import { createTranslateLoader } from '../app.module';
 import { NavbarModule } from '../common/navbar/navbar.module';

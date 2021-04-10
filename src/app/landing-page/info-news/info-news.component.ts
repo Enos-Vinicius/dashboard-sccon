@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NewsService } from 'src/shared/services/news.service';
+import { NewsService } from '../../../shared/services/news.service';
 
 @Component({
   selector: 'app-info-news',
